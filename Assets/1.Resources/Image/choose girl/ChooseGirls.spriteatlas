@@ -1,0 +1,70 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: ChooseGirls
+  serializedVersion: 2
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: 7f443ba773e498e4b88e9e77b23fd167, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 65a75220296eb31448c92659738e39a2, type: 3}
+  - {fileID: 21300000, guid: ec957752f2399b8468108edbdbc8e98e, type: 3}
+  - {fileID: 21300000, guid: cac530c2f0249b74482c48957cfee835, type: 3}
+  - {fileID: 21300000, guid: c109c0d5c1ed2d94aa9c67b708757cd2, type: 3}
+  - {fileID: 21300000, guid: d46911862e45c5649925bdd56e4a3a3c, type: 3}
+  - {fileID: 21300000, guid: fff7f2a89ec7e16499e4a0d7512c085d, type: 3}
+  - {fileID: 21300000, guid: 6c7b586a9cccaba45be08de017ff67e7, type: 3}
+  - {fileID: 21300000, guid: 82f2615bdd286ac4d8149d8887f384c2, type: 3}
+  - {fileID: 21300000, guid: c3ecdfdd5a5ccec49ac648dcc5d98b5a, type: 3}
+  - {fileID: 21300000, guid: ece31c0f26e284049b3beb3bb8770223, type: 3}
+  - {fileID: 21300000, guid: 15d80b9fc13924c4ab72acb9cfaa7355, type: 3}
+  - {fileID: 21300000, guid: d4f9b5ff7eb067e439e93af1b8988d09, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - BG
+  - hazuki02
+  - kumiko01
+  - kumiko
+  - tuba
+  - hazuki
+  - sapphire02
+  - choose girl
+  - sapphire
+  - hazuki01
+  - sapphire01
+  - kumiko02
+  m_RenderDataMap: {}
+  m_Tag: ChooseGirls
+  m_IsVariant: 0
+  m_IsPlaceholder: 0
