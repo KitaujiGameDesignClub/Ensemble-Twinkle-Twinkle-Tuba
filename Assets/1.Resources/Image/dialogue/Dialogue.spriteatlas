@@ -1,0 +1,102 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Dialogue
+  serializedVersion: 2
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 8
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: 09a6fa9fbbf83cd4baa62047622a6054, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: -1460728908, guid: 4455ef135ae89314d9bb5a18cbb98b86, type: 3}
+  - {fileID: 26981368, guid: 4455ef135ae89314d9bb5a18cbb98b86, type: 3}
+  - {fileID: 917254220, guid: 4455ef135ae89314d9bb5a18cbb98b86, type: 3}
+  - {fileID: -180281537, guid: 4455ef135ae89314d9bb5a18cbb98b86, type: 3}
+  - {fileID: 1808383840, guid: 4455ef135ae89314d9bb5a18cbb98b86, type: 3}
+  - {fileID: -1240552831, guid: 4455ef135ae89314d9bb5a18cbb98b86, type: 3}
+  - {fileID: -1122148989, guid: 4455ef135ae89314d9bb5a18cbb98b86, type: 3}
+  - {fileID: 1929419270, guid: 4455ef135ae89314d9bb5a18cbb98b86, type: 3}
+  - {fileID: 257028730, guid: 4455ef135ae89314d9bb5a18cbb98b86, type: 3}
+  - {fileID: 234363473, guid: 4455ef135ae89314d9bb5a18cbb98b86, type: 3}
+  - {fileID: -551161986, guid: 4455ef135ae89314d9bb5a18cbb98b86, type: 3}
+  - {fileID: 470916169, guid: 4455ef135ae89314d9bb5a18cbb98b86, type: 3}
+  - {fileID: -1456118465, guid: 4455ef135ae89314d9bb5a18cbb98b86, type: 3}
+  - {fileID: -364340083, guid: 4455ef135ae89314d9bb5a18cbb98b86, type: 3}
+  - {fileID: -1569850222, guid: 4455ef135ae89314d9bb5a18cbb98b86, type: 3}
+  - {fileID: 80885781, guid: 4455ef135ae89314d9bb5a18cbb98b86, type: 3}
+  - {fileID: -1384025555, guid: 4455ef135ae89314d9bb5a18cbb98b86, type: 3}
+  - {fileID: 1166334176, guid: 4455ef135ae89314d9bb5a18cbb98b86, type: 3}
+  - {fileID: -1026805998, guid: 4455ef135ae89314d9bb5a18cbb98b86, type: 3}
+  - {fileID: -1467342702, guid: 4455ef135ae89314d9bb5a18cbb98b86, type: 3}
+  - {fileID: 21300000, guid: 2d89956baa7d2b643838165f4c7eb5e9, type: 3}
+  - {fileID: 21300000, guid: 9dee5e0eea1f7e44ca438ef13017c0ec, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - Euphonium-characters_7
+  - Euphonium-characters_6
+  - Euphonium-characters_5
+  - Euphonium-characters_4
+  - Euphonium-characters_3
+  - Euphonium-characters_2
+  - Euphonium-characters_1
+  - Euphonium-characters_0
+  - Euphonium-characters_9
+  - Euphonium-characters_8
+  - Euphonium-characters_12
+  - Euphonium-characters_13
+  - Euphonium-characters_10
+  - Euphonium-characters_11
+  - Euphonium-characters_16
+  - Euphonium-characters_17
+  - Euphonium-characters_14
+  - Euphonium-characters_15
+  - Euphonium-characters_18
+  - Euphonium-characters_19
+  - mask
+  - "\u4EAC\u5439\u5C0F\u6E38\u620F\u5408\u96C6\u5C01\u9762"
+  m_RenderDataMap: {}
+  m_Tag: Dialogue
+  m_IsVariant: 0
+  m_IsPlaceholder: 0

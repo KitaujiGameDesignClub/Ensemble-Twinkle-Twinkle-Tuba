@@ -1,0 +1,17 @@
+{
+    "name": "Tools",
+    "rootNamespace": "",
+    "references": [
+        "GUID:b3f49edfedc855a48aa1a9e5d3cba438",
+        "GUID:cdd25110e0b12e545962d1f1696794a6"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
