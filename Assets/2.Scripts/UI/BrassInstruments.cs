@@ -6,7 +6,11 @@ using UnityEngine;
 public class BrassInstruments : MonoBehaviour,IUpdate
 {
     public KeyCode[] keyCodes = new KeyCode[4];
-    public Transform[] keys = new Transform[4];   
+    public Transform[] keys = new Transform[4];
+   /// <summary>
+   /// 按压速度
+   /// </summary>
+    public float pressSpeed = 25f;
     private bool[] keysPressed = new bool[4];
 
     private Vector3[] initialLocalPos;
@@ -49,11 +53,11 @@ public class BrassInstruments : MonoBehaviour,IUpdate
         {
             if (keysPressed[i])
             {
-                keys[i].localPosition = Vector3.Lerp(keys[i].localPosition,pressedLocalPos[i],25f * Time.deltaTime);
+                keys[i].localPosition = Vector3.Lerp(keys[i].localPosition,pressedLocalPos[i],pressSpeed * Time.deltaTime);
             }
             else
             {
-                keys[i].localPosition = Vector3.Lerp(keys[i].localPosition,initialLocalPos[i],25f * Time.deltaTime);
+                keys[i].localPosition = Vector3.Lerp(keys[i].localPosition,initialLocalPos[i],pressSpeed * Time.deltaTime);
             }
         }
     }

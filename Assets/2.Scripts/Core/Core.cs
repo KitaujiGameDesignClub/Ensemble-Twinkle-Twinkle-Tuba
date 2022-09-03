@@ -9,8 +9,19 @@ public class Core : MonoBehaviour
 
     public GameObject[] staffs = new GameObject[3];
 
+    public GameObject chooseCharacter;
+  /// <summary>
+  /// 游戏本体
+  /// </summary>
+    public GameObject gameSelf;
+    
     private void Awake()
     {
+        //打开选择角色的面板
+        chooseCharacter.SetActive(true);
+        //禁用游戏本体
+        gameSelf.SetActive(false);
+        //
         for (int i = 0; i < 3; i++)
         {
             instruments[i].SetActive(false);
@@ -27,6 +38,10 @@ public class Core : MonoBehaviour
     private void DemonstrateInstrument(int id)
     {
         instruments[id].SetActive(true);
+        //启用游戏本体
+        gameSelf.SetActive(true);
+        //摧毁选择角色的面板
+        Destroy(chooseCharacter);
       //  staffs [characterId].SetActive(true);
     }
     
