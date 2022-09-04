@@ -9,14 +9,20 @@ public class Core : MonoBehaviour
 
     public GameObject[] staffs = new GameObject[3];
 
+    [Header("三个场景")]
     public GameObject chooseCharacter;
   /// <summary>
   /// 游戏本体
   /// </summary>
     public GameObject gameSelf;
-    
+/// <summary>
+/// 游戏结束后的小剧场
+/// </summary>
+  public GameObject dialogue;
     private void Awake()
     {
+        
+        
         //打开选择角色的面板
         chooseCharacter.SetActive(true);
         //禁用游戏本体
