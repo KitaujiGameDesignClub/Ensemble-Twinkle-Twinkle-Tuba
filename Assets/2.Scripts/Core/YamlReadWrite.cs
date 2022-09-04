@@ -101,7 +101,7 @@ public static class YamlReadWrite
     /// <returns></returns>
     public static Dialogue[] ReadDialogues()
     {
-        DirectoryInfo directoryInfo = new DirectoryInfo($"{UnityButNotAssets}/saves/Dialogue");
+        DirectoryInfo directoryInfo = new DirectoryInfo($"{UnityButNotAssets}/Dialogue");
 
        var manifests = directoryInfo.GetFiles("*.yaml");
 

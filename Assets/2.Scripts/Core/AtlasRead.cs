@@ -53,6 +53,9 @@ public class AtlasRead : MonoBehaviour
             spriteRenderer.sprite = spriteAtlas.GetSprite(nameOfSprite);
         }
     }
+    
+    
+    
 
 
 }
