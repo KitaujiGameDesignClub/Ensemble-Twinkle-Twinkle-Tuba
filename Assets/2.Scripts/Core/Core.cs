@@ -5,7 +5,10 @@ using UnityEngine;
 
 public class Core : MonoBehaviour
 {
-    public GameObject[] instruments = new GameObject[3];
+    /// <summary>
+    /// 选择的乐器编号
+    /// </summary>
+    public static int selectedInstrument;
 
     public GameObject[] staffs = new GameObject[3];
 
@@ -21,18 +24,15 @@ public class Core : MonoBehaviour
   public GameObject dialogue;
     private void Awake()
     {
-        
+        //不选择乐器
+        selectedInstrument = -1;
         
         //打开选择角色的面板
         chooseCharacter.SetActive(true);
         //禁用游戏本体
         gameSelf.SetActive(false);
-        //
-        for (int i = 0; i < 3; i++)
-        {
-            instruments[i].SetActive(false);
-//            staffs[i].SetActive(false);
-        }
+        
+       
     }
 
     public void StartGame(int id)
@@ -43,12 +43,12 @@ public class Core : MonoBehaviour
 
     private void DemonstrateInstrument(int id)
     {
-        instruments[id].SetActive(true);
+        selectedInstrument = id;
         //启用游戏本体
         gameSelf.SetActive(true);
         //摧毁选择角色的面板
         Destroy(chooseCharacter);
-      //  staffs [characterId].SetActive(true);
+      
     }
     
     // Start is called before the first frame update

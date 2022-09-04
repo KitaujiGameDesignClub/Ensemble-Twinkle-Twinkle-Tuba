@@ -33,6 +33,9 @@ public class Metronome : MonoBehaviour
    [Header("每次滴答一下后调用的事件")]
     public UnityEvent<int> AfterTick = new();
     
+/// <summary>
+/// 节拍器正在播放
+/// </summary>
     private bool isPlaying;
     
 
@@ -40,8 +43,9 @@ public class Metronome : MonoBehaviour
     public void StartPlay()
     {
         if(isPlaying) return;
-        isPlaying = true;
+       
         OnReady.Invoke();
+   
         InvokeRepeating(nameof(Play),startTimeOffset,60f / bpm);
     }
 
@@ -59,7 +63,8 @@ public class Metronome : MonoBehaviour
        //因为是从0开始的，所以一上来就要加一个
       if(meter == 4) meter = 0;
       meter++;
-      
+      isPlaying = true;
+      Debug.Log(AfterTick.ToString());
         AfterTick.Invoke(meter);
     }
 

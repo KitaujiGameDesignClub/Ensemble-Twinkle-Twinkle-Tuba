@@ -589,7 +589,7 @@ Sprite:
     c3ecdfdd5a5ccec49ac648dcc5d98b5a: 21300000
   m_AtlasTags:
   - ChooseGirls
-  m_SpriteAtlas: {fileID: 0}
+  m_SpriteAtlas: {fileID: 4343727234628468602, guid: 7db54a3c60296a143977759ff256ce71, type: 2}
   m_RD:
     serializedVersion: 3
     texture: {fileID: 2800000, guid: c3ecdfdd5a5ccec49ac648dcc5d98b5a, type: 3}
@@ -683,7 +683,7 @@ Sprite:
     downscaleMultiplier: 1
   m_AtlasRD:
     serializedVersion: 3
-    texture: {fileID: 0}
+    texture: {fileID: 2, guid: 00000000000000000000000000000000, type: 0}
     alphaTexture: {fileID: 0}
     secondaryTextures: []
     m_SubMeshes:
@@ -763,14 +763,14 @@ Sprite:
     m_Bindpose: []
     textureRect:
       serializedVersion: 2
-      x: 0
-      y: 0
+      x: 1548
+      y: 1084
       width: 256
       height: 128
     textureRectOffset: {x: 0, y: 0}
-    atlasRectOffset: {x: -1, y: -1}
-    settingsRaw: 0
-    uvTransform: {x: 100, y: 128, z: 100, w: 64}
+    atlasRectOffset: {x: 1548, y: 1084}
+    settingsRaw: 1
+    uvTransform: {x: 100, y: 1676, z: 100, w: 1148}
     downscaleMultiplier: 1
   m_PhysicsShape:
   - - {x: -0.53999996, y: -0.02}
@@ -996,6 +996,82 @@ Sprite:
     - {x: 0.85999995, y: 0.07}
   m_Bones: []
   m_SpriteID: 5e97eb03825dee720800000000000000
+--- !u!1 &201008370
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 201008371}
+  - component: {fileID: 201008373}
+  - component: {fileID: 201008372}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 2147483647
+  m_IsActive: 1
+--- !u!224 &201008371
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 201008370}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 657193054}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 59, y: 209.8}
+  m_SizeDelta: {x: 28.71, y: 196.94}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &201008372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 201008370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.28259167, g: 0.5264807, b: 0.9245283, a: 0.74509805}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &201008373
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 201008370}
+  m_CullTransparentMesh: 1
 --- !u!213 &219387356
 Sprite:
   m_ObjectHideFlags: 0
@@ -1021,7 +1097,7 @@ Sprite:
     d46911862e45c5649925bdd56e4a3a3c: 21300000
   m_AtlasTags:
   - ChooseGirls
-  m_SpriteAtlas: {fileID: 0}
+  m_SpriteAtlas: {fileID: 4343727234628468602, guid: 7db54a3c60296a143977759ff256ce71, type: 2}
   m_RD:
     serializedVersion: 3
     texture: {fileID: 2800000, guid: d46911862e45c5649925bdd56e4a3a3c, type: 3}
@@ -1115,7 +1191,7 @@ Sprite:
     downscaleMultiplier: 1
   m_AtlasRD:
     serializedVersion: 3
-    texture: {fileID: 0}
+    texture: {fileID: 2, guid: 00000000000000000000000000000000, type: 0}
     alphaTexture: {fileID: 0}
     secondaryTextures: []
     m_SubMeshes:
@@ -1195,14 +1271,14 @@ Sprite:
     m_Bindpose: []
     textureRect:
       serializedVersion: 2
-      x: 0
-      y: 0
+      x: 260
+      y: 1084
       width: 256
       height: 512
     textureRectOffset: {x: 0, y: 0}
-    atlasRectOffset: {x: -1, y: -1}
-    settingsRaw: 0
-    uvTransform: {x: 100, y: 128, z: 100, w: 256}
+    atlasRectOffset: {x: 260, y: 1084}
+    settingsRaw: 1
+    uvTransform: {x: 100, y: 388, z: 100, w: 1340}
     downscaleMultiplier: 1
   m_PhysicsShape:
   - - {x: 0.59, y: -1.77}
@@ -1485,7 +1561,7 @@ Sprite:
     cac530c2f0249b74482c48957cfee835: 21300000
   m_AtlasTags:
   - ChooseGirls
-  m_SpriteAtlas: {fileID: 0}
+  m_SpriteAtlas: {fileID: 4343727234628468602, guid: 7db54a3c60296a143977759ff256ce71, type: 2}
   m_RD:
     serializedVersion: 3
     texture: {fileID: 2800000, guid: cac530c2f0249b74482c48957cfee835, type: 3}
@@ -1579,7 +1655,7 @@ Sprite:
     downscaleMultiplier: 1
   m_AtlasRD:
     serializedVersion: 3
-    texture: {fileID: 0}
+    texture: {fileID: 2, guid: 00000000000000000000000000000000, type: 0}
     alphaTexture: {fileID: 0}
     secondaryTextures: []
     m_SubMeshes:
@@ -1660,13 +1736,13 @@ Sprite:
     textureRect:
       serializedVersion: 2
       x: 0
-      y: 0
+      y: 1084
       width: 256
       height: 512
     textureRectOffset: {x: 0, y: 0}
-    atlasRectOffset: {x: -1, y: -1}
-    settingsRaw: 0
-    uvTransform: {x: 100, y: 128, z: 100, w: 256}
+    atlasRectOffset: {x: 0, y: 1084}
+    settingsRaw: 1
+    uvTransform: {x: 100, y: 128, z: 100, w: 1340}
     downscaleMultiplier: 1
   m_PhysicsShape:
   - - {x: 0.39, y: -2}
@@ -2475,23 +2551,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57b93ad20de7c1849bc0bd69e21a6110, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  keyCodes: 6a0000006b0000006c00000020000000
+  keyCodes: 6a0000006b0000006c000000
   keys:
   - {fileID: 528630810}
   - {fileID: 528630809}
   - {fileID: 528630808}
-  - {fileID: 528630807}
   pressSpeed: 25
   pressedLocalPos:
   - {x: 0.04526611, y: 0.01740521, z: -0.112}
   - {x: 0.07259479, y: 0.01740521, z: -0.112}
   - {x: 0.1001739, y: 0.01740521, z: -0.112}
-  - {x: 0.1784, y: -0.0239, z: 0.0545}
---- !u!4 &528630807 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -1987214836380446103, guid: d3db445958efda94cbf28308733bd014, type: 3}
-  m_PrefabInstance: {fileID: 528630803}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &528630808 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -3900717468420871019, guid: d3db445958efda94cbf28308733bd014, type: 3}
@@ -2639,7 +2708,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 563983679}
-  - component: {fileID: 563983677}
   - component: {fileID: 563983678}
   m_Layer: 5
   m_Name: ' Game Core'
@@ -2648,27 +2716,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
---- !u!114 &563983677
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 563983672}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0510e343611d4994ba2cdb33ceae5e1b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bpm: 72
-  meter: 0
-  startTimeOffset: 0
-  OnReady:
-    m_PersistentCalls:
-      m_Calls: []
-  AfterTick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &563983678
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2681,10 +2728,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 405b5c97f7c45e147adf5cb9da7c29be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  instruments:
-  - {fileID: 1476036726}
-  - {fileID: 1036599992}
-  - {fileID: 528630805}
   staffs:
   - {fileID: 0}
   - {fileID: 0}
@@ -2725,7 +2768,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &637986219
 Transform:
   m_ObjectHideFlags: 0
@@ -2855,7 +2898,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 201008371}
   m_Father: {fileID: 1495219236}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2923,7 +2967,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_TargetDisplay: 0
 --- !u!1 &674962621
 GameObject:
@@ -3077,7 +3121,7 @@ GameObject:
   - component: {fileID: 849202205}
   - component: {fileID: 849202203}
   m_Layer: 0
-  m_Name: Camera FOR key
+  m_Name: Camera for instrument
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3174,6 +3218,90 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &855301246
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 855301247}
+  - component: {fileID: 855301248}
+  m_Layer: 0
+  m_Name: staff eupho
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &855301247
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 855301246}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 47.896324, y: 0, z: 0}
+  m_LocalScale: {x: 4.57307, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1146860996}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &855301248
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 855301246}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 3
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 1104044689, guid: 3e5eef0eb94a4d943a1dbf46196f63de, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 26.81, y: 1.12}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 1
+  m_SpriteSortPoint: 0
 --- !u!1 &959684026
 GameObject:
   m_ObjectHideFlags: 0
@@ -3885,7 +4013,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a063987d394c6434eae3aa2c21f08e18, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a063987d394c6434eae3aa2c21f08e18, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -3966,18 +4094,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57b93ad20de7c1849bc0bd69e21a6110, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  keyCodes: 680000006a0000006b0000006c000000
+  keyCodes: 6a0000006b0000006c000000
   keys:
   - {fileID: 1081710939}
   - {fileID: 1081710940}
   - {fileID: 1081710941}
-  - {fileID: 1081710942}
   pressSpeed: 30
   pressedLocalPos:
   - {x: -0.0367, y: 0.1134, z: 0.0147}
   - {x: -0.0448, y: 0.1135, z: 0.0394}
   - {x: -0.0521, y: 0.114, z: 0.0661}
-  - {x: -0.0468, y: 0.1136, z: 0.0915}
 --- !u!4 &1081710939 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2175821076857936335, guid: a063987d394c6434eae3aa2c21f08e18, type: 3}
@@ -3991,11 +4117,6 @@ Transform:
 --- !u!4 &1081710941 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -7711478028085257248, guid: a063987d394c6434eae3aa2c21f08e18, type: 3}
-  m_PrefabInstance: {fileID: 1081710936}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1081710942 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8840089218214370239, guid: a063987d394c6434eae3aa2c21f08e18, type: 3}
   m_PrefabInstance: {fileID: 1081710936}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1085067601
@@ -4102,7 +4223,7 @@ GameObject:
   - component: {fileID: 1100623308}
   - component: {fileID: 1100623309}
   m_Layer: 0
-  m_Name: staff
+  m_Name: staff bass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4115,13 +4236,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1100623307}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 27.6159, y: 2.31, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 47.896324, y: 0, z: 0}
+  m_LocalScale: {x: 4.57307, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1495219236}
-  m_RootOrder: 2
+  m_Father: {fileID: 1146860996}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1100623309
 SpriteRenderer:
@@ -4190,7 +4311,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1146860996
 Transform:
@@ -4200,12 +4321,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1146860995}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.38, y: 2.31, z: 0}
-  m_LocalScale: {x: 0.19194378, y: 2, z: 1}
+  m_LocalPosition: {x: 3.5476007, y: 2.49, z: 0}
+  m_LocalScale: {x: 0.33848944, y: 1.5479358, z: 0.7739679}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1100623308}
+  - {fileID: 1826865037}
+  - {fileID: 855301247}
   m_Father: {fileID: 1495219236}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!331 &1146860997
 SpriteMask:
@@ -4511,7 +4635,7 @@ Sprite:
     65a75220296eb31448c92659738e39a2: 21300000
   m_AtlasTags:
   - ChooseGirls
-  m_SpriteAtlas: {fileID: 0}
+  m_SpriteAtlas: {fileID: 4343727234628468602, guid: 7db54a3c60296a143977759ff256ce71, type: 2}
   m_RD:
     serializedVersion: 3
     texture: {fileID: 2800000, guid: 65a75220296eb31448c92659738e39a2, type: 3}
@@ -4605,7 +4729,7 @@ Sprite:
     downscaleMultiplier: 1
   m_AtlasRD:
     serializedVersion: 3
-    texture: {fileID: 0}
+    texture: {fileID: 2, guid: 00000000000000000000000000000000, type: 0}
     alphaTexture: {fileID: 0}
     secondaryTextures: []
     m_SubMeshes:
@@ -4690,8 +4814,8 @@ Sprite:
       width: 1920
       height: 1080
     textureRectOffset: {x: 0, y: 0}
-    atlasRectOffset: {x: -1, y: -1}
-    settingsRaw: 64
+    atlasRectOffset: {x: 0, y: 0}
+    settingsRaw: 65
     uvTransform: {x: 100, y: 960, z: 100, w: 540}
     downscaleMultiplier: 1
   m_PhysicsShape:
@@ -4726,7 +4850,7 @@ Sprite:
     fff7f2a89ec7e16499e4a0d7512c085d: 21300000
   m_AtlasTags:
   - ChooseGirls
-  m_SpriteAtlas: {fileID: 0}
+  m_SpriteAtlas: {fileID: 4343727234628468602, guid: 7db54a3c60296a143977759ff256ce71, type: 2}
   m_RD:
     serializedVersion: 3
     texture: {fileID: 2800000, guid: fff7f2a89ec7e16499e4a0d7512c085d, type: 3}
@@ -4820,7 +4944,7 @@ Sprite:
     downscaleMultiplier: 1
   m_AtlasRD:
     serializedVersion: 3
-    texture: {fileID: 0}
+    texture: {fileID: 2, guid: 00000000000000000000000000000000, type: 0}
     alphaTexture: {fileID: 0}
     secondaryTextures: []
     m_SubMeshes:
@@ -4900,14 +5024,14 @@ Sprite:
     m_Bindpose: []
     textureRect:
       serializedVersion: 2
-      x: 0
-      y: 0
+      x: 1300
+      y: 1476
       width: 256
       height: 128
     textureRectOffset: {x: 0, y: 0}
-    atlasRectOffset: {x: -1, y: -1}
-    settingsRaw: 0
-    uvTransform: {x: 100, y: 128, z: 100, w: 64}
+    atlasRectOffset: {x: 1300, y: 1476}
+    settingsRaw: 1
+    uvTransform: {x: 100, y: 1428, z: 100, w: 1540}
     downscaleMultiplier: 1
   m_PhysicsShape:
   - - {x: -0.56, y: 0.17999999}
@@ -5122,7 +5246,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1283847472
 Transform:
   m_ObjectHideFlags: 0
@@ -5153,6 +5277,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue: {fileID: 0}
   characterIcons: []
+  Extra: {fileID: 0}
+  LeftContent: {fileID: 0}
+  RightContent: {fileID: 0}
 --- !u!213 &1337447967
 Sprite:
   m_ObjectHideFlags: 0
@@ -5178,7 +5305,7 @@ Sprite:
     c109c0d5c1ed2d94aa9c67b708757cd2: 21300000
   m_AtlasTags:
   - ChooseGirls
-  m_SpriteAtlas: {fileID: 0}
+  m_SpriteAtlas: {fileID: 4343727234628468602, guid: 7db54a3c60296a143977759ff256ce71, type: 2}
   m_RD:
     serializedVersion: 3
     texture: {fileID: 2800000, guid: c109c0d5c1ed2d94aa9c67b708757cd2, type: 3}
@@ -5272,7 +5399,7 @@ Sprite:
     downscaleMultiplier: 1
   m_AtlasRD:
     serializedVersion: 3
-    texture: {fileID: 0}
+    texture: {fileID: 2, guid: 00000000000000000000000000000000, type: 0}
     alphaTexture: {fileID: 0}
     secondaryTextures: []
     m_SubMeshes:
@@ -5353,13 +5480,13 @@ Sprite:
     textureRect:
       serializedVersion: 2
       x: 0
-      y: 0
+      y: 1600
       width: 256
       height: 128
     textureRectOffset: {x: 0, y: 0}
-    atlasRectOffset: {x: -1, y: -1}
-    settingsRaw: 0
-    uvTransform: {x: 100, y: 128, z: 100, w: 64}
+    atlasRectOffset: {x: 0, y: 1600}
+    settingsRaw: 1
+    uvTransform: {x: 100, y: 128, z: 100, w: 1664}
     downscaleMultiplier: 1
   m_PhysicsShape:
   - - {x: -0.59999996, y: 0.16}
@@ -5579,7 +5706,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1362090365
 Transform:
   m_ObjectHideFlags: 0
@@ -5596,7 +5723,7 @@ Transform:
   - {fileID: 1081710937}
   - {fileID: 528630804}
   m_Father: {fileID: 1495219236}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1397567222
 GameObject:
@@ -5716,7 +5843,7 @@ Sprite:
     d4f9b5ff7eb067e439e93af1b8988d09: 21300000
   m_AtlasTags:
   - ChooseGirls
-  m_SpriteAtlas: {fileID: 0}
+  m_SpriteAtlas: {fileID: 4343727234628468602, guid: 7db54a3c60296a143977759ff256ce71, type: 2}
   m_RD:
     serializedVersion: 3
     texture: {fileID: 2800000, guid: d4f9b5ff7eb067e439e93af1b8988d09, type: 3}
@@ -5810,7 +5937,7 @@ Sprite:
     downscaleMultiplier: 1
   m_AtlasRD:
     serializedVersion: 3
-    texture: {fileID: 0}
+    texture: {fileID: 2, guid: 00000000000000000000000000000000, type: 0}
     alphaTexture: {fileID: 0}
     secondaryTextures: []
     m_SubMeshes:
@@ -5890,14 +6017,14 @@ Sprite:
     m_Bindpose: []
     textureRect:
       serializedVersion: 2
-      x: 0
-      y: 0
+      x: 1300
+      y: 1216
       width: 256
       height: 256
     textureRectOffset: {x: 0, y: 0}
-    atlasRectOffset: {x: -1, y: -1}
-    settingsRaw: 0
-    uvTransform: {x: 100, y: 128, z: 100, w: 128}
+    atlasRectOffset: {x: 1300, y: 1216}
+    settingsRaw: 1
+    uvTransform: {x: 100, y: 1428, z: 100, w: 1344}
     downscaleMultiplier: 1
   m_PhysicsShape:
   - - {x: 0.72999996, y: -1.04}
@@ -5971,7 +6098,7 @@ Sprite:
     15d80b9fc13924c4ab72acb9cfaa7355: 21300000
   m_AtlasTags:
   - ChooseGirls
-  m_SpriteAtlas: {fileID: 0}
+  m_SpriteAtlas: {fileID: 4343727234628468602, guid: 7db54a3c60296a143977759ff256ce71, type: 2}
   m_RD:
     serializedVersion: 3
     texture: {fileID: 2800000, guid: 15d80b9fc13924c4ab72acb9cfaa7355, type: 3}
@@ -6065,7 +6192,7 @@ Sprite:
     downscaleMultiplier: 1
   m_AtlasRD:
     serializedVersion: 3
-    texture: {fileID: 0}
+    texture: {fileID: 2, guid: 00000000000000000000000000000000, type: 0}
     alphaTexture: {fileID: 0}
     secondaryTextures: []
     m_SubMeshes:
@@ -6145,14 +6272,14 @@ Sprite:
     m_Bindpose: []
     textureRect:
       serializedVersion: 2
-      x: 0
-      y: 0
+      x: 780
+      y: 1216
       width: 256
       height: 512
     textureRectOffset: {x: 0, y: 0}
-    atlasRectOffset: {x: -1, y: -1}
-    settingsRaw: 0
-    uvTransform: {x: 100, y: 128, z: 100, w: 256}
+    atlasRectOffset: {x: 780, y: 1216}
+    settingsRaw: 1
+    uvTransform: {x: 100, y: 908, z: 100, w: 1472}
     downscaleMultiplier: 1
   m_PhysicsShape:
   - - {x: -0.12, y: -2.04}
@@ -6294,7 +6421,7 @@ Sprite:
     ec957752f2399b8468108edbdbc8e98e: 21300000
   m_AtlasTags:
   - ChooseGirls
-  m_SpriteAtlas: {fileID: 0}
+  m_SpriteAtlas: {fileID: 4343727234628468602, guid: 7db54a3c60296a143977759ff256ce71, type: 2}
   m_RD:
     serializedVersion: 3
     texture: {fileID: 2800000, guid: ec957752f2399b8468108edbdbc8e98e, type: 3}
@@ -6388,7 +6515,7 @@ Sprite:
     downscaleMultiplier: 1
   m_AtlasRD:
     serializedVersion: 3
-    texture: {fileID: 0}
+    texture: {fileID: 2, guid: 00000000000000000000000000000000, type: 0}
     alphaTexture: {fileID: 0}
     secondaryTextures: []
     m_SubMeshes:
@@ -6468,14 +6595,14 @@ Sprite:
     m_Bindpose: []
     textureRect:
       serializedVersion: 2
-      x: 0
-      y: 0
+      x: 1040
+      y: 1216
       width: 256
       height: 256
     textureRectOffset: {x: 0, y: 0}
-    atlasRectOffset: {x: -1, y: -1}
-    settingsRaw: 0
-    uvTransform: {x: 100, y: 128, z: 100, w: 128}
+    atlasRectOffset: {x: 1040, y: 1216}
+    settingsRaw: 1
+    uvTransform: {x: 100, y: 1168, z: 100, w: 1344}
     downscaleMultiplier: 1
   m_PhysicsShape:
   - - {x: 0.78999996, y: -1}
@@ -6547,7 +6674,7 @@ Sprite:
     ece31c0f26e284049b3beb3bb8770223: 21300000
   m_AtlasTags:
   - ChooseGirls
-  m_SpriteAtlas: {fileID: 0}
+  m_SpriteAtlas: {fileID: 4343727234628468602, guid: 7db54a3c60296a143977759ff256ce71, type: 2}
   m_RD:
     serializedVersion: 3
     texture: {fileID: 2800000, guid: ece31c0f26e284049b3beb3bb8770223, type: 3}
@@ -6641,7 +6768,7 @@ Sprite:
     downscaleMultiplier: 1
   m_AtlasRD:
     serializedVersion: 3
-    texture: {fileID: 0}
+    texture: {fileID: 2, guid: 00000000000000000000000000000000, type: 0}
     alphaTexture: {fileID: 0}
     secondaryTextures: []
     m_SubMeshes:
@@ -6721,14 +6848,14 @@ Sprite:
     m_Bindpose: []
     textureRect:
       serializedVersion: 2
-      x: 0
-      y: 0
+      x: 520
+      y: 1216
       width: 256
       height: 512
     textureRectOffset: {x: 0, y: 0}
-    atlasRectOffset: {x: -1, y: -1}
-    settingsRaw: 0
-    uvTransform: {x: 100, y: 128, z: 100, w: 256}
+    atlasRectOffset: {x: 520, y: 1216}
+    settingsRaw: 1
+    uvTransform: {x: 100, y: 648, z: 100, w: 1472}
     downscaleMultiplier: 1
   m_PhysicsShape:
   - - {x: -0.22, y: -2.2}
@@ -7057,7 +7184,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 0cc948e615880594894d82614017f90f, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 0cc948e615880594894d82614017f90f, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -7148,13 +7275,16 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1495219236}
+  - component: {fileID: 1495219237}
+  - component: {fileID: 1495219238}
+  - component: {fileID: 1495219239}
   m_Layer: 0
   m_Name: Game self
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1495219236
 Transform:
   m_ObjectHideFlags: 0
@@ -7168,12 +7298,169 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 657193054}
-  - {fileID: 1362090365}
-  - {fileID: 1100623308}
   - {fileID: 1146860996}
+  - {fileID: 1362090365}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1495219237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1495219235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33d050c55f097034c85447708b62cdfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  index: 000000000000000000000000
+  DistanceOffsetForEupho:
+  - 0.475
+  - 0
+  - 0
+  - 0
+  DistanceOffsetForTuba:
+  - 0.475
+  - 0
+  - 0
+  - 0
+  DistanceOffsetForBass:
+  - 0.475
+  - 0
+  - 0
+  - 0
+  pauseWhenStaffMoved: 0
+  metronome: {fileID: 1495219238}
+  allowSoundEffect: 1
+  soundeffect: {fileID: 8300000, guid: d76a7f12ff5670540ad911604461d5ca, type: 3}
+  instruments:
+  - {fileID: 1476036726}
+  - {fileID: 1036599992}
+  - {fileID: 528630805}
+  staffs:
+  - {fileID: 1100623308}
+  - {fileID: 1826865037}
+  - {fileID: 855301247}
+  helpLine: {fileID: 201008370}
+--- !u!114 &1495219238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1495219235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0510e343611d4994ba2cdb33ceae5e1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bpm: 72
+  meter: 0
+  startTimeOffset: 1
+  OnReady:
+    m_PersistentCalls:
+      m_Calls: []
+  AfterTick:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!82 &1495219239
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1495219235}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!213 &1557680543
 Sprite:
   m_ObjectHideFlags: 0
@@ -7199,7 +7486,7 @@ Sprite:
     82f2615bdd286ac4d8149d8887f384c2: 21300000
   m_AtlasTags:
   - ChooseGirls
-  m_SpriteAtlas: {fileID: 0}
+  m_SpriteAtlas: {fileID: 4343727234628468602, guid: 7db54a3c60296a143977759ff256ce71, type: 2}
   m_RD:
     serializedVersion: 3
     texture: {fileID: 2800000, guid: 82f2615bdd286ac4d8149d8887f384c2, type: 3}
@@ -7293,7 +7580,7 @@ Sprite:
     downscaleMultiplier: 1
   m_AtlasRD:
     serializedVersion: 3
-    texture: {fileID: 0}
+    texture: {fileID: 2, guid: 00000000000000000000000000000000, type: 0}
     alphaTexture: {fileID: 0}
     secondaryTextures: []
     m_SubMeshes:
@@ -7373,14 +7660,14 @@ Sprite:
     m_Bindpose: []
     textureRect:
       serializedVersion: 2
-      x: 0
-      y: 0
+      x: 520
+      y: 1084
       width: 1024
       height: 128
     textureRectOffset: {x: 0, y: 0}
-    atlasRectOffset: {x: -1, y: -1}
-    settingsRaw: 0
-    uvTransform: {x: 100, y: 512, z: 100, w: 64}
+    atlasRectOffset: {x: 520, y: 1084}
+    settingsRaw: 1
+    uvTransform: {x: 100, y: 1032, z: 100, w: 1148}
     downscaleMultiplier: 1
   m_PhysicsShape:
   - - {x: -3.1599998, y: -0.08}
@@ -7939,6 +8226,90 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1668124086}
   m_CullTransparentMesh: 1
+--- !u!1 &1826865036
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1826865037}
+  - component: {fileID: 1826865038}
+  m_Layer: 0
+  m_Name: staff tuba
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1826865037
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1826865036}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 47.896324, y: 0, z: 0}
+  m_LocalScale: {x: 4.57307, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1146860996}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &1826865038
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1826865036}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 3
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: -620155614, guid: 3e5eef0eb94a4d943a1dbf46196f63de, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 26.81, y: 1.12}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 1
+  m_SpriteSortPoint: 0
 --- !u!1 &1917451073
 GameObject:
   m_ObjectHideFlags: 0
