@@ -1,0 +1,3 @@
+设定成窗口化发布
+内容在预设“canvas for tools”内修改。
+设为Mono

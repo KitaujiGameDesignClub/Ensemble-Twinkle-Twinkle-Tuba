@@ -45,6 +45,14 @@ public static class YamlReadWrite
     /// <typeparam name="T"></typeparam>
     public static void Write<T>(T content, FileName fileName, string notes = null)
     {
+        if (fileName == FileName.Dialogue)
+        {
+            Debug.LogError("请使用工具进行保存小剧场的操作");
+            return;
+            
+        }
+        
+        
 //检查是否存在所需的游戏文件夹，不存在则创建
         CheckAndCreateDirectory();
         Serializer serializer = new Serializer();
@@ -52,8 +60,11 @@ public static class YamlReadWrite
         //把注释写入的内容
         string authenticContent = $"{notes}\n{serializer.Serialize(content)}";
 
-        StreamWriter streamWriter =
-            new StreamWriter($"{UnityButNotAssets}/saves/{fileName.ToString()}.yaml", false, Encoding.UTF8);
+       
+            StreamWriter  streamWriter =
+                new StreamWriter($"{UnityButNotAssets}/saves/{fileName.ToString()}.yaml", false, Encoding.UTF8);
+  
+       
         streamWriter.Write(authenticContent);
         streamWriter.Dispose();
         streamWriter.Close();
@@ -67,17 +78,54 @@ public static class YamlReadWrite
     /// <returns></returns>
     public static T Read<T>(FileName fileName)
     {
-        //检查是否存在所需的游戏文件夹，不存在则创建
-        CheckAndCreateDirectory();
-        Deserializer deserializer = new();
-        StreamReader streamReader =
-            new StreamReader($"{UnityButNotAssets}/saves/{fileName.ToString()}.yaml", Encoding.UTF8);
+      
+            //检查是否存在所需的游戏文件夹，不存在则创建
+            CheckAndCreateDirectory();
+            Deserializer deserializer = new();
+      
+      
+            StreamReader streamReader =
+                new StreamReader($"{UnityButNotAssets}/saves/{fileName.ToString()}.yaml", Encoding.UTF8);
+        
+  
+
+            var content = deserializer.Deserialize<T>(streamReader.ReadToEnd());
+            streamReader.Dispose();
+            streamReader.Close();
+            return content;
+    }
+
+    /// <summary>
+    /// 读取小剧场的清单文件
+    /// </summary>
+    /// <returns></returns>
+    public static Dialogue[] ReadDialogues()
+    {
+        DirectoryInfo directoryInfo = new DirectoryInfo($"{UnityButNotAssets}/saves/Dialogue");
+
+       var manifests = directoryInfo.GetFiles("*.yaml");
+
+       Dialogue[] dialogues = new Dialogue[manifests.Length];
+       Deserializer deserializer = new Deserializer();
+
+       for (int i = 0; i < dialogues.Length; i++)
+       {
+           FileStream fileStream = new FileStream(manifests[i].FullName, FileMode.Open, FileAccess.Read);
+           StreamReader streamReader = new StreamReader(fileStream);
+           //yaml读取
+           var content = deserializer.Deserialize<Dialogue>(streamReader.ReadToEnd());
+           streamReader.Dispose();
+           streamReader.Close();
+           dialogues[i] = content;
+           
+          
+       }
+
+       return dialogues;
 
 
-        var content = deserializer.Deserialize<T>(streamReader.ReadToEnd());
-        streamReader.Dispose();
-        streamReader.Close();
-        return content;
+
+
     }
 
 
@@ -94,7 +142,7 @@ public static class YamlReadWrite
 
 
     #region yaml用的各种结构体（类）
-
+      
     /// <summary>
     /// 储存大镲时间的结构体
     /// </summary>
@@ -119,16 +167,20 @@ public static class YamlReadWrite
         public bool hasPlayed;
     }
 
-
-    public struct Dialogue
-    {
-        public characterId characterLeft;
-        public characterId characterRight;
-        public string LeftContent;
-        public string RightContent;
-        public string extraContent;
-        public string BackgroundImage;
-    }
+/// <summary>
+/// 小剧场
+/// </summary>
+[Serializable]
+public struct Dialogue
+{
+    public string Writer;
+    public int characterLeft;
+    public int characterRight;
+    public string LeftContent;
+    public string RightContent;
+    public string extraContent;
+    public string BackgroundImageName;
+}
 
     public enum characterId
     {
