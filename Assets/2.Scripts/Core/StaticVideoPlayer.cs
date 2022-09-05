@@ -1,28 +1,76 @@
+using System;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.Video;
 
 /// <summary>
 /// 
 /// </summary>
-public class StaticVideoPlayer : MonoBehaviour
+public class StaticVideoPlayer : MonoBehaviour,IUpdate
 {
-    public static VideoPlayer videoPlayer;
+    public static StaticVideoPlayer staticVideoPlayer;
+    
+    
+    public long Frame => VideoPlayer.frame;
+    public  bool IsPlaying => VideoPlayer.isPlaying;
+
+    public  UnityEvent eachFrame;
+
+    /// <summary>
+    /// 记录视频上一帧是第几帧
+    /// </summary>
+    private long PreviousFrameInVideo;
+    
+    VideoPlayer VideoPlayer;
     
     private AudioSource audioSource;
 
 
     private void Awake()
     {
-       
-        videoPlayer = GetComponent<VideoPlayer>();
+
+        staticVideoPlayer = this;
+        VideoPlayer = GetComponent<VideoPlayer>();
+
+        if (VideoPlayer.playOnAwake)
+        {
+            Debug.LogError("不允许PlayOnAwake");
+            return;
+        }
+        
         audioSource = GetComponent<AudioSource>();
 
         
         audioSource.volume = Settings.SettingsContent.MusicVolume;
+
+        eachFrame = new();
+        
     }
 
 
-    
-  
+    public  void Play()
+    {
+        VideoPlayer.Play();
+        PreviousFrameInVideo = VideoPlayer.frame;
+        UpdateManager.RegisterUpdate(this);
+        
+    }
+
+    public void Pause()
+    {
+        UpdateManager.RegisterUpdate(this);
+        VideoPlayer.Pause();
+    }
+
+
     //音量控制，用事件组
+    public void FastUpdate()
+    {
+        //每多一帧，调用一次方法
+        if (VideoPlayer.frame - PreviousFrameInVideo == 1)
+        {
+            PreviousFrameInVideo++;
+            eachFrame.Invoke();
+        }
+    }
 }

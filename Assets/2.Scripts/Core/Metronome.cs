@@ -64,7 +64,7 @@ public class Metronome : MonoBehaviour
       if(meter == 4) meter = 0;
       meter++;
       isPlaying = true;
-      Debug.Log(AfterTick.ToString());
+  
         AfterTick.Invoke(meter);
     }
 

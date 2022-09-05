@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class BrassInstruments : MonoBehaviour,IUpdate
 {
+    //按照三键系统进行。多的那个键用于进行吸气吹气判定
+    
     public KeyCode[] keyCodes = new KeyCode[4];
     public Transform[] keys = new Transform[4];
    /// <summary>
@@ -39,7 +41,7 @@ public class BrassInstruments : MonoBehaviour,IUpdate
 
   
     /// <summary>
-    /// 状态更新
+    /// 按键和吹气吸气状态更新
     /// </summary>
     public void FastUpdate()
     {
