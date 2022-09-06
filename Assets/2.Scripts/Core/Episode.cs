@@ -3,23 +3,22 @@
 public class Episode 
 {
    /// <summary>
-   /// 吹哨
+   /// 掏出乐器和乐谱
    /// </summary>
-   public const int  whistle = 973;
+   public const int ShowStaffAndInstrument = 538;//22s+10frames
 
    /// <summary>
-   /// 踢腿。开始行进
+   /// 乐谱开始移动
    /// </summary>
-   public const int StartMarch = 1363;
+   public const int StartMoving = 560;//23s+8frames
 
    /// <summary>
-   /// 行进结束
+   /// 合奏结束
    /// </summary>
-   public const int MarchEnd = 4910;
+   public const int EnsembleEnd = 1553;//1min 4s 15frames
 
-   /// <summary>
-   /// 结算
-   /// </summary>
-   public const int Settlement = 5044;
-
+/// <summary>
+/// 视频结束
+/// </summary>
+   public const int VideoEnd = 2018;
 }

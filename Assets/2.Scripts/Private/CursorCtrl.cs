@@ -10,7 +10,7 @@ public class CursorCtrl : MonoBehaviour
     /// <summary>
     /// 帧数间隔
     /// </summary>
-    public int[] IntervalFrame;
+    private int[] IntervalFrame;
 
 
     /// <summary>
@@ -22,14 +22,14 @@ public class CursorCtrl : MonoBehaviour
     private float[] speeds;
 
     private Transform staff;
-    
+
     /// <summary>
     /// 设定移动速度（绝对值）
     /// </summary>
     public void SetSpeed(Transform cursor)
     {
         staff = transform;
-        
+
         speeds = new float[cursorLocation.Length];
 
         for (int i = 0; i < speeds.Length; i++)
@@ -45,7 +45,7 @@ public class CursorCtrl : MonoBehaviour
             }
         }
 
-        //清除不需要的数组，节省点内存
+        //清楚数组
         IntervalFrame = null;
     }
 
@@ -57,8 +57,6 @@ public class CursorCtrl : MonoBehaviour
     /// <returns>乐谱的位置</returns>
     public void StaffRefresh(Transform cursor)
     {
-      
-        
         //最后一个音符之后，乐谱不动了
         if (index < cursorLocation.Length)
         {
@@ -69,15 +67,36 @@ public class CursorCtrl : MonoBehaviour
 
 
     /// <summary>
+    /// 设定乐谱音符的时间间隔（从本地读取）
+    /// </summary>
+    public void SetInterval()
+    {
+        var yaml = YamlReadWrite.Read<YamlReadWrite.StaffTime>((YamlReadWrite.FileName)Core.selectedInstrument);
+
+        //转化为程序可以识别的帧数
+        IntervalFrame = new int[yaml.time.Length];
+        for (int i = 0; i < IntervalFrame.Length; i++)
+        {
+            if (i == 0)
+            {
+                IntervalFrame[i] = YamlReadWrite.ConvertFriendlyToReadable(24, yaml.time[i]) - Episode.StartMoving;
+            }
+            else
+            {
+                IntervalFrame[i] = YamlReadWrite.ConvertFriendlyToReadable(24, yaml.time[i]) -
+                                   YamlReadWrite.ConvertFriendlyToReadable(24, yaml.time[i - 1]);
+   
+            }
+        }
+    }
+
+    /// <summary>
     /// 检查光标是不是到位点了。到了Index+1
     /// </summary>
     private void checkCursorPosition(Transform cursor)
     {
         if (cursorLocation[index].position.x - cursor.position.x <= 0.001f)
         {
-            Debug.Log(cursorLocation[index].position.x +"   "+ staff.position.x);
-            
-            Debug.Log("sdsada");
             index++;
         }
     }

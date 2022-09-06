@@ -14,7 +14,7 @@ public class StaticVideoPlayer : MonoBehaviour,IUpdate
     public long Frame => VideoPlayer.frame;
     public  bool IsPlaying => VideoPlayer.isPlaying;
 
-    public  UnityEvent eachFrame;
+    public UnityEvent eachFrame;
 
     /// <summary>
     /// 记录视频上一帧是第几帧
@@ -62,13 +62,29 @@ public class StaticVideoPlayer : MonoBehaviour,IUpdate
         VideoPlayer.Pause();
     }
 
+    public void Jump(long frame)
+    {
+        VideoPlayer.frame = frame;
+    }
+
+    /// <summary>
+    /// 注册事件：每帧执行的要运行
+    /// </summary>
+    public void RegisterEachFrame()
+    {
+        PreviousFrameInVideo = VideoPlayer.frame - 1;
+    }
+
 
     //音量控制，用事件组
     public void FastUpdate()
     {
+       
+        
         //每多一帧，调用一次方法
         if (VideoPlayer.frame - PreviousFrameInVideo == 1)
         {
+           
             PreviousFrameInVideo++;
             eachFrame.Invoke();
         }

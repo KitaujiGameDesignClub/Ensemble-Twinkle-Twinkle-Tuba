@@ -3,36 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MusicalStaffCtrl : MonoBehaviour
+public class MusicalStaffCtrl : MonoBehaviour,IUpdate
 {
-    /// <summary>
-    /// staff开始移动的滞后时间
-    /// </summary>
-    public float startTimeOffset;
+   
     
-    [Header("此物体一旦被激活，乐谱就开始移动了")]
-    [Space(20)]
-    [Header("目前到第几个节拍了。1-4")]
-    [Header("0：低音提琴")]
-    [Header("1：大号")]
-    [Header("2：上低音号")]
-    public int[] index;
 
-    [Header("节拍间隔距离偏移")] 
-    public float[] DistanceOffsetForEupho = new float[4];
-    public float[] DistanceOffsetForTuba = new float[4];
-    public float[] DistanceOffsetForBass = new float[4];
 
-    [Header("允许乐谱每动一次，游戏就暂停吗？")]
-    public bool pauseWhenStaffMoved;
-
- //   [Header("节拍器。在这里调整BPM")]
-    //public Metronome metronome;
-    
-[Header("允许节拍器播放音效吗")]
-    public bool allowSoundEffect = false;
-[Header("节拍器音效")]
-    public AudioClip soundeffect;
 
         [Header("三个乐器")]
     public GameObject[] instruments = new GameObject[3];
@@ -42,12 +18,9 @@ public class MusicalStaffCtrl : MonoBehaviour
     [Header("辅助线 光标")] 
     public Transform Cursor;
     
-    private AudioSource audioSource;
 
-    private void Awake()
-    {
-        audioSource = GetComponent<AudioSource>();
-    }
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -62,7 +35,9 @@ public class MusicalStaffCtrl : MonoBehaviour
         Cursor.gameObject.SetActive(false);
         //播放视频
         StaticVideoPlayer.staticVideoPlayer.Play();
-        Invoke(nameof( showStaffAndInstrument),20f);
+      
+        //注册update
+        UpdateManager.RegisterUpdate(this);
 
         //   metronome.OnReady.AddListener(showStaffAndInstrument);
         //  metronome.AfterTick.AddListener(moveStaff); 
@@ -82,55 +57,76 @@ public class MusicalStaffCtrl : MonoBehaviour
         instruments[Core.selectedInstrument].SetActive(true);
         //显示乐谱
         staffs[Core.selectedInstrument].gameObject.SetActive(true);
-        //计算乐谱移动速度
-        staffs[Core.selectedInstrument].SetSpeed(Cursor);
-        //显示判定线
+      //显示判定线
        Cursor.gameObject.SetActive(true); 
       
     
     //一段时间之后注册事件，让乐谱移动
-   Invoke(nameof(register),startTimeOffset);
+ //  Invoke(nameof(register),startTimeOffset);
     }
 
+    /// <summary>
+    /// 注册，让乐谱移动
+    /// </summary>
     void register()
     {
+        StaticVideoPlayer.staticVideoPlayer.RegisterEachFrame();
         StaticVideoPlayer.staticVideoPlayer.eachFrame.AddListener(delegate { staffs[Core.selectedInstrument].StaffRefresh(Cursor); });
     }
     
     
-  
-    
-    
-    /// <summary>
-    /// 移动乐谱
-    /// </summary>
-    [Obsolete("旧的，按节奏动的")]
-    void moveStaff(int meter)
-    {
-        //记录节拍数
-        index[Core.selectedInstrument] = meter;
-        //播放音效
-      if(allowSoundEffect)   audioSource.PlayOneShot(soundeffect);
-        //移动乐谱
 
-        switch (Core.selectedInstrument)
+    public void FastUpdate()
+    {
+        //跳过前面的片段
+        if (Core.episode == 0 && Input.GetKeyDown(KeyCode.X))
         {
-            case 0:
-          //      staffs[Core.selectedInstrument].Translate(Vector3.left * (0.4f + DistanceOffsetForBass[index[Core.selectedInstrument] - 1]) );//原来的速度是0.32
+            StaticVideoPlayer.staticVideoPlayer.Jump(Episode.ShowStaffAndInstrument -1);
+        }
+        
+        
+     
+        
+        switch (StaticVideoPlayer.staticVideoPlayer.Frame)
+        {
+            //显示乐器和乐谱，读取本地时间文件
+            case >= Episode.ShowStaffAndInstrument when Core.episode == 0:
+               
+                Core.episode++;
+                staffs[Core.selectedInstrument]. SetInterval();
+                //计算乐谱移动速度
+                staffs[Core.selectedInstrument].SetSpeed(Cursor);
+                showStaffAndInstrument();
                 break;
             
-            case 1:
-        //        staffs[Core.selectedInstrument].Translate(Vector3.left * (0.4f + DistanceOffsetForTuba[index[Core.selectedInstrument] - 1]) );
+            //乐谱开始移动
+            case >= Episode.StartMoving when Core.episode == 1:
+                Core.episode++;
+                //注册，让乐谱移动
+                register();
+            break;
+            
+            //合奏结束
+            case  >= Episode.EnsembleEnd when Core.episode == 2:
+                Core.episode++;
+                StaticVideoPlayer.staticVideoPlayer.eachFrame.RemoveAllListeners();
+               UpdateManager.Remove(this);
+                //先禁用乐器和乐谱
+                for (int i = 0; i < 3; i++)
+                {
+                    instruments[i].SetActive(false);
+                    staffs[i].gameObject.SetActive(false);
+                }
+                //禁用判定线
+                Cursor.gameObject.SetActive(false);
                 break;
-            case 2:
-         //       staffs[Core.selectedInstrument].Translate(Vector3.left * (0.4f + DistanceOffsetForEupho[index[Core.selectedInstrument] - 1]) );
+            
+            //视频结束，进入小剧场
+            case >= Episode.VideoEnd when Core.episode == 3:
+                Core.episode++;
+                Core.core.ShowDialogue();
                 break;
+            
         }
-
-      
-       
-       
-
-
     }
 }

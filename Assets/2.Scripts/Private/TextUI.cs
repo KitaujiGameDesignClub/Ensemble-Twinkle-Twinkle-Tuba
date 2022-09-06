@@ -21,13 +21,7 @@ public class TextUI : MonoBehaviour
 
     // public TMP_Text Accuracy;
 
-    /// <summary>
-    /// 得分
-    /// </summary>
-    public TMP_Text score;
-
-    
-   
+  
     /// <summary>
     /// 正确按下按键的个数
     /// </summary>
@@ -60,7 +54,7 @@ public class TextUI : MonoBehaviour
         textUI = this;
         total = 0;
         right = 0;
-        score.text = "";
+     
     }
 
     // Start is called before the first frame update
@@ -104,7 +98,7 @@ public class TextUI : MonoBehaviour
         float scoreCache = (float)right / total;
    
 
-        score.text = $"人群呼声：{((int)(scoreCache * 100)).ToString()} / 100";
+
 
     }
     

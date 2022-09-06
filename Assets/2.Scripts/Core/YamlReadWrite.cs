@@ -9,10 +9,13 @@ public static class YamlReadWrite
 {
     public enum FileName
     {
-        Settings,
-        PsitonsAction,
+       
+        DoubleBass,
+        Tuba,
+        Eupho,
         Cymbal,
         Dialogue,
+        Settings,
     }
 
 
@@ -141,13 +144,23 @@ public static class YamlReadWrite
     }
 
 
+    /// <summary>
+    /// 【PR标记点专用】将有好的时间线转化为电脑可以用的（视频帧数） 
+    /// </summary>
+    public static int ConvertFriendlyToReadable(int videoFps, string friendlyConent)
+    {
+        //00:00:00:00
+        string[] fix = friendlyConent.Split(':');
+        return int.Parse(fix[3]) + int.Parse(fix[2]) * videoFps + int.Parse(fix[1]) * 60 * videoFps;
+    }
+
     #region yaml用的各种结构体（类）
       
     /// <summary>
-    /// 储存大镲时间的结构体
+    /// 乐器指法时间点位
     /// </summary>
     [Serializable]
-    public struct CymbalAction
+    public struct StaffTime
     {
         public string[] time;
     }

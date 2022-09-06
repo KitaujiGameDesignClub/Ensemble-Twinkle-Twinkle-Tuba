@@ -5,12 +5,17 @@ using UnityEngine;
 
 public class Core : MonoBehaviour
 {
+    public static Core core;
+    
     /// <summary>
     /// 选择的乐器编号
     /// </summary>
     public static int selectedInstrument;
 
-    public GameObject[] staffs = new GameObject[3];
+    /// <summary>
+    /// 到哪一章节了
+    /// </summary>
+    public static int episode = 0;
 
     [Header("三个场景")]
     public GameObject chooseCharacter;
@@ -24,6 +29,8 @@ public class Core : MonoBehaviour
   public GameObject dialogue;
     private void Awake()
     {
+        core = this;
+        
         //不选择乐器
         selectedInstrument = -1;
         
@@ -31,8 +38,9 @@ public class Core : MonoBehaviour
         chooseCharacter.SetActive(true);
         //禁用游戏本体
         gameSelf.SetActive(false);
-        
-       
+
+        episode = 0;
+
     }
 
     public void StartGame(int id)
@@ -50,16 +58,16 @@ public class Core : MonoBehaviour
         Destroy(chooseCharacter);
       
     }
+
+    /// <summary>
+    /// 显示小剧场
+    /// </summary>
+    public void ShowDialogue()
+    {
+        gameSelf.SetActive(false);
+        dialogue.SetActive(true);
+    }
     
     // Start is called before the first frame update
-     void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
