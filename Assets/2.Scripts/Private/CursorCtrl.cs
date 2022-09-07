@@ -7,6 +7,9 @@ using UnityEngine;
 /// </summary>
 public class CursorCtrl : MonoBehaviour
 {
+
+
+    
     /// <summary>
     /// 帧数间隔
     /// </summary>
@@ -91,6 +94,21 @@ public class CursorCtrl : MonoBehaviour
     }
 
     /// <summary>
+    /// 检查指法是否对应
+    /// </summary>
+    /// <param name="fingerings"></param>
+    /// <returns></returns>
+   void CheckFingering(Core.Fingering fingering)
+    {
+        
+    }
+    
+    public void CheckFingeringForBass(int fingering)
+    {
+        
+    }
+    
+    /// <summary>
     /// 检查光标是不是到位点了。到了Index+1
     /// </summary>
     private void checkCursorPosition(Transform cursor)
@@ -100,6 +118,8 @@ public class CursorCtrl : MonoBehaviour
             index++;
         }
     }
+    
+    
 
 
 #if UNITY_EDITOR

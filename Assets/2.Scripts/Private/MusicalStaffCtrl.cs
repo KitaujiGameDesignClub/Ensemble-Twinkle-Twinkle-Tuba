@@ -15,6 +15,10 @@ public class MusicalStaffCtrl : MonoBehaviour,IUpdate
     [Header("三个乐谱")]
     public CursorCtrl[] staffs = new CursorCtrl[3];
 
+    [Header("指法显示（模型）")] public GameObject fingeringShowcase;
+
+    [Header("提琴指法")] public GameObject bassFingerings;
+    
     [Header("辅助线 光标")] 
     public Transform Cursor;
     
@@ -33,6 +37,10 @@ public class MusicalStaffCtrl : MonoBehaviour,IUpdate
         }
         //禁用判定线
         Cursor.gameObject.SetActive(false);
+        //禁用与指法有关的
+        fingeringShowcase.SetActive(false);
+        bassFingerings.SetActive(false);
+        
         //播放视频
         StaticVideoPlayer.staticVideoPlayer.Play();
       
@@ -59,7 +67,16 @@ public class MusicalStaffCtrl : MonoBehaviour,IUpdate
         staffs[Core.selectedInstrument].gameObject.SetActive(true);
       //显示判定线
        Cursor.gameObject.SetActive(true); 
-      
+      //显示与指法有关的
+      fingeringShowcase.SetActive(true);
+      if(Core.selectedInstrument == 0)
+      {
+          bassFingerings.SetActive(true);
+      }
+      else
+      {
+          Destroy(bassFingerings);
+      }
     
     //一段时间之后注册事件，让乐谱移动
  //  Invoke(nameof(register),startTimeOffset);
