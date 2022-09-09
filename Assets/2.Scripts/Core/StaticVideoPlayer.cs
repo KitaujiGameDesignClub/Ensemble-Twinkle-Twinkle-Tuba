@@ -43,8 +43,7 @@ public class StaticVideoPlayer : MonoBehaviour,IUpdate
         
         audioSource.volume = Settings.SettingsContent.MusicVolume;
 
-        eachFrame = new();
-        
+      
     }
 
 
@@ -62,9 +61,14 @@ public class StaticVideoPlayer : MonoBehaviour,IUpdate
         VideoPlayer.Pause();
     }
 
+    /// <summary>
+    /// 跳跃之后，每帧执行的事件失效
+    /// </summary>
+    /// <param name="frame"></param>
     public void Jump(long frame)
     {
         VideoPlayer.frame = frame;
+      
     }
 
     /// <summary>

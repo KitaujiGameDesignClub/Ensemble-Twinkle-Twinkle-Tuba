@@ -34,11 +34,15 @@ SpriteAtlas:
     variantMultiplier: 1
     packables:
     - {fileID: 2800000, guid: 3088d9c58065718489d59f1ebcc60763, type: 3}
+    - {fileID: 21300000, guid: af3dff784c334154d93104a22211183b, type: 3}
+    - {fileID: 21300000, guid: d7731404a5bb30e4498cd84c521ea098, type: 3}
+    - {fileID: 21300000, guid: 3d11d7ffbc75cf442a5b4966a5040a30, type: 3}
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
+  - {fileID: 21300000, guid: d7731404a5bb30e4498cd84c521ea098, type: 3}
   - {fileID: -127341132, guid: 3088d9c58065718489d59f1ebcc60763, type: 3}
   - {fileID: 1283565006, guid: 3088d9c58065718489d59f1ebcc60763, type: 3}
   - {fileID: -421002176, guid: 3088d9c58065718489d59f1ebcc60763, type: 3}
@@ -52,7 +56,10 @@ SpriteAtlas:
   - {fileID: -1421568890, guid: 3088d9c58065718489d59f1ebcc60763, type: 3}
   - {fileID: -1050714743, guid: 3088d9c58065718489d59f1ebcc60763, type: 3}
   - {fileID: -2098870709, guid: 3088d9c58065718489d59f1ebcc60763, type: 3}
+  - {fileID: 21300000, guid: af3dff784c334154d93104a22211183b, type: 3}
+  - {fileID: 21300000, guid: 3d11d7ffbc75cf442a5b4966a5040a30, type: 3}
   m_PackedSpriteNamesToIndex:
+  - Tuba
   - DoubleBass_be
   - DoubleBass_A1
   - DoubleBass_bB1
@@ -66,6 +73,8 @@ SpriteAtlas:
   - DoubleBass_c
   - DoubleBass_bB
   - DoubleBass_bE
+  - circle
+  - air
   m_RenderDataMap: {}
   m_Tag: Game
   m_IsVariant: 0

@@ -15,9 +15,13 @@ public class MusicalStaffCtrl : MonoBehaviour,IUpdate
     [Header("三个乐谱")]
     public CursorCtrl[] staffs = new CursorCtrl[3];
 
-    [Header("指法显示（模型）")] public GameObject fingeringShowcase;
+    [Header("三个指法显示")] 
+    public GameObject[] fingeringShow = new GameObject[3];
+    
+    
+   
 
-    [Header("提琴指法")] public GameObject bassFingerings;
+   
     
     [Header("辅助线 光标")] 
     public Transform Cursor;
@@ -34,12 +38,11 @@ public class MusicalStaffCtrl : MonoBehaviour,IUpdate
         {
             instruments[i].SetActive(false);
             staffs[i].gameObject.SetActive(false);
+            fingeringShow[i].gameObject.SetActive(false);
         }
         //禁用判定线
         Cursor.gameObject.SetActive(false);
-        //禁用与指法有关的
-        fingeringShowcase.SetActive(false);
-        bassFingerings.SetActive(false);
+     
         
         //播放视频
         StaticVideoPlayer.staticVideoPlayer.Play();
@@ -69,28 +72,21 @@ public class MusicalStaffCtrl : MonoBehaviour,IUpdate
                 instruments[Core.selectedInstrument].SetActive(true);
                 //显示乐谱
                 staffs[Core.selectedInstrument].gameObject.SetActive(true);
+                fingeringShow[Core.selectedInstrument].SetActive(true);
             }
             else
             {
                 //卸载不需要的乐器和乐谱
              Destroy(instruments[i]);   
              Destroy(staffs[i].gameObject);
+             Destroy(fingeringShow[i]);
             }
         }
         
      
       //显示判定线
        Cursor.gameObject.SetActive(true); 
-      //显示与指法有关的
-      fingeringShowcase.SetActive(true);
-      if(Core.selectedInstrument == 0)
-      {
-          bassFingerings.SetActive(true);
-      }
-      else
-      {
-          Destroy(bassFingerings);
-      }
+    
     
     //一段时间之后注册事件，让乐谱移动
  //  Invoke(nameof(register),startTimeOffset);
@@ -150,14 +146,13 @@ public class MusicalStaffCtrl : MonoBehaviour,IUpdate
                 Core.episode++;
                 StaticVideoPlayer.staticVideoPlayer.eachFrame.RemoveAllListeners();
                UpdateManager.Remove(this);
-                //先禁用乐器和乐谱
-                for (int i = 0; i < 3; i++)
-                {
-                    instruments[i].SetActive(false);
-                    staffs[i].gameObject.SetActive(false);
-                }
-                //禁用判定线
-                Cursor.gameObject.SetActive(false);
+                //删掉乐器和乐谱
+               Destroy(instruments[Core.selectedInstrument]); 
+                Destroy( staffs[Core.selectedInstrument].gameObject);
+             Destroy(fingeringShow[Core.selectedInstrument]);
+                
+                //删掉判定线
+                Destroy(Cursor.gameObject); 
                 break;
             
             //视频结束，进入小剧场

@@ -12,7 +12,17 @@ public class CursorCtrl : MonoBehaviour
 
 
     
-  
+    /// <summary>
+    /// 低音提琴用的提示圈
+    /// </summary>
+    [Header("低音提琴用的提示圈")]
+    public Transform circle;
+
+    /// <summary>
+    /// 低音提琴用的那些“按钮”
+    /// </summary>
+    [Header(" 低音提琴用的那些“按钮”")]
+    public Transform[] bassButtons;
 
 
     /// <summary>
@@ -45,6 +55,10 @@ public class CursorCtrl : MonoBehaviour
     private bool pressed;
     private Transform staff;
 
+    /// <summary>
+    /// 读取的本乐器的时间点（程序可识别）
+    /// </summary>
+    private int[] time;
 
 
 
@@ -53,6 +67,8 @@ public class CursorCtrl : MonoBehaviour
     /// </summary>
     public void SetSpeed(Transform cursor)
     {
+     
+        
         staff = transform;
 
         speeds = new float[cursorLocation.Length];
@@ -70,7 +86,8 @@ public class CursorCtrl : MonoBehaviour
             }
         }
 
-    
+        //删掉数组
+        IntervalFrame = null;
     }
 
 
@@ -84,18 +101,30 @@ public class CursorCtrl : MonoBehaviour
         //最后一个音符之后，乐谱不动了
         if (index < cursorLocation.Length)
         {
+            //最后一个音符之前，按照之前算好的速度进行移动
             staff.Translate(speeds[index] * Vector2.left);
-            checkCursorPosition(cursor);
+
+
+            
+            //光标前10frames显示（按帧数判断）
+            if (Core.selectedInstrument == 0 && StaticVideoPlayer.staticVideoPlayer.Frame >= time[index] - 10)
+            {
+                //显示要按的位置
+                circle.position = bassButtons[(int)fingeringNeedToPressed[index]].position;
+            }
+            
+          
+            //检查光标是不是在音符那边，
+            if (time[index] <= StaticVideoPlayer.staticVideoPlayer.Frame)
+            {
+                //消除提示，不过玩家此时还是可以按下去
+              if(Core.selectedInstrument == 0)  circle.position = 100 * Vector3Int.right;
+               //到了就切换到下一个音符
+               if(index < time.Length - 1)  index++;
+               
+            }
         }
         
-        //进行要输入的按键的判定（这里仅针对那些要求玩家啥也不输入的）
-       if (fingeringNeedToPressed[index] == Core.Fingering.Null)
-        {
-            checkFingeringsNeedToPressed(Core.Fingering.Null);
-        }
-       
-       //低音提琴用 ：提示圈圈出来要按的键
-      
     }
 
 
@@ -108,32 +137,25 @@ public class CursorCtrl : MonoBehaviour
 
         //转化为程序可以识别的帧数
         IntervalFrame = new int[yaml.time.Length];
+        time = new int[yaml.time.Length];
         for (int i = 0; i < IntervalFrame.Length; i++)
         {
+            time[i] = YamlReadWrite.ConvertFriendlyToReadable(24, yaml.time[i], yaml.lag);
+
             if (i == 0)
             {
-                IntervalFrame[i] = YamlReadWrite.ConvertFriendlyToReadable(24, yaml.time[i],yaml.lag) - Episode.StartMoving;
+                IntervalFrame[i] = time[i] - Episode.StartMoving;
             }
             else
             {
-                IntervalFrame[i] = YamlReadWrite.ConvertFriendlyToReadable(24, yaml.time[i],yaml.lag) -
-                                   YamlReadWrite.ConvertFriendlyToReadable(24, yaml.time[i - 1],yaml.lag);
-   
+                IntervalFrame[i] = time[i] - time[i - 1];
             }
         }
+
+      
     }
   
-    /// <summary>
-    /// 检查光标是不是到位点了。到了Index+1
-    /// </summary>
-    private void checkCursorPosition(Transform cursor)
-    {
-        if (cursorLocation[index].position.x - cursor.position.x <= 0.001f)
-        {
-            index++;
-        }
-    }
-    
+
     /// <summary>
     /// 检查指法是否对应（三个乐器都能用，不想改名字了）
     /// </summary>
@@ -141,11 +163,7 @@ public class CursorCtrl : MonoBehaviour
     /// <returns></returns>
     public void CheckFingeringForBass(int fingering)
     {
-        //这里，只要玩家一旦按下去（在到达不需要按键的音符之前），就会让pressed为true
-        pressed = fingeringNeedToPressed[index] == Core.Fingering.Null;
-       
-        
-        checkFingeringsNeedToPressed((Core.Fingering)fingering);
+      checkFingeringsNeedToPressed((Core.Fingering)fingering);
     }
 
     /// <summary>
@@ -162,15 +180,7 @@ public class CursorCtrl : MonoBehaviour
   
     }
     
-    /// <summary>
-    /// 专门用来接受玩家输入和检查指法。还有bass在对应的按钮那边显示提示圈
-    /// </summary>
-    public void FastUpdate()
-    {
-       
-    }
-    
-    /// <summary>
+
 
 
     /// <summary>
@@ -178,22 +188,14 @@ public class CursorCtrl : MonoBehaviour
     /// </summary>
     private void checkFingeringsNeedToPressed(Core.Fingering fingering)
     {
-        //既然是要求玩家啥也不输入的，就只要让玩家保持 在到达这个不需要输入的音符之前，啥都不输入就行
-        if (fingering == Core.Fingering.Null)
-        {
-            if (!pressed)
-            {
-                onRight.Invoke();
-            }
-        }
-        
+     
         
         //确定应该是第几个音符
         switch (index)
         {
             //0这一情况，单独拿出来
             case 0:
-                if (StaticVideoPlayer.staticVideoPlayer.Frame - IntervalFrame[0] <= 5)
+                if (StaticVideoPlayer.staticVideoPlayer.Frame - time[0] <= 5)
                 {
                     //这第0个音符，刚好落在提前5帧的范围内
                     //检查玩家输入的指法是否符合要要求
@@ -207,7 +209,7 @@ public class CursorCtrl : MonoBehaviour
                 break;
                 
             default:
-                if (Mathf.Abs(StaticVideoPlayer.staticVideoPlayer.Frame - IntervalFrame[index]) <= 5)
+                if (Mathf.Abs(StaticVideoPlayer.staticVideoPlayer.Frame - time[index]) <= 5)
                 {
                     //第index个音符
                     //检查玩家输入的指法是否符合要要求
@@ -216,7 +218,7 @@ public class CursorCtrl : MonoBehaviour
                         onRight.Invoke();
                     }
                 }
-                else if (Mathf.Abs(StaticVideoPlayer.staticVideoPlayer.Frame - IntervalFrame[index - 1]) <= 5)
+                else if (Mathf.Abs(StaticVideoPlayer.staticVideoPlayer.Frame - time[index - 1]) <= 5)
                 {
                     //第index - 1个音符
                     //检查玩家输入的指法是否符合要要求
