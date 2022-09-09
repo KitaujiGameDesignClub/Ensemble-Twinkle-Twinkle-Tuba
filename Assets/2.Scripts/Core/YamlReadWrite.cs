@@ -147,11 +147,11 @@ public static class YamlReadWrite
     /// <summary>
     /// 【PR标记点专用】将有好的时间线转化为电脑可以用的（视频帧数） 
     /// </summary>
-    public static int ConvertFriendlyToReadable(int videoFps, string friendlyConent)
+    public static int ConvertFriendlyToReadable(int videoFps, string friendlyConent,int lag)
     {
         //00:00:00:00
         string[] fix = friendlyConent.Split(':');
-        return int.Parse(fix[3]) + int.Parse(fix[2]) * videoFps + int.Parse(fix[1]) * 60 * videoFps;
+        return int.Parse(fix[3]) + int.Parse(fix[2]) * videoFps + int.Parse(fix[1]) * 60 * videoFps + lag;
     }
 
     #region yaml用的各种结构体（类）
@@ -162,6 +162,7 @@ public static class YamlReadWrite
     [Serializable]
     public struct StaffTime
     {
+        public int lag;
         public string[] time;
     }
 

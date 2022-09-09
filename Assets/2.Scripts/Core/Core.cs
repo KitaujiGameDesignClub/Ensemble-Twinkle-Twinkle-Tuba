@@ -17,6 +17,34 @@ public class Core : MonoBehaviour
     /// </summary>
     public static int episode = 0;
 
+/// <summary>
+/// 乐器指法
+/// </summary>
+    public enum Fingering
+    {
+        LeftC,
+        LeftG,
+        LeftD,
+        A1,
+        bE,
+        bB1,
+        d,
+        A,
+        be,
+        bB,
+        F,
+        C,
+        f,
+        RightC,
+        RIghtG,
+        RightD,
+        Key1,
+        Key12,
+        Key13,
+        Space,
+        Null
+    }
+    
     [Header("三个场景")]
     public GameObject chooseCharacter;
   /// <summary>
@@ -27,6 +55,8 @@ public class Core : MonoBehaviour
 /// 游戏结束后的小剧场
 /// </summary>
   public GameObject dialogue;
+
+
     private void Awake()
     {
         core = this;
@@ -45,10 +75,14 @@ public class Core : MonoBehaviour
 
     public void StartGame(int id)
     {
-        //显示乐器，应该延迟到视频到开始合奏之前的一小段时间
+        //开始游戏
         DemonstrateInstrument(id);
     }
 
+    /// <summary>
+    /// 现在是开始游戏了
+    /// </summary>
+    /// <param name="id"></param>
     private void DemonstrateInstrument(int id)
     {
         selectedInstrument = id;

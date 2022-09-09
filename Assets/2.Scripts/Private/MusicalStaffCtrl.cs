@@ -15,6 +15,10 @@ public class MusicalStaffCtrl : MonoBehaviour,IUpdate
     [Header("三个乐谱")]
     public CursorCtrl[] staffs = new CursorCtrl[3];
 
+    [Header("指法显示（模型）")] public GameObject fingeringShowcase;
+
+    [Header("提琴指法")] public GameObject bassFingerings;
+    
     [Header("辅助线 光标")] 
     public Transform Cursor;
     
@@ -33,6 +37,10 @@ public class MusicalStaffCtrl : MonoBehaviour,IUpdate
         }
         //禁用判定线
         Cursor.gameObject.SetActive(false);
+        //禁用与指法有关的
+        fingeringShowcase.SetActive(false);
+        bassFingerings.SetActive(false);
+        
         //播放视频
         StaticVideoPlayer.staticVideoPlayer.Play();
       
@@ -52,14 +60,37 @@ public class MusicalStaffCtrl : MonoBehaviour,IUpdate
     /// </summary>
     void showStaffAndInstrument()
     {
-       
-       //显示乐器
-        instruments[Core.selectedInstrument].SetActive(true);
-        //显示乐谱
-        staffs[Core.selectedInstrument].gameObject.SetActive(true);
+
+        for (int i = 0; i < 3; i++)
+        {
+            if(i == Core.selectedInstrument)
+            {
+                //显示乐器
+                instruments[Core.selectedInstrument].SetActive(true);
+                //显示乐谱
+                staffs[Core.selectedInstrument].gameObject.SetActive(true);
+            }
+            else
+            {
+                //卸载不需要的乐器和乐谱
+             Destroy(instruments[i]);   
+             Destroy(staffs[i].gameObject);
+            }
+        }
+        
+     
       //显示判定线
        Cursor.gameObject.SetActive(true); 
-      
+      //显示与指法有关的
+      fingeringShowcase.SetActive(true);
+      if(Core.selectedInstrument == 0)
+      {
+          bassFingerings.SetActive(true);
+      }
+      else
+      {
+          Destroy(bassFingerings);
+      }
     
     //一段时间之后注册事件，让乐谱移动
  //  Invoke(nameof(register),startTimeOffset);
@@ -71,7 +102,12 @@ public class MusicalStaffCtrl : MonoBehaviour,IUpdate
     void register()
     {
         StaticVideoPlayer.staticVideoPlayer.RegisterEachFrame();
-        StaticVideoPlayer.staticVideoPlayer.eachFrame.AddListener(delegate { staffs[Core.selectedInstrument].StaffRefresh(Cursor); });
+        StaticVideoPlayer.staticVideoPlayer.eachFrame.AddListener(delegate
+        {
+            //注册让乐谱移动
+            staffs[Core.selectedInstrument].StaffRefresh(Cursor);
+           
+        });
     }
     
     
@@ -83,6 +119,9 @@ public class MusicalStaffCtrl : MonoBehaviour,IUpdate
         {
             StaticVideoPlayer.staticVideoPlayer.Jump(Episode.ShowStaffAndInstrument -1);
         }
+        
+        
+      
         
         
      
