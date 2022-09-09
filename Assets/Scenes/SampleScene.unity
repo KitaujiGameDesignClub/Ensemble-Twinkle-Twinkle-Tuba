@@ -1022,7 +1022,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1100623308}
-  m_RootOrder: 23
+  m_RootOrder: 30
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!213 &158551513
 Sprite:
@@ -1049,7 +1049,7 @@ Sprite:
     c3ecdfdd5a5ccec49ac648dcc5d98b5a: 21300000
   m_AtlasTags:
   - ChooseGirls
-  m_SpriteAtlas: {fileID: 4343727234628468602, guid: 7db54a3c60296a143977759ff256ce71, type: 2}
+  m_SpriteAtlas: {fileID: 0}
   m_RD:
     serializedVersion: 3
     texture: {fileID: 2800000, guid: c3ecdfdd5a5ccec49ac648dcc5d98b5a, type: 3}
@@ -1143,7 +1143,7 @@ Sprite:
     downscaleMultiplier: 1
   m_AtlasRD:
     serializedVersion: 3
-    texture: {fileID: 2, guid: 00000000000000000000000000000000, type: 0}
+    texture: {fileID: 0}
     alphaTexture: {fileID: 0}
     secondaryTextures: []
     m_SubMeshes:
@@ -1223,14 +1223,14 @@ Sprite:
     m_Bindpose: []
     textureRect:
       serializedVersion: 2
-      x: 0.07612038
-      y: 1694.0762
-      width: 207.89713
-      height: 104.87257
-    textureRectOffset: {x: 23.07612, y: 11.07612}
-    atlasRectOffset: {x: -23, y: 1683}
-    settingsRaw: 67
-    uvTransform: {x: 100, y: 105, z: 100, w: 1747}
+      x: 0
+      y: 0
+      width: 256
+      height: 128
+    textureRectOffset: {x: 0, y: 0}
+    atlasRectOffset: {x: -1, y: -1}
+    settingsRaw: 0
+    uvTransform: {x: 100, y: 128, z: 100, w: 64}
     downscaleMultiplier: 1
   m_PhysicsShape:
   - - {x: -0.53999996, y: -0.02}
@@ -1518,6 +1518,37 @@ Transform:
   m_Father: {fileID: 855301247}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &183066547
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 183066548}
+  m_Layer: 0
+  m_Name: GameObject (34)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &183066548
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 183066547}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -13.95, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1100623308}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &188840066
 GameObject:
   m_ObjectHideFlags: 0
@@ -1650,7 +1681,7 @@ Sprite:
     d46911862e45c5649925bdd56e4a3a3c: 21300000
   m_AtlasTags:
   - ChooseGirls
-  m_SpriteAtlas: {fileID: 4343727234628468602, guid: 7db54a3c60296a143977759ff256ce71, type: 2}
+  m_SpriteAtlas: {fileID: 0}
   m_RD:
     serializedVersion: 3
     texture: {fileID: 2800000, guid: d46911862e45c5649925bdd56e4a3a3c, type: 3}
@@ -1744,7 +1775,7 @@ Sprite:
     downscaleMultiplier: 1
   m_AtlasRD:
     serializedVersion: 3
-    texture: {fileID: 2, guid: 00000000000000000000000000000000, type: 0}
+    texture: {fileID: 0}
     alphaTexture: {fileID: 0}
     secondaryTextures: []
     m_SubMeshes:
@@ -1824,14 +1855,14 @@ Sprite:
     m_Bindpose: []
     textureRect:
       serializedVersion: 2
-      x: 236.07352
-      y: 1084.0762
-      width: 239.92455
-      height: 492.89713
-    textureRectOffset: {x: 8.073522, y: 10.07612}
-    atlasRectOffset: {x: 228, y: 1074}
-    settingsRaw: 67
-    uvTransform: {x: 100, y: 356, z: 100, w: 1330}
+      x: 0
+      y: 0
+      width: 256
+      height: 512
+    textureRectOffset: {x: 0, y: 0}
+    atlasRectOffset: {x: -1, y: -1}
+    settingsRaw: 0
+    uvTransform: {x: 100, y: 128, z: 100, w: 256}
     downscaleMultiplier: 1
   m_PhysicsShape:
   - - {x: 0.59, y: -1.77}
@@ -2021,7 +2052,7 @@ Sprite:
     3088d9c58065718489d59f1ebcc60763: -2098870709
   m_AtlasTags:
   - Game
-  m_SpriteAtlas: {fileID: 4343727234628468602, guid: 072c7effd3723684eb75716ac7dd6565, type: 2}
+  m_SpriteAtlas: {fileID: 0}
   m_RD:
     serializedVersion: 3
     texture: {fileID: 2800000, guid: 3088d9c58065718489d59f1ebcc60763, type: 3}
@@ -2115,7 +2146,7 @@ Sprite:
     downscaleMultiplier: 1
   m_AtlasRD:
     serializedVersion: 3
-    texture: {fileID: 2, guid: 00000000000000000000000000000000, type: 0}
+    texture: {fileID: 0}
     alphaTexture: {fileID: 0}
     secondaryTextures: []
     m_SubMeshes:
@@ -2195,14 +2226,14 @@ Sprite:
     m_Bindpose: []
     textureRect:
       serializedVersion: 2
-      x: 0
-      y: 252
+      x: 155
+      y: 142
       width: 81
       height: 80
     textureRectOffset: {x: 0, y: 0}
-    atlasRectOffset: {x: -155, y: 110}
-    settingsRaw: 67
-    uvTransform: {x: 100, y: 40.5, z: 100, w: 292}
+    atlasRectOffset: {x: -1, y: -1}
+    settingsRaw: 64
+    uvTransform: {x: 100, y: 195.5, z: 100, w: 182}
     downscaleMultiplier: 1
   m_PhysicsShape:
   - - {x: 0.375, y: 0.26999998}
@@ -2278,7 +2309,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1100623308}
-  m_RootOrder: 25
+  m_RootOrder: 32
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &286270201
 GameObject:
@@ -2495,7 +2526,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1100623308}
-  m_RootOrder: 30
+  m_RootOrder: 37
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &345831364
 GameObject:
@@ -2615,7 +2646,7 @@ Sprite:
     cac530c2f0249b74482c48957cfee835: 21300000
   m_AtlasTags:
   - ChooseGirls
-  m_SpriteAtlas: {fileID: 4343727234628468602, guid: 7db54a3c60296a143977759ff256ce71, type: 2}
+  m_SpriteAtlas: {fileID: 0}
   m_RD:
     serializedVersion: 3
     texture: {fileID: 2800000, guid: cac530c2f0249b74482c48957cfee835, type: 3}
@@ -2709,7 +2740,7 @@ Sprite:
     downscaleMultiplier: 1
   m_AtlasRD:
     serializedVersion: 3
-    texture: {fileID: 2, guid: 00000000000000000000000000000000, type: 0}
+    texture: {fileID: 0}
     alphaTexture: {fileID: 0}
     secondaryTextures: []
     m_SubMeshes:
@@ -2789,14 +2820,14 @@ Sprite:
     m_Bindpose: []
     textureRect:
       serializedVersion: 2
-      x: 0.07612038
-      y: 1084
-      width: 231.84775
+      x: 0
+      y: 0
+      width: 256
       height: 512
-    textureRectOffset: {x: 12.07612, y: 0}
-    atlasRectOffset: {x: -12, y: 1084}
-    settingsRaw: 67
-    uvTransform: {x: 100, y: 116, z: 100, w: 1340}
+    textureRectOffset: {x: 0, y: 0}
+    atlasRectOffset: {x: -1, y: -1}
+    settingsRaw: 0
+    uvTransform: {x: 100, y: 128, z: 100, w: 256}
     downscaleMultiplier: 1
   m_PhysicsShape:
   - - {x: 0.39, y: -2}
@@ -3294,6 +3325,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1100623308}
   m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &500692546
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 500692547}
+  m_Layer: 0
+  m_Name: GameObject (40)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &500692547
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 500692546}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 12.91, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1100623308}
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &516793603
 GameObject:
@@ -4253,6 +4315,37 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!1 &588122171
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 588122172}
+  m_Layer: 0
+  m_Name: GameObject (39)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &588122172
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 588122171}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 8.34, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1100623308}
+  m_RootOrder: 21
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &602126751
 GameObject:
   m_ObjectHideFlags: 0
@@ -4314,6 +4407,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 855301247}
   m_RootOrder: 25
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &626927477
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 626927478}
+  m_Layer: 0
+  m_Name: GameObject (35)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &626927478
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 626927477}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -7.92, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1100623308}
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &633703790
 GameObject:
@@ -4565,6 +4689,37 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 10
   m_TargetDisplay: 0
+--- !u!1 &669714006
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 669714007}
+  m_Layer: 0
+  m_Name: GameObject (36)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &669714007
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 669714006}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.4, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1100623308}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &674725625
 GameObject:
   m_ObjectHideFlags: 0
@@ -4915,7 +5070,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1100623308}
-  m_RootOrder: 31
+  m_RootOrder: 38
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &826230969
 GameObject:
@@ -5358,6 +5513,10 @@ MonoBehaviour:
   - {fileID: 633703791}
   - {fileID: 1840131894}
   - {fileID: 2079146354}
+  fingeringNeedToPressed: 
+  onRight:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &859025343
 GameObject:
   m_ObjectHideFlags: 0
@@ -5449,7 +5608,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1100623308}
-  m_RootOrder: 33
+  m_RootOrder: 40
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &939764929
 GameObject:
@@ -6113,7 +6272,7 @@ Sprite:
     3088d9c58065718489d59f1ebcc60763: -421002176
   m_AtlasTags:
   - Game
-  m_SpriteAtlas: {fileID: 4343727234628468602, guid: 072c7effd3723684eb75716ac7dd6565, type: 2}
+  m_SpriteAtlas: {fileID: 0}
   m_RD:
     serializedVersion: 3
     texture: {fileID: 2800000, guid: 3088d9c58065718489d59f1ebcc60763, type: 3}
@@ -6207,7 +6366,7 @@ Sprite:
     downscaleMultiplier: 1
   m_AtlasRD:
     serializedVersion: 3
-    texture: {fileID: 2, guid: 00000000000000000000000000000000, type: 0}
+    texture: {fileID: 0}
     alphaTexture: {fileID: 0}
     secondaryTextures: []
     m_SubMeshes:
@@ -6287,14 +6446,14 @@ Sprite:
     m_Bindpose: []
     textureRect:
       serializedVersion: 2
-      x: 0
-      y: 336
+      x: 155
+      y: 39
       width: 81
       height: 79
     textureRectOffset: {x: 0, y: 0}
-    atlasRectOffset: {x: -155, y: 297}
-    settingsRaw: 67
-    uvTransform: {x: 100, y: 40.5, z: 100, w: 375.5}
+    atlasRectOffset: {x: -1, y: -1}
+    settingsRaw: 64
+    uvTransform: {x: 100, y: 195.5, z: 100, w: 78.5}
     downscaleMultiplier: 1
   m_PhysicsShape:
   - - {x: 0.385, y: 0.265}
@@ -6488,7 +6647,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1100623308}
-  m_RootOrder: 26
+  m_RootOrder: 33
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1012373623
 GameObject:
@@ -6519,7 +6678,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1100623308}
-  m_RootOrder: 19
+  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1017522907
 GameObject:
@@ -6577,7 +6736,7 @@ Sprite:
     3088d9c58065718489d59f1ebcc60763: -1821482016
   m_AtlasTags:
   - Game
-  m_SpriteAtlas: {fileID: 4343727234628468602, guid: 072c7effd3723684eb75716ac7dd6565, type: 2}
+  m_SpriteAtlas: {fileID: 0}
   m_RD:
     serializedVersion: 3
     texture: {fileID: 2800000, guid: 3088d9c58065718489d59f1ebcc60763, type: 3}
@@ -6671,7 +6830,7 @@ Sprite:
     downscaleMultiplier: 1
   m_AtlasRD:
     serializedVersion: 3
-    texture: {fileID: 2, guid: 00000000000000000000000000000000, type: 0}
+    texture: {fileID: 0}
     alphaTexture: {fileID: 0}
     secondaryTextures: []
     m_SubMeshes:
@@ -6751,14 +6910,14 @@ Sprite:
     m_Bindpose: []
     textureRect:
       serializedVersion: 2
-      x: 86
-      y: 168
+      x: 269
+      y: 142
       width: 81
       height: 80
     textureRectOffset: {x: 0, y: 0}
-    atlasRectOffset: {x: -183, y: 26}
-    settingsRaw: 67
-    uvTransform: {x: 100, y: 126.5, z: 100, w: 208}
+    atlasRectOffset: {x: -1, y: -1}
+    settingsRaw: 64
+    uvTransform: {x: 100, y: 309.5, z: 100, w: 182}
     downscaleMultiplier: 1
   m_PhysicsShape:
   - - {x: 0.205, y: 0.37}
@@ -6869,7 +7028,7 @@ Sprite:
     3088d9c58065718489d59f1ebcc60763: 1283565006
   m_AtlasTags:
   - Game
-  m_SpriteAtlas: {fileID: 4343727234628468602, guid: 072c7effd3723684eb75716ac7dd6565, type: 2}
+  m_SpriteAtlas: {fileID: 0}
   m_RD:
     serializedVersion: 3
     texture: {fileID: 2800000, guid: 3088d9c58065718489d59f1ebcc60763, type: 3}
@@ -6963,7 +7122,7 @@ Sprite:
     downscaleMultiplier: 1
   m_AtlasRD:
     serializedVersion: 3
-    texture: {fileID: 2, guid: 00000000000000000000000000000000, type: 0}
+    texture: {fileID: 0}
     alphaTexture: {fileID: 0}
     secondaryTextures: []
     m_SubMeshes:
@@ -7043,14 +7202,14 @@ Sprite:
     m_Bindpose: []
     textureRect:
       serializedVersion: 2
-      x: 85
-      y: 252
+      x: 61
+      y: 38
       width: 81
       height: 79
     textureRectOffset: {x: 0, y: 0}
-    atlasRectOffset: {x: 24, y: 214}
-    settingsRaw: 67
-    uvTransform: {x: 100, y: 125.5, z: 100, w: 291.5}
+    atlasRectOffset: {x: -1, y: -1}
+    settingsRaw: 64
+    uvTransform: {x: 100, y: 101.5, z: 100, w: 77.5}
     downscaleMultiplier: 1
   m_PhysicsShape:
   - - {x: 0.265, y: 0.345}
@@ -7895,7 +8054,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1100623308}
-  m_RootOrder: 17
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1100623307
 GameObject:
@@ -7914,7 +8073,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1100623308
 Transform:
   m_ObjectHideFlags: 0
@@ -7942,8 +8101,15 @@ Transform:
   - {fileID: 1078996943}
   - {fileID: 467454608}
   - {fileID: 107486464}
+  - {fileID: 183066548}
+  - {fileID: 626927478}
+  - {fileID: 669714007}
+  - {fileID: 1237865114}
+  - {fileID: 1225382114}
   - {fileID: 1472397656}
+  - {fileID: 588122172}
   - {fileID: 2099988963}
+  - {fileID: 500692547}
   - {fileID: 1085739548}
   - {fileID: 1616177015}
   - {fileID: 1012373624}
@@ -8044,8 +8210,15 @@ MonoBehaviour:
   - {fileID: 1078996943}
   - {fileID: 467454608}
   - {fileID: 107486464}
+  - {fileID: 183066548}
+  - {fileID: 626927478}
+  - {fileID: 669714007}
+  - {fileID: 1237865114}
+  - {fileID: 1225382114}
   - {fileID: 1472397656}
+  - {fileID: 588122172}
   - {fileID: 2099988963}
+  - {fileID: 500692547}
   - {fileID: 1085739548}
   - {fileID: 1616177015}
   - {fileID: 1012373624}
@@ -8063,6 +8236,10 @@ MonoBehaviour:
   - {fileID: 802357761}
   - {fileID: 1656342802}
   - {fileID: 938003643}
+  fingeringNeedToPressed: 05000000090000000a0000000900000004000000090000000a0000000900000004000000070000000900000001000000040000000a00000005000000140000001400000014000000140000001400000005000000140000000800000014000000050000000a0000001400000005000000090000000a0000000900000004000000090000000a0000000900000008000000070000000900000001000000040000000a00000009000000
+  onRight:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1106419357
 GameObject:
   m_ObjectHideFlags: 0
@@ -8676,7 +8853,7 @@ Sprite:
     3088d9c58065718489d59f1ebcc60763: -399098083
   m_AtlasTags:
   - Game
-  m_SpriteAtlas: {fileID: 4343727234628468602, guid: 072c7effd3723684eb75716ac7dd6565, type: 2}
+  m_SpriteAtlas: {fileID: 0}
   m_RD:
     serializedVersion: 3
     texture: {fileID: 2800000, guid: 3088d9c58065718489d59f1ebcc60763, type: 3}
@@ -8770,7 +8947,7 @@ Sprite:
     downscaleMultiplier: 1
   m_AtlasRD:
     serializedVersion: 3
-    texture: {fileID: 2, guid: 00000000000000000000000000000000, type: 0}
+    texture: {fileID: 0}
     alphaTexture: {fileID: 0}
     secondaryTextures: []
     m_SubMeshes:
@@ -8850,14 +9027,14 @@ Sprite:
     m_Bindpose: []
     textureRect:
       serializedVersion: 2
-      x: 0
-      y: 419
+      x: 269
+      y: 39
       width: 81
       height: 79
     textureRectOffset: {x: 0, y: 0}
-    atlasRectOffset: {x: -269, y: 380}
-    settingsRaw: 67
-    uvTransform: {x: 100, y: 40.5, z: 100, w: 458.5}
+    atlasRectOffset: {x: -1, y: -1}
+    settingsRaw: 64
+    uvTransform: {x: 100, y: 309.5, z: 100, w: 78.5}
     downscaleMultiplier: 1
   m_PhysicsShape:
   - - {x: -0.235, y: 0.39499998}
@@ -8902,6 +9079,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1100623308}
   m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1225382113
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1225382114}
+  m_Layer: 0
+  m_Name: GameObject (38)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1225382114
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1225382113}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.8, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1100623308}
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1228170789
 GameObject:
@@ -8995,6 +9203,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1100623308}
   m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1237865113
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1237865114}
+  m_Layer: 0
+  m_Name: GameObject (37)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1237865114
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1237865113}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.88, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1100623308}
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1246725062
 GameObject:
@@ -9114,7 +9353,7 @@ Sprite:
     65a75220296eb31448c92659738e39a2: 21300000
   m_AtlasTags:
   - ChooseGirls
-  m_SpriteAtlas: {fileID: 4343727234628468602, guid: 7db54a3c60296a143977759ff256ce71, type: 2}
+  m_SpriteAtlas: {fileID: 0}
   m_RD:
     serializedVersion: 3
     texture: {fileID: 2800000, guid: 65a75220296eb31448c92659738e39a2, type: 3}
@@ -9208,7 +9447,7 @@ Sprite:
     downscaleMultiplier: 1
   m_AtlasRD:
     serializedVersion: 3
-    texture: {fileID: 2, guid: 00000000000000000000000000000000, type: 0}
+    texture: {fileID: 0}
     alphaTexture: {fileID: 0}
     secondaryTextures: []
     m_SubMeshes:
@@ -9293,8 +9532,8 @@ Sprite:
       width: 1920
       height: 1080
     textureRectOffset: {x: 0, y: 0}
-    atlasRectOffset: {x: 0, y: 0}
-    settingsRaw: 67
+    atlasRectOffset: {x: -1, y: -1}
+    settingsRaw: 64
     uvTransform: {x: 100, y: 960, z: 100, w: 540}
     downscaleMultiplier: 1
   m_PhysicsShape:
@@ -9333,7 +9572,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1100623308}
-  m_RootOrder: 22
+  m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!213 &1274040377
 Sprite:
@@ -9360,7 +9599,7 @@ Sprite:
     fff7f2a89ec7e16499e4a0d7512c085d: 21300000
   m_AtlasTags:
   - ChooseGirls
-  m_SpriteAtlas: {fileID: 4343727234628468602, guid: 7db54a3c60296a143977759ff256ce71, type: 2}
+  m_SpriteAtlas: {fileID: 0}
   m_RD:
     serializedVersion: 3
     texture: {fileID: 2800000, guid: fff7f2a89ec7e16499e4a0d7512c085d, type: 3}
@@ -9454,7 +9693,7 @@ Sprite:
     downscaleMultiplier: 1
   m_AtlasRD:
     serializedVersion: 3
-    texture: {fileID: 2, guid: 00000000000000000000000000000000, type: 0}
+    texture: {fileID: 0}
     alphaTexture: {fileID: 0}
     secondaryTextures: []
     m_SubMeshes:
@@ -9534,14 +9773,14 @@ Sprite:
     m_Bindpose: []
     textureRect:
       serializedVersion: 2
-      x: 1326.0513
-      y: 1084.0146
-      width: 200.87256
-      height: 87.90921
-    textureRectOffset: {x: 28.051317, y: 20.014671}
-    atlasRectOffset: {x: 1298, y: 1064}
-    settingsRaw: 67
-    uvTransform: {x: 100, y: 1426, z: 100, w: 1128}
+      x: 0
+      y: 0
+      width: 256
+      height: 128
+    textureRectOffset: {x: 0, y: 0}
+    atlasRectOffset: {x: -1, y: -1}
+    settingsRaw: 0
+    uvTransform: {x: 100, y: 128, z: 100, w: 64}
     downscaleMultiplier: 1
   m_PhysicsShape:
   - - {x: -0.56, y: 0.17999999}
@@ -9756,7 +9995,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1283847472
 Transform:
   m_ObjectHideFlags: 0
@@ -9823,7 +10062,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1100623308}
-  m_RootOrder: 27
+  m_RootOrder: 34
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1307703071
 GameObject:
@@ -9912,7 +10151,7 @@ Sprite:
     3088d9c58065718489d59f1ebcc60763: 622889984
   m_AtlasTags:
   - Game
-  m_SpriteAtlas: {fileID: 4343727234628468602, guid: 072c7effd3723684eb75716ac7dd6565, type: 2}
+  m_SpriteAtlas: {fileID: 0}
   m_RD:
     serializedVersion: 3
     texture: {fileID: 2800000, guid: 3088d9c58065718489d59f1ebcc60763, type: 3}
@@ -10006,7 +10245,7 @@ Sprite:
     downscaleMultiplier: 1
   m_AtlasRD:
     serializedVersion: 3
-    texture: {fileID: 2, guid: 00000000000000000000000000000000, type: 0}
+    texture: {fileID: 0}
     alphaTexture: {fileID: 0}
     secondaryTextures: []
     m_SubMeshes:
@@ -10086,14 +10325,14 @@ Sprite:
     m_Bindpose: []
     textureRect:
       serializedVersion: 2
-      x: 0
-      y: 0
+      x: 60
+      y: 141
       width: 82
       height: 80
     textureRectOffset: {x: 0, y: 0}
-    atlasRectOffset: {x: -60, y: -141}
-    settingsRaw: 67
-    uvTransform: {x: 100, y: 41, z: 100, w: 40}
+    atlasRectOffset: {x: -1, y: -1}
+    settingsRaw: 64
+    uvTransform: {x: 100, y: 101, z: 100, w: 181}
     downscaleMultiplier: 1
   m_PhysicsShape:
   - - {x: 0.22999999, y: 0.38}
@@ -10136,7 +10375,7 @@ Sprite:
     c109c0d5c1ed2d94aa9c67b708757cd2: 21300000
   m_AtlasTags:
   - ChooseGirls
-  m_SpriteAtlas: {fileID: 4343727234628468602, guid: 7db54a3c60296a143977759ff256ce71, type: 2}
+  m_SpriteAtlas: {fileID: 0}
   m_RD:
     serializedVersion: 3
     texture: {fileID: 2800000, guid: c109c0d5c1ed2d94aa9c67b708757cd2, type: 3}
@@ -10230,7 +10469,7 @@ Sprite:
     downscaleMultiplier: 1
   m_AtlasRD:
     serializedVersion: 3
-    texture: {fileID: 2, guid: 00000000000000000000000000000000, type: 0}
+    texture: {fileID: 0}
     alphaTexture: {fileID: 0}
     secondaryTextures: []
     m_SubMeshes:
@@ -10310,14 +10549,14 @@ Sprite:
     m_Bindpose: []
     textureRect:
       serializedVersion: 2
-      x: 1219.0267
-      y: 1342.013
-      width: 252.96034
-      height: 73.950806
-    textureRectOffset: {x: 2.026751, y: 27.012913}
-    atlasRectOffset: {x: 1217, y: 1315}
-    settingsRaw: 67
-    uvTransform: {x: 100, y: 1345, z: 100, w: 1379}
+      x: 0
+      y: 0
+      width: 256
+      height: 128
+    textureRectOffset: {x: 0, y: 0}
+    atlasRectOffset: {x: -1, y: -1}
+    settingsRaw: 0
+    uvTransform: {x: 100, y: 128, z: 100, w: 64}
     downscaleMultiplier: 1
   m_PhysicsShape:
   - - {x: -0.59999996, y: 0.16}
@@ -10547,7 +10786,7 @@ Sprite:
     3088d9c58065718489d59f1ebcc60763: -4784321
   m_AtlasTags:
   - Game
-  m_SpriteAtlas: {fileID: 4343727234628468602, guid: 072c7effd3723684eb75716ac7dd6565, type: 2}
+  m_SpriteAtlas: {fileID: 0}
   m_RD:
     serializedVersion: 3
     texture: {fileID: 2800000, guid: 3088d9c58065718489d59f1ebcc60763, type: 3}
@@ -10641,7 +10880,7 @@ Sprite:
     downscaleMultiplier: 1
   m_AtlasRD:
     serializedVersion: 3
-    texture: {fileID: 2, guid: 00000000000000000000000000000000, type: 0}
+    texture: {fileID: 0}
     alphaTexture: {fileID: 0}
     secondaryTextures: []
     m_SubMeshes:
@@ -10721,14 +10960,14 @@ Sprite:
     m_Bindpose: []
     textureRect:
       serializedVersion: 2
-      x: 171
-      y: 84
+      x: 156
+      y: 393
       width: 81
       height: 80
     textureRectOffset: {x: 0, y: 0}
-    atlasRectOffset: {x: 15, y: -309}
-    settingsRaw: 67
-    uvTransform: {x: 100, y: 211.5, z: 100, w: 124}
+    atlasRectOffset: {x: -1, y: -1}
+    settingsRaw: 64
+    uvTransform: {x: 100, y: 196.5, z: 100, w: 433}
     downscaleMultiplier: 1
   m_PhysicsShape:
   - - {x: 0.265, y: 0.34}
@@ -11532,7 +11771,7 @@ Sprite:
     d4f9b5ff7eb067e439e93af1b8988d09: 21300000
   m_AtlasTags:
   - ChooseGirls
-  m_SpriteAtlas: {fileID: 4343727234628468602, guid: 7db54a3c60296a143977759ff256ce71, type: 2}
+  m_SpriteAtlas: {fileID: 0}
   m_RD:
     serializedVersion: 3
     texture: {fileID: 2800000, guid: d4f9b5ff7eb067e439e93af1b8988d09, type: 3}
@@ -11626,7 +11865,7 @@ Sprite:
     downscaleMultiplier: 1
   m_AtlasRD:
     serializedVersion: 3
-    texture: {fileID: 2, guid: 00000000000000000000000000000000, type: 0}
+    texture: {fileID: 0}
     alphaTexture: {fileID: 0}
     secondaryTextures: []
     m_SubMeshes:
@@ -11706,14 +11945,14 @@ Sprite:
     m_Bindpose: []
     textureRect:
       serializedVersion: 2
-      x: 1070.0762
-      y: 1084.0762
-      width: 251.84775
-      height: 253.88097
-    textureRectOffset: {x: 3.0761204, y: 0.076120496}
-    atlasRectOffset: {x: 1067, y: 1084}
-    settingsRaw: 67
-    uvTransform: {x: 100, y: 1195, z: 100, w: 1212}
+      x: 0
+      y: 0
+      width: 256
+      height: 256
+    textureRectOffset: {x: 0, y: 0}
+    atlasRectOffset: {x: -1, y: -1}
+    settingsRaw: 0
+    uvTransform: {x: 100, y: 128, z: 100, w: 128}
     downscaleMultiplier: 1
   m_PhysicsShape:
   - - {x: 0.72999996, y: -1.04}
@@ -11849,7 +12088,7 @@ Sprite:
     15d80b9fc13924c4ab72acb9cfaa7355: 21300000
   m_AtlasTags:
   - ChooseGirls
-  m_SpriteAtlas: {fileID: 4343727234628468602, guid: 7db54a3c60296a143977759ff256ce71, type: 2}
+  m_SpriteAtlas: {fileID: 0}
   m_RD:
     serializedVersion: 3
     texture: {fileID: 2800000, guid: 15d80b9fc13924c4ab72acb9cfaa7355, type: 3}
@@ -11943,7 +12182,7 @@ Sprite:
     downscaleMultiplier: 1
   m_AtlasRD:
     serializedVersion: 3
-    texture: {fileID: 2, guid: 00000000000000000000000000000000, type: 0}
+    texture: {fileID: 0}
     alphaTexture: {fileID: 0}
     secondaryTextures: []
     m_SubMeshes:
@@ -12023,14 +12262,14 @@ Sprite:
     m_Bindpose: []
     textureRect:
       serializedVersion: 2
-      x: 650.02673
-      y: 1084
-      width: 155.9465
+      x: 0
+      y: 0
+      width: 256
       height: 512
-    textureRectOffset: {x: 50.026752, y: 0}
-    atlasRectOffset: {x: 600, y: 1084}
-    settingsRaw: 67
-    uvTransform: {x: 100, y: 728, z: 100, w: 1340}
+    textureRectOffset: {x: 0, y: 0}
+    atlasRectOffset: {x: -1, y: -1}
+    settingsRaw: 0
+    uvTransform: {x: 100, y: 128, z: 100, w: 256}
     downscaleMultiplier: 1
   m_PhysicsShape:
   - - {x: -0.12, y: -2.04}
@@ -12290,7 +12529,7 @@ Sprite:
     3088d9c58065718489d59f1ebcc60763: 985744760
   m_AtlasTags:
   - Game
-  m_SpriteAtlas: {fileID: 4343727234628468602, guid: 072c7effd3723684eb75716ac7dd6565, type: 2}
+  m_SpriteAtlas: {fileID: 0}
   m_RD:
     serializedVersion: 3
     texture: {fileID: 2800000, guid: 3088d9c58065718489d59f1ebcc60763, type: 3}
@@ -12384,7 +12623,7 @@ Sprite:
     downscaleMultiplier: 1
   m_AtlasRD:
     serializedVersion: 3
-    texture: {fileID: 2, guid: 00000000000000000000000000000000, type: 0}
+    texture: {fileID: 0}
     alphaTexture: {fileID: 0}
     secondaryTextures: []
     m_SubMeshes:
@@ -12464,14 +12703,14 @@ Sprite:
     m_Bindpose: []
     textureRect:
       serializedVersion: 2
-      x: 85
-      y: 335
+      x: 156
+      y: 290
       width: 81
       height: 79
     textureRectOffset: {x: 0, y: 0}
-    atlasRectOffset: {x: -71, y: 45}
-    settingsRaw: 67
-    uvTransform: {x: 100, y: 125.5, z: 100, w: 374.5}
+    atlasRectOffset: {x: -1, y: -1}
+    settingsRaw: 64
+    uvTransform: {x: 100, y: 196.5, z: 100, w: 329.5}
     downscaleMultiplier: 1
   m_PhysicsShape:
   - - {x: 0.255, y: 0.345}
@@ -12517,7 +12756,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1100623308}
-  m_RootOrder: 15
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!213 &1473040652
 Sprite:
@@ -12544,7 +12783,7 @@ Sprite:
     ece31c0f26e284049b3beb3bb8770223: 21300000
   m_AtlasTags:
   - ChooseGirls
-  m_SpriteAtlas: {fileID: 4343727234628468602, guid: 7db54a3c60296a143977759ff256ce71, type: 2}
+  m_SpriteAtlas: {fileID: 0}
   m_RD:
     serializedVersion: 3
     texture: {fileID: 2800000, guid: ece31c0f26e284049b3beb3bb8770223, type: 3}
@@ -12638,7 +12877,7 @@ Sprite:
     downscaleMultiplier: 1
   m_AtlasRD:
     serializedVersion: 3
-    texture: {fileID: 2, guid: 00000000000000000000000000000000, type: 0}
+    texture: {fileID: 0}
     alphaTexture: {fileID: 0}
     secondaryTextures: []
     m_SubMeshes:
@@ -12718,14 +12957,14 @@ Sprite:
     m_Bindpose: []
     textureRect:
       serializedVersion: 2
-      x: 480.02673
-      y: 1084
-      width: 165.89713
+      x: 0
+      y: 0
+      width: 256
       height: 512
-    textureRectOffset: {x: 45.026752, y: 0}
-    atlasRectOffset: {x: 435, y: 1084}
-    settingsRaw: 67
-    uvTransform: {x: 100, y: 563, z: 100, w: 1340}
+    textureRectOffset: {x: 0, y: 0}
+    atlasRectOffset: {x: -1, y: -1}
+    settingsRaw: 0
+    uvTransform: {x: 100, y: 128, z: 100, w: 256}
     downscaleMultiplier: 1
   m_PhysicsShape:
   - - {x: -0.22, y: -2.2}
@@ -13303,7 +13542,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1495219236
 Transform:
   m_ObjectHideFlags: 0
@@ -13467,7 +13706,7 @@ Sprite:
     ec957752f2399b8468108edbdbc8e98e: 21300000
   m_AtlasTags:
   - ChooseGirls
-  m_SpriteAtlas: {fileID: 4343727234628468602, guid: 7db54a3c60296a143977759ff256ce71, type: 2}
+  m_SpriteAtlas: {fileID: 0}
   m_RD:
     serializedVersion: 3
     texture: {fileID: 2800000, guid: ec957752f2399b8468108edbdbc8e98e, type: 3}
@@ -13561,7 +13800,7 @@ Sprite:
     downscaleMultiplier: 1
   m_AtlasRD:
     serializedVersion: 3
-    texture: {fileID: 2, guid: 00000000000000000000000000000000, type: 0}
+    texture: {fileID: 0}
     alphaTexture: {fileID: 0}
     secondaryTextures: []
     m_SubMeshes:
@@ -13641,14 +13880,14 @@ Sprite:
     m_Bindpose: []
     textureRect:
       serializedVersion: 2
-      x: 959.0761
-      y: 1344.043
+      x: 0.076120496
+      y: 1.042908
       width: 255.84775
       height: 254.95709
     textureRectOffset: {x: 0.076120496, y: 1.042908}
-    atlasRectOffset: {x: 959, y: 1343}
-    settingsRaw: 67
-    uvTransform: {x: 100, y: 1087, z: 100, w: 1471}
+    atlasRectOffset: {x: -1, y: -1}
+    settingsRaw: 64
+    uvTransform: {x: 100, y: 128, z: 100, w: 128}
     downscaleMultiplier: 1
   m_PhysicsShape:
   - - {x: 0.78999996, y: -1}
@@ -13870,7 +14109,7 @@ Sprite:
     82f2615bdd286ac4d8149d8887f384c2: 21300000
   m_AtlasTags:
   - ChooseGirls
-  m_SpriteAtlas: {fileID: 4343727234628468602, guid: 7db54a3c60296a143977759ff256ce71, type: 2}
+  m_SpriteAtlas: {fileID: 0}
   m_RD:
     serializedVersion: 3
     texture: {fileID: 2800000, guid: 82f2615bdd286ac4d8149d8887f384c2, type: 3}
@@ -13964,7 +14203,7 @@ Sprite:
     downscaleMultiplier: 1
   m_AtlasRD:
     serializedVersion: 3
-    texture: {fileID: 2, guid: 00000000000000000000000000000000, type: 0}
+    texture: {fileID: 0}
     alphaTexture: {fileID: 0}
     secondaryTextures: []
     m_SubMeshes:
@@ -14044,14 +14283,14 @@ Sprite:
     m_Bindpose: []
     textureRect:
       serializedVersion: 2
-      x: 0.026752472
-      y: 1600.0621
-      width: 954.93036
-      height: 89.91113
-    textureRectOffset: {x: 39.026752, y: 19.062115}
-    atlasRectOffset: {x: -39, y: 1581}
-    settingsRaw: 67
-    uvTransform: {x: 100, y: 473, z: 100, w: 1645}
+      x: 0
+      y: 0
+      width: 1024
+      height: 128
+    textureRectOffset: {x: 0, y: 0}
+    atlasRectOffset: {x: -1, y: -1}
+    settingsRaw: 0
+    uvTransform: {x: 100, y: 512, z: 100, w: 64}
     downscaleMultiplier: 1
   m_PhysicsShape:
   - - {x: -3.1599998, y: -0.08}
@@ -14335,7 +14574,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1100623308}
-  m_RootOrder: 28
+  m_RootOrder: 35
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1582907726
 GameObject:
@@ -14397,7 +14636,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1100623308}
-  m_RootOrder: 20
+  m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1586605418
 GameObject:
@@ -14573,7 +14812,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1100623308}
-  m_RootOrder: 18
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1629741363
 GameObject:
@@ -14770,7 +15009,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1100623308}
-  m_RootOrder: 32
+  m_RootOrder: 39
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1668124086
 GameObject:
@@ -14970,7 +15209,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1100623308}
-  m_RootOrder: 29
+  m_RootOrder: 36
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1704217597
 GameObject:
@@ -15059,7 +15298,7 @@ Sprite:
     3088d9c58065718489d59f1ebcc60763: 625821124
   m_AtlasTags:
   - Game
-  m_SpriteAtlas: {fileID: 4343727234628468602, guid: 072c7effd3723684eb75716ac7dd6565, type: 2}
+  m_SpriteAtlas: {fileID: 0}
   m_RD:
     serializedVersion: 3
     texture: {fileID: 2800000, guid: 3088d9c58065718489d59f1ebcc60763, type: 3}
@@ -15153,7 +15392,7 @@ Sprite:
     downscaleMultiplier: 1
   m_AtlasRD:
     serializedVersion: 3
-    texture: {fileID: 2, guid: 00000000000000000000000000000000, type: 0}
+    texture: {fileID: 0}
     alphaTexture: {fileID: 0}
     secondaryTextures: []
     m_SubMeshes:
@@ -15233,14 +15472,14 @@ Sprite:
     m_Bindpose: []
     textureRect:
       serializedVersion: 2
-      x: 0
-      y: 84
+      x: 60
+      y: 288
       width: 82
       height: 80
     textureRectOffset: {x: 0, y: 0}
-    atlasRectOffset: {x: -60, y: -204}
-    settingsRaw: 67
-    uvTransform: {x: 100, y: 41, z: 100, w: 124}
+    atlasRectOffset: {x: -1, y: -1}
+    settingsRaw: 64
+    uvTransform: {x: 100, y: 101, z: 100, w: 328}
     downscaleMultiplier: 1
   m_PhysicsShape:
   - - {x: 0.41, y: 0.17}
@@ -15583,7 +15822,7 @@ Sprite:
     3088d9c58065718489d59f1ebcc60763: 1287811460
   m_AtlasTags:
   - Game
-  m_SpriteAtlas: {fileID: 4343727234628468602, guid: 072c7effd3723684eb75716ac7dd6565, type: 2}
+  m_SpriteAtlas: {fileID: 0}
   m_RD:
     serializedVersion: 3
     texture: {fileID: 2800000, guid: 3088d9c58065718489d59f1ebcc60763, type: 3}
@@ -15677,7 +15916,7 @@ Sprite:
     downscaleMultiplier: 1
   m_AtlasRD:
     serializedVersion: 3
-    texture: {fileID: 2, guid: 00000000000000000000000000000000, type: 0}
+    texture: {fileID: 0}
     alphaTexture: {fileID: 0}
     secondaryTextures: []
     m_SubMeshes:
@@ -15757,14 +15996,14 @@ Sprite:
     m_Bindpose: []
     textureRect:
       serializedVersion: 2
-      x: 0
-      y: 168
+      x: 371
+      y: 393
       width: 82
       height: 80
     textureRectOffset: {x: 0, y: 0}
-    atlasRectOffset: {x: -371, y: -225}
-    settingsRaw: 67
-    uvTransform: {x: 100, y: 41, z: 100, w: 208}
+    atlasRectOffset: {x: -1, y: -1}
+    settingsRaw: 64
+    uvTransform: {x: 100, y: 412, z: 100, w: 433}
     downscaleMultiplier: 1
   m_PhysicsShape:
   - - {x: 0.26999998, y: 0.35}
@@ -15813,7 +16052,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1100623308}
-  m_RootOrder: 24
+  m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!213 &1797992342
 Sprite:
@@ -15840,7 +16079,7 @@ Sprite:
     3088d9c58065718489d59f1ebcc60763: -1050714743
   m_AtlasTags:
   - Game
-  m_SpriteAtlas: {fileID: 4343727234628468602, guid: 072c7effd3723684eb75716ac7dd6565, type: 2}
+  m_SpriteAtlas: {fileID: 0}
   m_RD:
     serializedVersion: 3
     texture: {fileID: 2800000, guid: 3088d9c58065718489d59f1ebcc60763, type: 3}
@@ -15934,7 +16173,7 @@ Sprite:
     downscaleMultiplier: 1
   m_AtlasRD:
     serializedVersion: 3
-    texture: {fileID: 2, guid: 00000000000000000000000000000000, type: 0}
+    texture: {fileID: 0}
     alphaTexture: {fileID: 0}
     secondaryTextures: []
     m_SubMeshes:
@@ -16014,14 +16253,14 @@ Sprite:
     m_Bindpose: []
     textureRect:
       serializedVersion: 2
-      x: 171
-      y: 168
+      x: 269
+      y: 289
       width: 81
       height: 80
     textureRectOffset: {x: 0, y: 0}
-    atlasRectOffset: {x: -98, y: -121}
-    settingsRaw: 67
-    uvTransform: {x: 100, y: 211.5, z: 100, w: 208}
+    atlasRectOffset: {x: -1, y: -1}
+    settingsRaw: 64
+    uvTransform: {x: 100, y: 309.5, z: 100, w: 329}
     downscaleMultiplier: 1
   m_PhysicsShape:
   - - {x: 0.405, y: 0.17}
@@ -16337,6 +16576,10 @@ MonoBehaviour:
   - {fileID: 1106419358}
   - {fileID: 1712218842}
   - {fileID: 345831365}
+  fingeringNeedToPressed: 
+  onRight:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!213 &1827736749
 Sprite:
   m_ObjectHideFlags: 0
@@ -16362,7 +16605,7 @@ Sprite:
     3088d9c58065718489d59f1ebcc60763: 622889984
   m_AtlasTags:
   - Game
-  m_SpriteAtlas: {fileID: 4343727234628468602, guid: 072c7effd3723684eb75716ac7dd6565, type: 2}
+  m_SpriteAtlas: {fileID: 0}
   m_RD:
     serializedVersion: 3
     texture: {fileID: 2800000, guid: 3088d9c58065718489d59f1ebcc60763, type: 3}
@@ -16456,7 +16699,7 @@ Sprite:
     downscaleMultiplier: 1
   m_AtlasRD:
     serializedVersion: 3
-    texture: {fileID: 2, guid: 00000000000000000000000000000000, type: 0}
+    texture: {fileID: 0}
     alphaTexture: {fileID: 0}
     secondaryTextures: []
     m_SubMeshes:
@@ -16536,14 +16779,14 @@ Sprite:
     m_Bindpose: []
     textureRect:
       serializedVersion: 2
-      x: 0
-      y: 0
+      x: 60
+      y: 141
       width: 82
       height: 80
     textureRectOffset: {x: 0, y: 0}
-    atlasRectOffset: {x: -60, y: -141}
-    settingsRaw: 67
-    uvTransform: {x: 100, y: 41, z: 100, w: 40}
+    atlasRectOffset: {x: -1, y: -1}
+    settingsRaw: 64
+    uvTransform: {x: 100, y: 101, z: 100, w: 181}
     downscaleMultiplier: 1
   m_PhysicsShape:
   - - {x: 0.22999999, y: 0.38}
@@ -16679,7 +16922,7 @@ Sprite:
     3088d9c58065718489d59f1ebcc60763: -1421568890
   m_AtlasTags:
   - Game
-  m_SpriteAtlas: {fileID: 4343727234628468602, guid: 072c7effd3723684eb75716ac7dd6565, type: 2}
+  m_SpriteAtlas: {fileID: 0}
   m_RD:
     serializedVersion: 3
     texture: {fileID: 2800000, guid: 3088d9c58065718489d59f1ebcc60763, type: 3}
@@ -16773,7 +17016,7 @@ Sprite:
     downscaleMultiplier: 1
   m_AtlasRD:
     serializedVersion: 3
-    texture: {fileID: 2, guid: 00000000000000000000000000000000, type: 0}
+    texture: {fileID: 0}
     alphaTexture: {fileID: 0}
     secondaryTextures: []
     m_SubMeshes:
@@ -16853,14 +17096,14 @@ Sprite:
     m_Bindpose: []
     textureRect:
       serializedVersion: 2
-      x: 86
-      y: 0
+      x: 60
+      y: 392
       width: 82
       height: 80
     textureRectOffset: {x: 0, y: 0}
-    atlasRectOffset: {x: 26, y: -392}
-    settingsRaw: 67
-    uvTransform: {x: 100, y: 127, z: 100, w: 40}
+    atlasRectOffset: {x: -1, y: -1}
+    settingsRaw: 64
+    uvTransform: {x: 100, y: 101, z: 100, w: 432}
     downscaleMultiplier: 1
   m_PhysicsShape:
   - - {x: 0.39, y: 0.22}
@@ -16907,7 +17150,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1100623308}
-  m_RootOrder: 21
+  m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!213 &1893936885
 Sprite:
@@ -16934,7 +17177,7 @@ Sprite:
     3088d9c58065718489d59f1ebcc60763: 625821124
   m_AtlasTags:
   - Game
-  m_SpriteAtlas: {fileID: 4343727234628468602, guid: 072c7effd3723684eb75716ac7dd6565, type: 2}
+  m_SpriteAtlas: {fileID: 0}
   m_RD:
     serializedVersion: 3
     texture: {fileID: 2800000, guid: 3088d9c58065718489d59f1ebcc60763, type: 3}
@@ -17028,7 +17271,7 @@ Sprite:
     downscaleMultiplier: 1
   m_AtlasRD:
     serializedVersion: 3
-    texture: {fileID: 2, guid: 00000000000000000000000000000000, type: 0}
+    texture: {fileID: 0}
     alphaTexture: {fileID: 0}
     secondaryTextures: []
     m_SubMeshes:
@@ -17108,14 +17351,14 @@ Sprite:
     m_Bindpose: []
     textureRect:
       serializedVersion: 2
-      x: 0
-      y: 84
+      x: 60
+      y: 288
       width: 82
       height: 80
     textureRectOffset: {x: 0, y: 0}
-    atlasRectOffset: {x: -60, y: -204}
-    settingsRaw: 67
-    uvTransform: {x: 100, y: 41, z: 100, w: 124}
+    atlasRectOffset: {x: -1, y: -1}
+    settingsRaw: 64
+    uvTransform: {x: 100, y: 101, z: 100, w: 328}
     downscaleMultiplier: 1
   m_PhysicsShape:
   - - {x: 0.41, y: 0.17}
@@ -17717,7 +17960,7 @@ Sprite:
     3088d9c58065718489d59f1ebcc60763: -127341132
   m_AtlasTags:
   - Game
-  m_SpriteAtlas: {fileID: 4343727234628468602, guid: 072c7effd3723684eb75716ac7dd6565, type: 2}
+  m_SpriteAtlas: {fileID: 0}
   m_RD:
     serializedVersion: 3
     texture: {fileID: 2800000, guid: 3088d9c58065718489d59f1ebcc60763, type: 3}
@@ -17811,7 +18054,7 @@ Sprite:
     downscaleMultiplier: 1
   m_AtlasRD:
     serializedVersion: 3
-    texture: {fileID: 2, guid: 00000000000000000000000000000000, type: 0}
+    texture: {fileID: 0}
     alphaTexture: {fileID: 0}
     secondaryTextures: []
     m_SubMeshes:
@@ -17891,14 +18134,14 @@ Sprite:
     m_Bindpose: []
     textureRect:
       serializedVersion: 2
-      x: 86
-      y: 84
+      x: 269
+      y: 393
       width: 81
       height: 80
     textureRectOffset: {x: 0, y: 0}
-    atlasRectOffset: {x: -183, y: -309}
-    settingsRaw: 67
-    uvTransform: {x: 100, y: 126.5, z: 100, w: 124}
+    atlasRectOffset: {x: -1, y: -1}
+    settingsRaw: 64
+    uvTransform: {x: 100, y: 309.5, z: 100, w: 433}
     downscaleMultiplier: 1
   m_PhysicsShape:
   - - {x: 0.39499998, y: 0.25}
@@ -18222,7 +18465,7 @@ Sprite:
     3088d9c58065718489d59f1ebcc60763: -1421568890
   m_AtlasTags:
   - Game
-  m_SpriteAtlas: {fileID: 4343727234628468602, guid: 072c7effd3723684eb75716ac7dd6565, type: 2}
+  m_SpriteAtlas: {fileID: 0}
   m_RD:
     serializedVersion: 3
     texture: {fileID: 2800000, guid: 3088d9c58065718489d59f1ebcc60763, type: 3}
@@ -18316,7 +18559,7 @@ Sprite:
     downscaleMultiplier: 1
   m_AtlasRD:
     serializedVersion: 3
-    texture: {fileID: 2, guid: 00000000000000000000000000000000, type: 0}
+    texture: {fileID: 0}
     alphaTexture: {fileID: 0}
     secondaryTextures: []
     m_SubMeshes:
@@ -18396,14 +18639,14 @@ Sprite:
     m_Bindpose: []
     textureRect:
       serializedVersion: 2
-      x: 86
-      y: 0
+      x: 60
+      y: 392
       width: 82
       height: 80
     textureRectOffset: {x: 0, y: 0}
-    atlasRectOffset: {x: 26, y: -392}
-    settingsRaw: 67
-    uvTransform: {x: 100, y: 127, z: 100, w: 40}
+    atlasRectOffset: {x: -1, y: -1}
+    settingsRaw: 64
+    uvTransform: {x: 100, y: 101, z: 100, w: 432}
     downscaleMultiplier: 1
   m_PhysicsShape:
   - - {x: 0.39, y: 0.22}
@@ -18791,7 +19034,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1100623308}
-  m_RootOrder: 16
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2110285454
 GameObject:

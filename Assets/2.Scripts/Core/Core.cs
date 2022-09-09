@@ -38,6 +38,11 @@ public class Core : MonoBehaviour
         RightC,
         RIghtG,
         RightD,
+        Key1,
+        Key12,
+        Key13,
+        Space,
+        Null
     }
     
     [Header("三个场景")]

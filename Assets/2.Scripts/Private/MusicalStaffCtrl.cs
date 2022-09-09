@@ -60,11 +60,25 @@ public class MusicalStaffCtrl : MonoBehaviour,IUpdate
     /// </summary>
     void showStaffAndInstrument()
     {
-       
-       //显示乐器
-        instruments[Core.selectedInstrument].SetActive(true);
-        //显示乐谱
-        staffs[Core.selectedInstrument].gameObject.SetActive(true);
+
+        for (int i = 0; i < 3; i++)
+        {
+            if(i == Core.selectedInstrument)
+            {
+                //显示乐器
+                instruments[Core.selectedInstrument].SetActive(true);
+                //显示乐谱
+                staffs[Core.selectedInstrument].gameObject.SetActive(true);
+            }
+            else
+            {
+                //卸载不需要的乐器和乐谱
+             Destroy(instruments[i]);   
+             Destroy(staffs[i].gameObject);
+            }
+        }
+        
+     
       //显示判定线
        Cursor.gameObject.SetActive(true); 
       //显示与指法有关的
@@ -88,7 +102,12 @@ public class MusicalStaffCtrl : MonoBehaviour,IUpdate
     void register()
     {
         StaticVideoPlayer.staticVideoPlayer.RegisterEachFrame();
-        StaticVideoPlayer.staticVideoPlayer.eachFrame.AddListener(delegate { staffs[Core.selectedInstrument].StaffRefresh(Cursor); });
+        StaticVideoPlayer.staticVideoPlayer.eachFrame.AddListener(delegate
+        {
+            //注册让乐谱移动
+            staffs[Core.selectedInstrument].StaffRefresh(Cursor);
+           
+        });
     }
     
     
@@ -100,6 +119,9 @@ public class MusicalStaffCtrl : MonoBehaviour,IUpdate
         {
             StaticVideoPlayer.staticVideoPlayer.Jump(Episode.ShowStaffAndInstrument -1);
         }
+        
+        
+      
         
         
      
