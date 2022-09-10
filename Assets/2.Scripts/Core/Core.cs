@@ -2,20 +2,24 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
+using UnityEngine.SceneManagement;
 
-public class Core : MonoBehaviour
+public class Core : MonoBehaviour,IUpdate
 {
     public static Core core;
     
     /// <summary>
     /// 选择的乐器编号
     /// </summary>
-    public static int selectedInstrument;
+    public int selectedInstrument;
 
     /// <summary>
     /// 到哪一章节了
     /// </summary>
-    public static int episode = 0;
+    public int episode = 0;
+    
+
 
 /// <summary>
 /// 乐器指法
@@ -42,7 +46,10 @@ public class Core : MonoBehaviour
         Key12,
         Key13,
         Space,
-        Null
+        Key12Space,
+        Key13Space,
+        Key1Space,
+       Null
     }
     
     [Header("三个场景")]
@@ -63,15 +70,23 @@ public class Core : MonoBehaviour
         
         //不选择乐器
         selectedInstrument = -1;
-        
-        //打开选择角色的面板
-        chooseCharacter.SetActive(true);
         //禁用游戏本体
         gameSelf.SetActive(false);
+     
+        //打开选择角色的面板
+        chooseCharacter.SetActive(true);
+       
 
         episode = 0;
 
     }
+
+    private void Start()
+    {
+        UpdateManager.RegisterUpdate(this);
+  
+    }
+
 
     public void StartGame(int id)
     {
@@ -98,10 +113,24 @@ public class Core : MonoBehaviour
     /// </summary>
     public void ShowDialogue()
     {
-        gameSelf.SetActive(false);
+      
         dialogue.SetActive(true);
+        //摧毁游戏面板
+        Destroy(gameSelf);
     }
     
     // Start is called before the first frame update
 
+    public void FastUpdate()
+    {
+        //重新开始游戏
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            SceneManager.LoadScene("load");
+        }
+    }
+    
+  
+    
+    
 }

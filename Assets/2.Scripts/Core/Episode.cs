@@ -20,5 +20,5 @@ public class Episode
 /// <summary>
 /// 视频结束
 /// </summary>
-   public const int VideoEnd = 2018;
+   public const int VideoEnd = 2017;
 }

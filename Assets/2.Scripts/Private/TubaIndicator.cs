@@ -31,7 +31,7 @@ public class TubaIndicator : MonoBehaviour
    {
       //点亮大号
     
-      image.color = Color.Lerp( image.color, light, 0.85f);
+      image.color = light;
       //然后逐渐变暗
       
    }
@@ -42,6 +42,6 @@ public class TubaIndicator : MonoBehaviour
    public void BecomingDark()
    {
    
-     image.color = Color.Lerp( image.color, dark, 0.01f);
+     image.color = Color.Lerp( image.color, dark, 0.04f);
    }
 }

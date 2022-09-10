@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -22,60 +23,46 @@ public TMP_Text RightContent;
 public TMP_Text Writer;
 public Image BG;
 
-/// <summary>
-/// 本轮游戏的小剧场
-/// </summary>
-private YamlReadWrite.Dialogue selectedDialogue;
+
+
+
+
 
 [ContextMenu("测试小剧场")]
-  public void Show()
+  public void Start()
   {
-#if UNITY_EDITOR
-    StartCoroutine(loadDialogue());
-#endif
-    
-    
-  }
-
-
-
-  public IEnumerator loadDialogue()
-  {
-    var all = YamlReadWrite.ReadDialogues();
-    int i = UnityEngine.Random.Range(0, all.Length);
-    //清单文件获取
-    selectedDialogue = YamlReadWrite.ReadDialogues()[i];
+//清单文件获取
+    var  selectedDialogue = Loading.selectedDialogue;
     //得到图片
-    UnityWebRequest d =
-      new UnityWebRequest(
-        $"file://{System.IO.Path.GetDirectoryName(Application.dataPath)}/Dialogue/{selectedDialogue.BackgroundImageName}.jpg");
- 
+    var image = Loading.dialogueImage;
     
-    DownloadHandlerTexture downloadHandlerTexture = new DownloadHandlerTexture(true);
-    d.downloadHandler = downloadHandlerTexture;
-    yield return d.SendWebRequest();
 
-    Texture2D texture = downloadHandlerTexture.texture;
-     BG.sprite = Sprite.Create(texture, new Rect(0f, 0f, texture.width, texture.height), Vector2.zero);
+    BG.sprite = image;
     
     
     //读取内容
     //读取内容
   
-    if (selectedDialogue.extraContent != "可选内容​")
+    if (selectedDialogue.extraContent != "可选内容​" || selectedDialogue.extraContent != "可选内容")
     {
-      Debug.Log("S");
       Extra.text = selectedDialogue.extraContent;
     }
     else
     {
       Extra.text = string.Empty;
     }
+    
     LeftContent.text = selectedDialogue.LeftContent;
     RightContent.text = selectedDialogue.RightContent;
     Writer.text = selectedDialogue.Writer;
     characterIcons[0].GetSpriteFromAtlas($"Euphonium-characters_{selectedDialogue.characterLeft}");
     characterIcons[1].GetSpriteFromAtlas($"Euphonium-characters_{selectedDialogue.characterRight}");
 
+    
+    
   }
+
+
+
+
 }

@@ -106,6 +106,7 @@ public class TextUI : MonoBehaviour
     
     public void ExitGame()
     {
+        
         Settings.SaveSettings();
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
@@ -123,7 +124,7 @@ public class TextUI : MonoBehaviour
 
     public void PlayAgain()
     {
-        PublicAudioSource.PlaySoundEffect(ClickEffect);
+      //  PublicAudioSource.PlaySoundEffect(ClickEffect);
         SceneManager.LoadScene("load");
         Settings.SaveSettings();
     }

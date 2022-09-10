@@ -66,13 +66,13 @@ public class MusicalStaffCtrl : MonoBehaviour,IUpdate
 
         for (int i = 0; i < 3; i++)
         {
-            if(i == Core.selectedInstrument)
+            if(i == Core.core.selectedInstrument)
             {
                 //显示乐器
-                instruments[Core.selectedInstrument].SetActive(true);
+                instruments[Core.core.selectedInstrument].SetActive(true);
                 //显示乐谱
-                staffs[Core.selectedInstrument].gameObject.SetActive(true);
-                fingeringShow[Core.selectedInstrument].SetActive(true);
+                staffs[Core.core.selectedInstrument].gameObject.SetActive(true);
+                fingeringShow[Core.core.selectedInstrument].SetActive(true);
             }
             else
             {
@@ -101,7 +101,7 @@ public class MusicalStaffCtrl : MonoBehaviour,IUpdate
         StaticVideoPlayer.staticVideoPlayer.eachFrame.AddListener(delegate
         {
             //注册让乐谱移动
-            staffs[Core.selectedInstrument].StaffRefresh(Cursor);
+            staffs[Core.core.selectedInstrument].StaffRefresh(Cursor);
            
         });
     }
@@ -111,11 +111,16 @@ public class MusicalStaffCtrl : MonoBehaviour,IUpdate
     public void FastUpdate()
     {
         //跳过前面的片段
-        if (Core.episode == 0 && Input.GetKeyDown(KeyCode.X))
+        if (Core.core.episode == 0 && Input.GetKeyDown(KeyCode.X))
         {
             StaticVideoPlayer.staticVideoPlayer.Jump(Episode.ShowStaffAndInstrument -1);
         }
         
+        //跳过后面的片段
+        if (Core.core.episode == 3 && Input.GetKeyDown(KeyCode.X) )
+        {
+            StaticVideoPlayer.staticVideoPlayer.Jump(Episode.VideoEnd - 1);
+        }
         
       
         
@@ -125,40 +130,41 @@ public class MusicalStaffCtrl : MonoBehaviour,IUpdate
         switch (StaticVideoPlayer.staticVideoPlayer.Frame)
         {
             //显示乐器和乐谱，读取本地时间文件
-            case >= Episode.ShowStaffAndInstrument when Core.episode == 0:
+            case >= Episode.ShowStaffAndInstrument when Core.core.episode == 0:
                
-                Core.episode++;
-                staffs[Core.selectedInstrument]. SetInterval();
+                Core.core.episode++;
+                staffs[Core.core.selectedInstrument]. SetInterval();
                 //计算乐谱移动速度
-                staffs[Core.selectedInstrument].SetSpeed(Cursor);
+                staffs[Core.core.selectedInstrument].SetSpeed(Cursor);
                 showStaffAndInstrument();
                 break;
             
             //乐谱开始移动
-            case >= Episode.StartMoving when Core.episode == 1:
-                Core.episode++;
+            case >= Episode.StartMoving when Core.core.episode == 1:
+                Core.core.episode++;
                 //注册，让乐谱移动
                 register();
             break;
             
             //合奏结束
-            case  >= Episode.EnsembleEnd when Core.episode == 2:
-                Core.episode++;
+            case  >= Episode.EnsembleEnd when Core.core.episode == 2:
+                Core.core.episode++;
                 StaticVideoPlayer.staticVideoPlayer.eachFrame.RemoveAllListeners();
-               UpdateManager.Remove(this);
+            
                 //删掉乐器和乐谱
-               Destroy(instruments[Core.selectedInstrument]); 
-                Destroy( staffs[Core.selectedInstrument].gameObject);
-             Destroy(fingeringShow[Core.selectedInstrument]);
+               Destroy(instruments[Core.core.selectedInstrument]); 
+                Destroy( staffs[Core.core.selectedInstrument].gameObject);
+             Destroy(fingeringShow[Core.core.selectedInstrument]);
                 
                 //删掉判定线
                 Destroy(Cursor.gameObject); 
                 break;
             
             //视频结束，进入小剧场
-            case >= Episode.VideoEnd when Core.episode == 3:
-                Core.episode++;
+            case >= Episode.VideoEnd when Core.core.episode == 3:
+                Core.core.episode++;
                 Core.core.ShowDialogue();
+               UpdateManager.Remove(this);
                 break;
             
         }
