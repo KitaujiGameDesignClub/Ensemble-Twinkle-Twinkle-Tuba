@@ -24,7 +24,9 @@ public class UpdateManager : MonoBehaviour
         }
         else
         {
+#if UNITY_EDITOR
             Debug.LogError("意外的IUpdate注册。应晚于Awake执行");
+#endif 
         }
     }
 

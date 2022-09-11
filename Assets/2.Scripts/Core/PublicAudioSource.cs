@@ -89,5 +89,10 @@ public class PublicAudioSource : MonoBehaviour
         Effect.Stop();
         Effect.PlayOneShot(clip,Settings.SettingsContent.SoundEffectVolume);
     }
+
+    public void SoundEffectStop()
+    {
+        Effect.Stop();
+    }
     
 }

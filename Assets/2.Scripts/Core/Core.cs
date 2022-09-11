@@ -90,8 +90,19 @@ public class Core : MonoBehaviour,IUpdate
 
     public void StartGame()
     {
+        if (selectedInstrument < 0)
+        {
+            return;
+        }
+        
+        //停止BGM继续播放
+        PublicAudioSource.publicAudioSource.StopMusicPlaying();
         //开始游戏
         DemonstrateInstrument();
+        //开始游戏
+        PublicAudioSource.publicAudioSource.PlaySoundEffect(PublicAudioSource.AudioType.Click);
+     
+        
     }
 
     /// <summary>
@@ -127,6 +138,22 @@ public class Core : MonoBehaviour,IUpdate
         if (Input.GetKeyDown(KeyCode.R))
         {
             SceneManager.LoadScene("load");
+        }
+        //重新开始游戏
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (Time.timeScale >= 0.5F)
+            {
+                Time.timeScale = 0f;
+                StaticVideoPlayer.staticVideoPlayer.Pause();
+            }
+            else
+            {
+                Time.timeScale = 1f;
+                StaticVideoPlayer.staticVideoPlayer.Play();
+            }
+          
+           
         }
     }
     

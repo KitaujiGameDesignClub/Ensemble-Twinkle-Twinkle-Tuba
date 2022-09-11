@@ -62,7 +62,7 @@ public class OpeningCtrl : MonoBehaviour
     
     public void StartGame()
     {
-        
+        PublicAudioSource.publicAudioSource.PlaySoundEffect(PublicAudioSource.AudioType.Click);
      SceneManager.LoadScene("load");
     }
 

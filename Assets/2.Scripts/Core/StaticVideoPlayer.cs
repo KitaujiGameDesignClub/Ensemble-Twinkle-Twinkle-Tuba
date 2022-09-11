@@ -1,4 +1,5 @@
 using System;
+using Codice.CM.Common;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Video;
@@ -57,7 +58,7 @@ public class StaticVideoPlayer : MonoBehaviour,IUpdate
 
     public void Pause()
     {
-        UpdateManager.RegisterUpdate(this);
+      UpdateManager.Remove(this);
         VideoPlayer.Pause();
     }
 

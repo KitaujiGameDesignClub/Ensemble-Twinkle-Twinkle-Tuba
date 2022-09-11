@@ -8,11 +8,7 @@ using UnityEngine.SceneManagement;
 public class TextUI : MonoBehaviour
 {
     public static TextUI textUI;
-
-    /// <summary>
-    /// 按钮点击的音效
-    /// </summary>
-    public AudioClip ClickEffect;
+    
     
     /// <summary>
     /// 记录视频帧数与帧率
@@ -124,7 +120,7 @@ public class TextUI : MonoBehaviour
 
     public void PlayAgain()
     {
-      //  PublicAudioSource.PlaySoundEffect(ClickEffect);
+        PublicAudioSource.publicAudioSource.PlaySoundEffect(PublicAudioSource.AudioType.Click);
         SceneManager.LoadScene("load");
         Settings.SaveSettings();
     }

@@ -23,7 +23,7 @@ public TMP_Text RightContent;
 public TMP_Text Writer;
 public Image BG;
 
-
+public AudioClip bgm;
 
 
 
@@ -39,6 +39,8 @@ public Image BG;
 
     BG.sprite = image;
     
+    //播放bgm
+    PublicAudioSource.publicAudioSource.PlayBackgroundMusic(bgm);
     
     //读取内容
     //读取内容
