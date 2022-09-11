@@ -2,14 +2,28 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class PublicAudioSource : MonoBehaviour
 {
-    private static AudioSource Music;
-    private static AudioSource Effect;
- 
+    public static PublicAudioSource publicAudioSource;
+
+    /// <summary>
+    /// 点击音效（长度大于1则随机播放一个）
+    /// </summary>
+    public AudioClip[] clicks;
+
+    public enum AudioType
+    {
+        Click,
+    }
+    
+    private  AudioSource Music;
+    private  AudioSource Effect;
+    
     private void Awake()
     {
+        publicAudioSource = this;
         DontDestroyOnLoad(gameObject);
         
         AudioSource[] audio = GetComponents<AudioSource>();
@@ -30,7 +44,7 @@ public class PublicAudioSource : MonoBehaviour
     
 
     // Start is called before the first frame update
-    public static void PlayBackgroundMusic(AudioClip clip)
+    public void PlayBackgroundMusic(AudioClip clip)
     {
         //停止之前的播放
         StopMusicPlaying();
@@ -39,20 +53,41 @@ public class PublicAudioSource : MonoBehaviour
         Music.Play();
     }
 
-    public static void UpdateMusicVolume()
+    public  void UpdateMusicVolume()
     {
         Music.volume = Settings.SettingsContent.MusicVolume;
     }
 
-    public static void StopMusicPlaying()
+    public void StopMusicPlaying()
     {
         Music.Stop();
         Music.clip = null;
     }
 
-    // Update is called once per frame
-    public static void PlaySoundEffect(AudioClip clip)
+    /// <summary>
+    /// 播放音效（公用）
+    /// </summary>
+    /// <param name="clip"></param>
+    public  void PlaySoundEffect(AudioType type)
     {
-       Effect.PlayOneShot(clip,Settings.SettingsContent.SoundEffectVolume);
+        switch (type)
+        {
+            case AudioType.Click:
+               PlaySoundEffect(clicks[Random.Range(0,clicks.Length)]);
+                break;
+                
+        }
+      
     }
+
+    /// <summary>
+    /// 播放音效（指定）
+    /// </summary>
+    /// <param name="clip"></param>
+    public void PlaySoundEffect(AudioClip clip)
+    {
+        Effect.Stop();
+        Effect.PlayOneShot(clip,Settings.SettingsContent.SoundEffectVolume);
+    }
+    
 }

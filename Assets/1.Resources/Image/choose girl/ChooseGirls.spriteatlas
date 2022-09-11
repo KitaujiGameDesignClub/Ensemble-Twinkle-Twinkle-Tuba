@@ -44,6 +44,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: cac530c2f0249b74482c48957cfee835, type: 3}
   - {fileID: 21300000, guid: c109c0d5c1ed2d94aa9c67b708757cd2, type: 3}
   - {fileID: 21300000, guid: d46911862e45c5649925bdd56e4a3a3c, type: 3}
+  - {fileID: 21300000, guid: 5adb7638accfd154a90ffc035aa58026, type: 3}
   - {fileID: 21300000, guid: fff7f2a89ec7e16499e4a0d7512c085d, type: 3}
   - {fileID: 21300000, guid: 6c7b586a9cccaba45be08de017ff67e7, type: 3}
   - {fileID: 21300000, guid: 82f2615bdd286ac4d8149d8887f384c2, type: 3}
@@ -57,6 +58,7 @@ SpriteAtlas:
   - kumiko01
   - kumiko
   - tuba
+  - blue box
   - hazuki
   - sapphire02
   - choose girl

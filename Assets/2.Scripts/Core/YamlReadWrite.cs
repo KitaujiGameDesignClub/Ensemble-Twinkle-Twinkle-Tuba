@@ -175,10 +175,7 @@ public static class YamlReadWrite
         public float MusicVolume;
         public float SoundEffectVolume;
 
-        public int lag;
 
-        //已经玩完这个游戏了，便于开启“跳过：老师的话”功能
-        public bool hasPlayed;
     }
 
 /// <summary>

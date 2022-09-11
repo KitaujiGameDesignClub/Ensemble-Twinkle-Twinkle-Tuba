@@ -29,12 +29,12 @@ public class OpeningCtrl : MonoBehaviour
         EffectVolSlider.value = Settings.SettingsContent.SoundEffectVolume;
 
         //调整音量
-        PublicAudioSource.UpdateMusicVolume();
+        PublicAudioSource.publicAudioSource.UpdateMusicVolume();
         
-        //注册事件
+        //注册事件，滑条更新音量
         MusicVolSlider.onValueChanged.AddListener(delegate(float arg0)
         {
-            Settings.SettingsContent.MusicVolume = arg0; PublicAudioSource.UpdateMusicVolume();
+            Settings.SettingsContent.MusicVolume = arg0; PublicAudioSource.publicAudioSource.UpdateMusicVolume();
         });
         EffectVolSlider.onValueChanged.AddListener(delegate(float arg0)
         {
@@ -43,7 +43,7 @@ public class OpeningCtrl : MonoBehaviour
 
         
         //播放BGM
-        PublicAudioSource.PlayBackgroundMusic(bgm);
+        PublicAudioSource.publicAudioSource.PlayBackgroundMusic(bgm);
     }
 
 

@@ -1,12 +1,16 @@
 using System;
 using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
-using Random = System.Random;
+
 
 public class Loading : MonoBehaviour
 {
+    public TMP_Text loadingState;
+    
+    
     /// <summary>
     /// 本轮游戏的小剧场
     /// </summary>
@@ -20,13 +24,19 @@ public class Loading : MonoBehaviour
     // Start is called before the first frame update
     private IEnumerator Start()
     {
-        Settings.SaveSettings();
+        loadingState.text = "少女调音中.....\n清除无用资源";
+        Settings.SaveSettings();  
+        GC.Collect();
         yield return Resources.UnloadUnusedAssets();
         GC.Collect();
+        yield return Resources.UnloadUnusedAssets();
+        
       //得到本轮的小剧场
+      loadingState.text = "少女调音中.....\n小剧场加载";
         yield return loadDialogue();
-    
+        loadingState.text = "少女调音中.....\n载入游戏场景";
         yield return SceneManager.LoadSceneAsync("SampleScene");
+        
     }
     
     public IEnumerator loadDialogue()

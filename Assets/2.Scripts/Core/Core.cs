@@ -88,19 +88,19 @@ public class Core : MonoBehaviour,IUpdate
     }
 
 
-    public void StartGame(int id)
+    public void StartGame()
     {
         //开始游戏
-        DemonstrateInstrument(id);
+        DemonstrateInstrument();
     }
 
     /// <summary>
     /// 现在是开始游戏了
     /// </summary>
     /// <param name="id"></param>
-    private void DemonstrateInstrument(int id)
+    private void DemonstrateInstrument()
     {
-        selectedInstrument = id;
+      
         //启用游戏本体
         gameSelf.SetActive(true);
         //摧毁选择角色的面板
