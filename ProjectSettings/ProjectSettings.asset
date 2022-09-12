@@ -110,7 +110,7 @@ PlayerSettings:
   xboxEnableFitness: 0
   visibleInBackground: 1
   allowFullscreenSwitch: 0
-  fullscreenMode: 3
+  fullscreenMode: 1
   xboxSpeechDB: 0
   xboxEnableHeadOrientation: 0
   xboxEnableGuest: 0
@@ -145,7 +145,7 @@ PlayerSettings:
     16:10: 0
     16:9: 1
     Others: 0
-  bundleVersion: 1.0
+  bundleVersion: 1.0.1
   preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0
@@ -168,7 +168,7 @@ PlayerSettings:
   applicationIdentifier:
     Standalone: com.Kitauji-Game-Design-Club-.Ensemble--Twinkle-Twinkle-Tuba
   buildNumber:
-    Standalone: 0
+    Standalone: 1
     iPhone: 0
     tvOS: 0
   overrideDefaultApplicationIdentifier: 0
@@ -280,7 +280,14 @@ PlayerSettings:
   AndroidMinifyDebug: 0
   AndroidValidateAppBundleSize: 1
   AndroidAppBundleSizeToValidate: 150
-  m_BuildTargetIcons: []
+  m_BuildTargetIcons:
+  - m_BuildTarget: 
+    m_Icons:
+    - serializedVersion: 2
+      m_Icon: {fileID: 2800000, guid: 65195d9e937da11449d78084871f968a, type: 3}
+      m_Width: 128
+      m_Height: 128
+      m_Kind: 0
   m_BuildTargetPlatformIcons:
   - m_BuildTarget: Android
     m_Icons:
@@ -642,7 +649,7 @@ PlayerSettings:
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend:
-    Standalone: 0
+    Standalone: 1
   il2cppCompilerConfiguration: {}
   managedStrippingLevel: {}
   incrementalIl2cppBuild: {}
