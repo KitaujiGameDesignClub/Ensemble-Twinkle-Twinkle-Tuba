@@ -25,6 +25,7 @@ public static class YamlReadWrite
     /// <returns></returns>
     public static string UnityButNotAssets
     {
+#if UNITY_EDITOR || UNITY_STANDALONE_WIN
         get
         {
             string[] raw = Application.dataPath.Split("/");
@@ -37,6 +38,11 @@ public static class YamlReadWrite
 
             return done;
         }
+        
+   
+        
+#endif
+      
     }
 
     /// <summary>
@@ -56,21 +62,28 @@ public static class YamlReadWrite
         }
         
         
-//检查是否存在所需的游戏文件夹，不存在则创建
-        CheckAndCreateDirectory();
+
         Serializer serializer = new Serializer();
 
         //把注释写入的内容
         string authenticContent = $"{notes}\n{serializer.Serialize(content)}";
 
-       
-            StreamWriter  streamWriter =
-                new StreamWriter($"{UnityButNotAssets}/saves/{fileName.ToString()}.yaml", false, Encoding.UTF8);
-  
-       
+#if UNITY_EDITOR || UNITY_STANDALONE_WIN
+        StreamWriter streamWriter =
+            new StreamWriter($"{UnityButNotAssets}/saves/{fileName.ToString()}.yaml", false, Encoding.UTF8);
+
+#elif UNITY_ANDROID
+           StreamWriter streamWriter =
+            new StreamWriter($"{Application.persistentDataPath}/saves/{fileName.ToString()}.yaml", false,
+                Encoding.UTF8);
+#endif
         streamWriter.Write(authenticContent);
         streamWriter.Dispose();
         streamWriter.Close();
+     
+
+
+
     }
 
     /// <summary>
@@ -82,20 +95,38 @@ public static class YamlReadWrite
     public static T Read<T>(FileName fileName)
     {
       
-            //检查是否存在所需的游戏文件夹，不存在则创建
-            CheckAndCreateDirectory();
+         
             Deserializer deserializer = new();
-      
-      
+            
+#if UNITY_EDITOR || UNITY_STANDALONE_WIN
+        StreamReader streamReader =
+            new StreamReader($"{UnityButNotAssets}/saves/{fileName.ToString()}.yaml", Encoding.UTF8);
+        var content = deserializer.Deserialize<T>(streamReader.ReadToEnd());
+        streamReader.Dispose();
+        streamReader.Close();
+       return content;
+#elif UNITY_ANDROID
+            if (fileName == FileName.Settings)
+        {
             StreamReader streamReader =
-                new StreamReader($"{UnityButNotAssets}/saves/{fileName.ToString()}.yaml", Encoding.UTF8);
-        
-  
-
+                new StreamReader($"{Application.persistentDataPath}/saves/{fileName.ToString()}.yaml", Encoding.UTF8);
             var content = deserializer.Deserialize<T>(streamReader.ReadToEnd());
             streamReader.Dispose();
             streamReader.Close();
             return content;
+        }
+        //除了设置文件，其他的yaml都从res文件夹中读取
+        else
+        {
+            return deserializer.Deserialize<T>(Resources.Load($"saves/{fileName.ToString()}").ToString());
+        }
+
+#endif
+
+     
+  
+
+          
     }
 
     /// <summary>
@@ -104,25 +135,44 @@ public static class YamlReadWrite
     /// <returns></returns>
     public static Dialogue[] ReadDialogues()
     {
+      
+        
+#if UNITY_EDITOR || UNITY_STANDALONE_WIN
         DirectoryInfo directoryInfo = new DirectoryInfo($"{UnityButNotAssets}/Dialogue");
+        var manifests = directoryInfo.GetFiles("*.yaml");
+   
+        Dialogue[] dialogues = new Dialogue[manifests.Length];
+        Deserializer deserializer = new Deserializer();
 
-       var manifests = directoryInfo.GetFiles("*.yaml");
-
-       Dialogue[] dialogues = new Dialogue[manifests.Length];
-       Deserializer deserializer = new Deserializer();
-
-       for (int i = 0; i < dialogues.Length; i++)
-       {
-           FileStream fileStream = new FileStream(manifests[i].FullName, FileMode.Open, FileAccess.Read);
-           StreamReader streamReader = new StreamReader(fileStream);
-           //yaml读取
-           var content = deserializer.Deserialize<Dialogue>(streamReader.ReadToEnd());
-           streamReader.Dispose();
-           streamReader.Close();
-           dialogues[i] = content;
+        for (int i = 0; i < dialogues.Length; i++)
+        {
+            //
+            FileStream fileStream = new FileStream(manifests[i].FullName, FileMode.Open, FileAccess.Read);
+            StreamReader streamReader = new StreamReader(fileStream);
+            //yaml读取
+            dialogues[i] = deserializer.Deserialize<Dialogue>(streamReader.ReadToEnd());
+            streamReader.Dispose();
+            streamReader.Close();
+            
            
           
+        }
+#elif UNITY_ANDROID
+            var manifests = Resources.LoadAll("Dialogue/yaml");
+       Dialogue[] dialogues = new Dialogue[manifests.Length];
+       Deserializer deserializer = new Deserializer();
+       for (int i = 0; i < manifests.Length; i++)
+       {
+           dialogues[i] = deserializer.Deserialize<Dialogue>(manifests[i].ToString());
        }
+#endif
+
+    
+      
+
+      
+
+     
 
        return dialogues;
 
@@ -137,10 +187,25 @@ public static class YamlReadWrite
     /// </summary>
     public static void CheckAndCreateDirectory()
     {
+#if UNITY_EDITOR || UNITY_EDITOR_WIN
         if (!Directory.Exists($"{UnityButNotAssets}/saves"))
         {
             Directory.CreateDirectory($"{UnityButNotAssets}/saves");
         }
+        if (!Directory.Exists($"{UnityButNotAssets}/Dialogue"))
+        {
+            Directory.CreateDirectory($"{UnityButNotAssets}/Dialogue");
+        }
+        
+#elif UNITY_ANDROID
+//安卓这边不允许小剧场外部储存
+          if (!Directory.Exists($"{Application.persistentDataPath}/saves"))
+        {
+            Directory.CreateDirectory($"{Application.persistentDataPath}/saves");
+        }
+#endif
+       
+       
     }
 
 
@@ -167,7 +232,7 @@ public static class YamlReadWrite
     }
 
     /// <summary>
-    /// 设置的内容
+    /// 设置的内容（唯一一个永远是外部储存的）
     /// </summary>
     [Serializable]
     public struct SettingsContent

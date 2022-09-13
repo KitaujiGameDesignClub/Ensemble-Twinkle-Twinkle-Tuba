@@ -16,8 +16,7 @@ public class OpeningCtrl : MonoBehaviour
     private void Awake()
     {
         Application.targetFrameRate = -1;
-        //读取设置文件
-        Settings.ReadSettings();
+        
         initialization.Invoke();
     }
 
@@ -27,9 +26,7 @@ public class OpeningCtrl : MonoBehaviour
         //按照文件调整滑块
         MusicVolSlider.value = Settings.SettingsContent.MusicVolume;
         EffectVolSlider.value = Settings.SettingsContent.SoundEffectVolume;
-
-        //调整音量
-        PublicAudioSource.publicAudioSource.UpdateMusicVolume();
+        
         
         //注册事件，滑条更新音量
         MusicVolSlider.onValueChanged.AddListener(delegate(float arg0)

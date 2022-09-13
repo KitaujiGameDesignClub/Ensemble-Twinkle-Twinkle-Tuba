@@ -45,7 +45,11 @@ public class Loading : MonoBehaviour
         int i = UnityEngine.Random.Range(0, all.Length);
         //清单文件获取
         selectedDialogue = YamlReadWrite.ReadDialogues()[i];
+       
+        
+     
         //得到图片
+#if  UNITY_EDITOR || UNITY_STANDALONE_WIN
         UnityWebRequest d =
             new UnityWebRequest(
                 $"file://{System.IO.Path.GetDirectoryName(Application.dataPath)}/Dialogue/{selectedDialogue.BackgroundImageName}.jpg");
@@ -56,6 +60,16 @@ public class Loading : MonoBehaviour
         yield return d.SendWebRequest();
 
         Texture2D texture = downloadHandlerTexture.texture;
+
+        
+        //android从resources文件中获取 
+#elif UNITY_ANDROID
+      var request= Resources.LoadAsync<Texture2D>($"Dialogue/Images/{selectedDialogue.BackgroundImageName}");
+        yield return request;
+        Texture2D texture = request.asset as Texture2D;
+
+  #endif
+      
         dialogueImage = Sprite.Create(texture, new Rect(0f, 0f, texture.width, texture.height), Vector2.zero);
         
 
