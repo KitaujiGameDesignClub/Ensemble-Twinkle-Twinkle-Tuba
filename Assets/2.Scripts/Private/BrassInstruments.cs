@@ -1,8 +1,9 @@
 
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class BrassInstruments : MonoBehaviour, IUpdate
+public class BrassInstruments : MonoBehaviour, IUpdate,ILateUpdate
 {
     public int instrumentId;
 
@@ -12,7 +13,11 @@ public class BrassInstruments : MonoBehaviour, IUpdate
     /// 按键输入设定
     /// </summary>
     public KeyCode[] keyCodes = new KeyCode[4];
-
+/// <summary>
+/// 按键输入设定（Android用）
+/// </summary>
+    public ScreenButton[] screenButton = new ScreenButton[4];
+    
     /// <summary>
     /// 活塞
     /// </summary>
@@ -49,6 +54,8 @@ public class BrassInstruments : MonoBehaviour, IUpdate
     /// </summary>
     private readonly Color transparent = new Color(1f, 1f, 1f, 0f);
 
+    private PointerEventData pointerEventData;
+    
     private void Awake()
     {
         //修正长度与初始化数组
@@ -63,6 +70,15 @@ public class BrassInstruments : MonoBehaviour, IUpdate
 
         //隐藏气息标记
         BreathIndicator.color = transparent;
+        
+      
+#if !UNITY_ANDROID
+        //删除不必要数组
+        screenButton = null;
+        
+    
+#endif
+       
     }
 
 
@@ -71,14 +87,44 @@ public class BrassInstruments : MonoBehaviour, IUpdate
     /// </summary>
     public void FastUpdate()
     {
+        
         //更新输入状态，在下面进行动画更新
+#if UNITY_EDITOR || UNITY_STANDALONE_WIN
         for (int i = 0; i < keyCodes.Length; i++)
         {
          
             keysPressed[i] = Input.GetKey(keyCodes[i]);
         }
+        
+    #elif UNITY_ANDROID
+     for (int i = 0; i < screenButton.Length; i++)
+        {
+            keysPressed[i] = screenButton[i].OnPressed;
+        }
+        
+#endif
 
-        //针对铺面要求的指法的判断（大号）
+       
+
+      
+    }
+
+    public void OnEnable()
+    {
+        UpdateManager.RegisterUpdate(this);
+        UpdateManager.RegisterLateUpdate(this);
+        
+    }
+
+    public void OnDisable()
+    {
+        UpdateManager.Remove(this);
+        UpdateManager.Remove(this);
+    }
+
+    public void BetterLateUpdate()
+    {
+          //针对铺面要求的指法的判断（大号）
         if (instrumentId == 1)
         {
             //每一个音符都有空格作为吹气keysPressed[3]=true
@@ -175,15 +221,5 @@ public class BrassInstruments : MonoBehaviour, IUpdate
                     Vector3.Lerp(keys[i].localPosition, initialLocalPos[i], pressSpeed * Time.deltaTime);
             }
         }
-    }
-
-    public void OnEnable()
-    {
-        UpdateManager.RegisterUpdate(this);
-    }
-
-    public void OnDisable()
-    {
-        UpdateManager.Remove(this);
     }
 }
