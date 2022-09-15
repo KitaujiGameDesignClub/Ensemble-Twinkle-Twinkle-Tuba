@@ -20,10 +20,12 @@ public class Core : MonoBehaviour,IUpdate
     /// <summary>
     /// 到哪一章节了
     /// </summary>
-    public int episode = 0;
-    
+    [HideInInspector] public int episode = 0;
 
-
+/// <summary>
+/// 上低音号，这个音符到前一个音符之间，按下过按键了吗
+/// </summary>
+    [HideInInspector] public bool hasPressedButton;
 /// <summary>
 /// 乐器指法
 /// </summary>

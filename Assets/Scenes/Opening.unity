@@ -2076,14 +2076,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 1731539450}
     m_Modifications:
     - target: {fileID: 3845406767296586215, guid: 6be5d379f7c8d704c8dd9270f1a9e775, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3845406767296586215, guid: 6be5d379f7c8d704c8dd9270f1a9e775, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3845406767296586215, guid: 6be5d379f7c8d704c8dd9270f1a9e775, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1318094231}
@@ -2091,30 +2083,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
       objectReference: {fileID: 408054854}
-    - target: {fileID: 3845406767296586215, guid: 6be5d379f7c8d704c8dd9270f1a9e775, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3845406767296586215, guid: 6be5d379f7c8d704c8dd9270f1a9e775, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: clickSound
-      objectReference: {fileID: 0}
-    - target: {fileID: 3845406767296586215, guid: 6be5d379f7c8d704c8dd9270f1a9e775, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
-      value: OpeningCtrl, Core
-      objectReference: {fileID: 0}
-    - target: {fileID: 3845406767296586215, guid: 6be5d379f7c8d704c8dd9270f1a9e775, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 3845406768136050201, guid: 6be5d379f7c8d704c8dd9270f1a9e775, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3845406768136050201, guid: 6be5d379f7c8d704c8dd9270f1a9e775, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3845406768136050201, guid: 6be5d379f7c8d704c8dd9270f1a9e775, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -2123,22 +2091,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
       objectReference: {fileID: 408054854}
-    - target: {fileID: 3845406768136050201, guid: 6be5d379f7c8d704c8dd9270f1a9e775, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3845406768136050201, guid: 6be5d379f7c8d704c8dd9270f1a9e775, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: clickSound
-      objectReference: {fileID: 0}
-    - target: {fileID: 3845406768136050201, guid: 6be5d379f7c8d704c8dd9270f1a9e775, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
-      value: OpeningCtrl, Core
-      objectReference: {fileID: 0}
-    - target: {fileID: 3845406768136050201, guid: 6be5d379f7c8d704c8dd9270f1a9e775, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 4940552268465373383, guid: 6be5d379f7c8d704c8dd9270f1a9e775, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2226,10 +2178,6 @@ PrefabInstance:
     - target: {fileID: 6888390661151364356, guid: 6be5d379f7c8d704c8dd9270f1a9e775, type: 3}
       propertyPath: m_Name
       value: course 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6888390661151364356, guid: 6be5d379f7c8d704c8dd9270f1a9e775, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6be5d379f7c8d704c8dd9270f1a9e775, type: 3}

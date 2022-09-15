@@ -105,7 +105,7 @@ public class CursorCtrl : MonoBehaviour
             staff.Translate(speeds[index] * Vector2.left);
 
 
-            
+            //下面是提亲的，辅助的 提示的 圈圈
             //光标前10frames显示（按帧数判断）
             if (Core.core.selectedInstrument == 0 && StaticVideoPlayer.staticVideoPlayer.Frame >= time[index] - 10)
             {
@@ -117,11 +117,29 @@ public class CursorCtrl : MonoBehaviour
             //检查光标是不是在音符那边，
             if (time[index] <= StaticVideoPlayer.staticVideoPlayer.Frame)
             {
-                //消除提示，不过玩家此时还是可以按下去
+                //（提琴）消除圆圈提示，不过玩家此时还是可以按下去
               if(Core.core.selectedInstrument == 0)  circle.position = 100 * Vector3Int.down;
-               //到了就切换到下一个音符
-               if(index < time.Length - 1)  index++;
-               
+              
+              //铜管：空拍并且没有按键的话，亮一下
+              if(fingeringNeedToPressed[index] == Core.Fingering.Null && !Core.core.hasPressedButton)  onRight.Invoke();
+              
+         
+              
+               if(index < time.Length - 1)
+               {
+                   
+                
+                   
+                   //到了就切换到下一个音符
+                   index++;
+                   
+                   //重置按键状态
+                   Core.core.hasPressedButton = false;
+
+               }
+            
+
+
             }
         }
         
@@ -197,16 +215,21 @@ public class CursorCtrl : MonoBehaviour
     /// </summary>
     private void checkFingeringsNeedToPressed(Core.Fingering fingering)
     {
-     
-        
+        //仅在判定时间之内（更短点）判断玩家是否松开了所有按键
+        if (Mathf.Abs(StaticVideoPlayer.staticVideoPlayer.Frame - time[index]) <= 5)
+        {
+            //这个音符到前一个音符之间，按下去按键了
+            Core.core.hasPressedButton = true;
+        }
+
         //确定应该是第几个音符
         switch (index)
         {
             //0这一情况，单独拿出来
             case 0:
-                if (StaticVideoPlayer.staticVideoPlayer.Frame - (time[0] - 3) >= 0 )
+                if (StaticVideoPlayer.staticVideoPlayer.Frame - (time[0] - 7) >= 0 )
                 {
-                    //这第0个音符，刚好落在提前5帧的范围内
+                    //这第0个音符，刚好落在提前7帧的范围内
                     //检查玩家输入的指法是否符合要要求
                     if ( CheckFingering(fingering, 0))
                     {
@@ -218,7 +241,7 @@ public class CursorCtrl : MonoBehaviour
                 break;
                 
             default:
-                if (Mathf.Abs(StaticVideoPlayer.staticVideoPlayer.Frame - time[index]) <= 3)
+                if (Mathf.Abs(StaticVideoPlayer.staticVideoPlayer.Frame - time[index]) <= 7)
                 {
                     //第index个音符
                     //检查玩家输入的指法是否符合要要求
@@ -227,7 +250,7 @@ public class CursorCtrl : MonoBehaviour
                         onRight.Invoke();
                     }
                 }
-                else if (Mathf.Abs(StaticVideoPlayer.staticVideoPlayer.Frame - time[index - 1]) <= 3)
+                else if (Mathf.Abs(StaticVideoPlayer.staticVideoPlayer.Frame - time[index - 1]) <= 7)
                 {
                     //第index - 1个音符
                     //检查玩家输入的指法是否符合要要求

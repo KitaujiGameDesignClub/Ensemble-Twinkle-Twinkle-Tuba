@@ -38,7 +38,7 @@ public class BrassInstruments : MonoBehaviour, IUpdate,ILateUpdate
     /// 保存按键按下去的状态（一直按着）
     /// </summary>
     private bool[] keysPressed = new bool[4];
-    
+
 
     private Vector3[] initialLocalPos;
 
@@ -95,17 +95,19 @@ public class BrassInstruments : MonoBehaviour, IUpdate,ILateUpdate
         {
          
             keysPressed[i] = Input.GetKey(keyCodes[i]);
+          
         }
         
     #elif UNITY_ANDROID
      for (int i = 0; i < screenButton.Length; i++)
         {
             keysPressed[i] = screenButton[i].OnPressed;
+
         }
         
 #endif
 
-       
+     
 
       
     }
@@ -133,7 +135,7 @@ public class BrassInstruments : MonoBehaviour, IUpdate,ILateUpdate
             switch (keysPressed[0])
             {
                 //仅吹气（无按键）
-                case false when !keysPressed[1] && !keysPressed[2] && keysPressed[3]:
+                case false when !keysPressed[1] && !keysPressed[2] &&keysPressed[3]:
                     cursorCtrl.CheckFingeringForBass(Core.Fingering.Space);
                  
                     break;
@@ -155,10 +157,7 @@ public class BrassInstruments : MonoBehaviour, IUpdate,ILateUpdate
         {
             switch (keysPressed[0])
             {
-                case false when !keysPressed[1] && !keysPressed[2] && !keysPressed[3]:
-                    cursorCtrl.CheckFingeringForBass(Core.Fingering.Null);
-                    
-                    break;
+              
                 case true when keysPressed[1] && keysPressed[3]:
                     cursorCtrl.CheckFingeringForBass(Core.Fingering.Key12Space);
                   break;

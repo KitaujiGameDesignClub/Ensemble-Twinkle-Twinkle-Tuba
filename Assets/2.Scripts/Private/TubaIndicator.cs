@@ -41,7 +41,7 @@ public class TubaIndicator : MonoBehaviour
    /// </summary>
    public void BecomingDark()
    {
-   
+ 
      image.color = Color.Lerp( image.color, dark, 0.04f);
    }
 }

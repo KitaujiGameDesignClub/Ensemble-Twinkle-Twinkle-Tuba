@@ -201,7 +201,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u94DC\u7BA1\u901A\u8FC7\u4E09\u4E2A\u6309\u952E\u63A7\u5236\uFF0C\u8BF7\u6839\u636E\u4E50\u8C31\u63D0\u793A\u6309\u4E0B\u5BF9\u5E94\u6309\u952E\u3002\u5927\u53F7\uFF1A\u6BCF\u4E2A\u97F3\u7B26\u90FD\u8981\u6309\u7A7A\u683C\u3002\u4E0A\u4F4E\u97F3\u53F7\uFF1A\u6BCF4\u62CD\u6309\u4E00\u6B21"
+  m_text: "\u94DC\u7BA1\u901A\u8FC7\u4E09\u4E2A\u6309\u952E\u63A7\u5236\uFF0C\u8BF7\u6839\u636E\u4E50\u8C31\u63D0\u793A\u6309\u4E0B\u5BF9\u5E94\u6309\u952E\u3002\u5927\u53F7\uFF1A\u6BCF\u4E2A\u97F3\u7B26\u90FD\u8981\u6309\u7A7A\u683C\u3002\u4E0A\u4F4E\u97F3\u53F7\uFF1A\u6BCF4\u5C0F\u8282\u6309\u4E00\u6B21"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 26216fab0443bbf48b81c57fc633a352, type: 2}
   m_sharedMaterial: {fileID: 317546186484929211, guid: 26216fab0443bbf48b81c57fc633a352, type: 2}
@@ -551,6 +551,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: OpeningCtrl, Core
+        m_MethodName: clickSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &3845406767877584633
 GameObject:
   m_ObjectHideFlags: 0
@@ -765,6 +777,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: OpeningCtrl, Core
+        m_MethodName: clickSound
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -999,7 +1023,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4940552268465373383
 RectTransform:
   m_ObjectHideFlags: 0

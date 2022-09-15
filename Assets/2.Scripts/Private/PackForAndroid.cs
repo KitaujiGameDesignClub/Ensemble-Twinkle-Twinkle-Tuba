@@ -51,6 +51,8 @@ public class PackForAndroid : IPreprocessBuildWithReport, IPostprocessBuildWithR
      
         Directory.Delete($"{Application.dataPath}/Resources/Dialogue");
         Directory.Delete($"{Application.dataPath}/Resources/saves");
+
+    
     }
 }
 #endif

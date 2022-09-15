@@ -3327,6 +3327,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   OnPressed: 0
+  onClick: 0
 --- !u!1 &516793603
 GameObject:
   m_ObjectHideFlags: 0
@@ -4092,6 +4093,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectedInstrument: -1
   episode: 0
+  hasPressedButton: 0
   chooseCharacter: {fileID: 2110285454}
   gameSelf: {fileID: 1495219235}
   dialogue: {fileID: 1283847471}
@@ -6466,6 +6468,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   OnPressed: 0
+  onClick: 0
 --- !u!1 &849202202
 GameObject:
   m_ObjectHideFlags: 0
@@ -6592,7 +6595,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &855301247
 Transform:
   m_ObjectHideFlags: 0
@@ -6700,7 +6703,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 1
+  m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &855301249
 MonoBehaviour:
@@ -6759,7 +6762,7 @@ MonoBehaviour:
   - {fileID: 633703791}
   - {fileID: 1840131894}
   - {fileID: 2079146354}
-  fingeringNeedToPressed: 130000001700000017000000170000001400000011000000170000001600000010000000110000001100000015000000120000001700000013000000170000001000000010000000140000001100000012000000130000001700000010000000100000001400000011000000120000001300000017000000170000001700000014000000110000001700000016000000100000001100000011000000150000001200000017000000
+  fingeringNeedToPressed: 130000001700000017000000170000001100000011000000170000001600000010000000110000001100000012000000120000001700000013000000170000001000000010000000110000001100000012000000130000001700000010000000100000001100000011000000120000001300000017000000170000001700000011000000110000001700000016000000100000001100000011000000120000001200000017000000
   onRight:
     m_PersistentCalls:
       m_Calls:
@@ -7563,6 +7566,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   OnPressed: 0
+  onClick: 0
 --- !u!1 &968487129
 GameObject:
   m_ObjectHideFlags: 0
@@ -10957,6 +10961,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   OnPressed: 0
+  onClick: 0
 --- !u!114 &1203506000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14140,7 +14145,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1495219236
 Transform:
   m_ObjectHideFlags: 0
