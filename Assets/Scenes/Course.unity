@@ -535,10 +535,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: course 2
       objectReference: {fileID: 0}
-    - target: {fileID: 6888390661151364356, guid: 6be5d379f7c8d704c8dd9270f1a9e775, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6be5d379f7c8d704c8dd9270f1a9e775, type: 3}
 --- !u!224 &3845406766590167297 stripped
@@ -647,7 +643,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7172738758628591055, guid: f65c01240c074734da99b3dab79c8615, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f65c01240c074734da99b3dab79c8615, type: 3}

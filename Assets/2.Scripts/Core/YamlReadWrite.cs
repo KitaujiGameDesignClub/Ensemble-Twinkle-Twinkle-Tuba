@@ -38,7 +38,12 @@ public static class YamlReadWrite
 
             return done;
         }
-        
+
+        #elif  UNITY_ANDROID
+        get
+        {
+            return Application.persistentDataPath;
+        }
    
         
 #endif

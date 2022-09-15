@@ -26,12 +26,14 @@ public class UpdateManager : MonoBehaviour
         {
             Updates.Add(update);
         }
+#if UNITY_EDITOR
         else
         {
-#if UNITY_EDITOR
+
             Debug.LogError("意外的IUpdate注册。应晚于Awake执行");
-#endif 
+
         }
+#endif 
     }
     
     public static void RegisterLateUpdate(ILateUpdate update)

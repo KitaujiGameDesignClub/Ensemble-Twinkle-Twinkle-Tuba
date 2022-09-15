@@ -36,14 +36,21 @@ public class PackForAndroid : IPreprocessBuildWithReport, IPostprocessBuildWithR
            File.Copy(manifests[i].FullName,$"{Application.dataPath}/Resources/Dialogue/Images/{manifests[i].Name}");
        }
        //移动saves文件夹中所有的Yaml文件到saves文件夹中
-       File.Copy($"{YamlReadWrite.UnityButNotAssets}/saves",$"{Application.dataPath}/Resources/saves");
+       directoryInfo = new DirectoryInfo($"{YamlReadWrite.UnityButNotAssets}/saves");
+       manifests = directoryInfo.GetFiles("*.yaml");
+       for (int i = 0; i < manifests.Length; i++)
+       {
+           File.Copy(manifests[i].FullName,$"{Application.dataPath}/Resources/saves/{manifests[i].Name}");
+       }
+     
     }
  
     public void OnPostprocessBuild(BuildReport report)
     {
         //编译完了，删掉Resources文件夹
-      //  File.Delete($"{Application.dataPath}/Resources/Dialogue");
-       // File.Delete($"{Application.dataPath}/Resources/saves");
+     
+        Directory.Delete($"{Application.dataPath}/Resources/Dialogue");
+        Directory.Delete($"{Application.dataPath}/Resources/saves");
     }
 }
 #endif

@@ -5,6 +5,9 @@ using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
 
+/// <summary>
+/// 负责场景切换与各类必要变量的储存
+/// </summary>
 public class Core : MonoBehaviour,IUpdate
 {
     public static Core core;
@@ -63,6 +66,7 @@ public class Core : MonoBehaviour,IUpdate
 /// </summary>
   public GameObject dialogue;
 
+public GameObject AndroidScreenButton;
 
     private void Awake()
     {
@@ -78,6 +82,10 @@ public class Core : MonoBehaviour,IUpdate
        
 
         episode = 0;
+
+#if UNITY_EDITOR || UNITY_STANDALONE_WIN
+      Destroy(AndroidScreenButton);
+#endif
 
     }
 
@@ -137,27 +145,54 @@ public class Core : MonoBehaviour,IUpdate
         //重新开始游戏
         if (Input.GetKeyDown(KeyCode.R))
         {
-            SceneManager.LoadScene("load");
+            Retry();
         }
-        //重新开始游戏
+        //暂停游戏
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (Time.timeScale >= 0.5F)
-            {
-                Time.timeScale = 0f;
-                StaticVideoPlayer.staticVideoPlayer.Pause();
-            }
-            else
-            {
-                Time.timeScale = 1f;
-                StaticVideoPlayer.staticVideoPlayer.Play();
-            }
-          
+           
+          Pause();
            
         }
     }
-    
-  
-    
+
+    public void Retry()
+    {
+        SceneManager.LoadScene("SampleScene");
+    }
+
+    public void clickSound()
+    {
+        PublicAudioSource.publicAudioSource.PlaySoundEffect(PublicAudioSource.AudioType.Click);
+    }
+
+    public void Pause()
+    {
+        if (Time.timeScale >= 0.5F)
+        {
+            Time.timeScale = 0f;
+            StaticVideoPlayer.staticVideoPlayer.Pause();
+        }
+        else
+        {
+            Time.timeScale = 1f;
+            StaticVideoPlayer.staticVideoPlayer.Play();
+        }
+    }
+
+    public void skip()
+    {
+        //跳过前面的片段
+        if (episode == 0)
+        {
+            StaticVideoPlayer.staticVideoPlayer.Jump(Episode.ShowStaffAndInstrument -1);
+        }
+        
+        //跳过后面的片段
+        if (episode == 3)
+        {
+            StaticVideoPlayer.staticVideoPlayer.Jump(Episode.VideoEnd - 1);
+        }
+    }
     
 }

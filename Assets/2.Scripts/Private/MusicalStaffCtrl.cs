@@ -110,7 +110,8 @@ public class MusicalStaffCtrl : MonoBehaviour,IUpdate
 
     public void FastUpdate()
     {
-        //跳过前面的片段
+
+          //跳过前面的片段
         if (Core.core.episode == 0 && Input.GetKeyDown(KeyCode.X))
         {
             StaticVideoPlayer.staticVideoPlayer.Jump(Episode.ShowStaffAndInstrument -1);
@@ -121,6 +122,9 @@ public class MusicalStaffCtrl : MonoBehaviour,IUpdate
         {
             StaticVideoPlayer.staticVideoPlayer.Jump(Episode.VideoEnd - 1);
         }
+
+        
+      
         
       
         
