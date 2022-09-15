@@ -85,6 +85,9 @@ public GameObject AndroidScreenButton;
 
 #if UNITY_EDITOR || UNITY_STANDALONE_WIN
       Destroy(AndroidScreenButton);
+      
+      #elif UNITY_ANDROID
+      AndroidScreenButton.SetActive(true);
 #endif
 
     }
@@ -161,10 +164,7 @@ public GameObject AndroidScreenButton;
         SceneManager.LoadScene("SampleScene");
     }
 
-    public void clickSound()
-    {
-        PublicAudioSource.publicAudioSource.PlaySoundEffect(PublicAudioSource.AudioType.Click);
-    }
+
 
     public void Pause()
     {

@@ -1,4 +1,5 @@
 
+using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -116,10 +117,11 @@ public class BrassInstruments : MonoBehaviour, IUpdate,ILateUpdate
         
     }
 
-    public void OnDisable()
+    public void OnDestroy()
     {
         UpdateManager.Remove(this);
-        UpdateManager.Remove(this);
+        UpdateManager.RemoveLateUpdate(this);
+
     }
 
     public void BetterLateUpdate()

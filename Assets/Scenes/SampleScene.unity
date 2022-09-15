@@ -1232,14 +1232,14 @@ Sprite:
     m_Bindpose: []
     textureRect:
       serializedVersion: 2
-      x: 0.07612038
-      y: 1584.0762
+      x: 516.0761
+      y: 674.0761
       width: 207.89713
       height: 104.87257
     textureRectOffset: {x: 23.07612, y: 11.07612}
-    atlasRectOffset: {x: -23, y: 1573}
+    atlasRectOffset: {x: 493, y: 663}
     settingsRaw: 67
-    uvTransform: {x: 100, y: 105, z: 100, w: 1637}
+    uvTransform: {x: 100, y: 621, z: 100, w: 727}
     downscaleMultiplier: 1
   m_PhysicsShape:
   - - {x: -0.53999996, y: -0.02}
@@ -2312,14 +2312,14 @@ Sprite:
     m_Bindpose: []
     textureRect:
       serializedVersion: 2
-      x: 513.07355
-      y: 1084.0762
+      x: 1541.0735
+      y: 0.07612038
       width: 239.92455
       height: 492.89713
     textureRectOffset: {x: 8.073522, y: 10.07612}
-    atlasRectOffset: {x: 505, y: 1074}
+    atlasRectOffset: {x: 1533, y: -10}
     settingsRaw: 67
-    uvTransform: {x: 100, y: 633, z: 100, w: 1330}
+    uvTransform: {x: 100, y: 1661, z: 100, w: 246}
     downscaleMultiplier: 1
   m_PhysicsShape:
   - - {x: 0.59, y: -1.77}
@@ -3054,7 +3054,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 471713155}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -35.11417, y: -4.199534, z: -2.2159245}
+  m_LocalPosition: {x: -35.11417, y: 8.86, z: -2.2159245}
   m_LocalScale: {x: 0.332617, y: 0.332617, z: 0.33288598}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3229,8 +3229,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 484, y: -391}
-  m_SizeDelta: {x: 131.33, y: 78.09}
+  m_AnchoredPosition: {x: 527.85, y: -387.99997}
+  m_SizeDelta: {x: 160.78, y: 95.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &498844376
 MonoBehaviour:
@@ -6368,8 +6368,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 328, y: -391}
-  m_SizeDelta: {x: 131.33, y: 78.09}
+  m_AnchoredPosition: {x: 342.1, y: -387.99997}
+  m_SizeDelta: {x: 160.78, y: 95.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &828153758
 MonoBehaviour:
@@ -6601,8 +6601,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 855301246}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 192.2, y: 0, z: 0}
-  m_LocalScale: {x: 4.57307, y: 1, z: 1}
+  m_LocalPosition: {x: 334.7473, y: 0, z: 0.000027268003}
+  m_LocalScale: {x: 7.1666975, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 129486139}
@@ -7465,8 +7465,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 184.34003, y: -391.0001}
-  m_SizeDelta: {x: 131.33, y: 78.09}
+  m_AnchoredPosition: {x: 161, y: -388}
+  m_SizeDelta: {x: 160.78, y: 95.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &965131654
 MonoBehaviour:
@@ -7691,7 +7691,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 690.1, y: -399.2}
+  m_AnchoredPosition: {x: 702, y: -383}
   m_SizeDelta: {x: 200, y: 72.84}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &975791738
@@ -9578,8 +9578,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1100623307}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 192.01, y: 0, z: 0}
-  m_LocalScale: {x: 4.57307, y: 1, z: 1}
+  m_LocalPosition: {x: 334.4495, y: 0, z: 0.000027268003}
+  m_LocalScale: {x: 7.1666975, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1156307353}
@@ -9670,7 +9670,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
+  m_MaskInteraction: 1
   m_SpriteSortPoint: 0
 --- !u!114 &1100623310
 MonoBehaviour:
@@ -10104,8 +10104,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1146860995}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.494, y: 2.5, z: 0}
-  m_LocalScale: {x: 0.122365475, y: 0.55958587, z: 0.27979293}
+  m_LocalPosition: {x: 3.8751, y: 2.5, z: 0}
+  m_LocalScale: {x: 0.078081414, y: 0.55958587, z: 0.27979293}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1100623308}
@@ -10889,8 +10889,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -522.07007, y: -391}
-  m_SizeDelta: {x: 298.65, y: 78.09}
+  m_AnchoredPosition: {x: -140, y: -385.12}
+  m_SizeDelta: {x: 298.65, y: 89.845}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1203505996
 MonoBehaviour:
@@ -11405,12 +11405,12 @@ Sprite:
       serializedVersion: 2
       x: 0
       y: 0
-      width: 1920
-      height: 1080
+      width: 1024
+      height: 576
     textureRectOffset: {x: 0, y: 0}
     atlasRectOffset: {x: 0, y: 0}
     settingsRaw: 67
-    uvTransform: {x: 100, y: 960, z: 100, w: 540}
+    uvTransform: {x: 53.333336, y: 512, z: 53.333336, w: 288}
     downscaleMultiplier: 1
   m_PhysicsShape:
   - - {x: -9.599999, y: 5.4}
@@ -13245,14 +13245,14 @@ Sprite:
     m_Bindpose: []
     textureRect:
       serializedVersion: 2
-      x: 927.02673
-      y: 1178
+      x: 1028.0267
+      y: 500
       width: 155.9465
       height: 512
     textureRectOffset: {x: 50.026752, y: 0}
-    atlasRectOffset: {x: 877, y: 1178}
+    atlasRectOffset: {x: 978, y: 500}
     settingsRaw: 67
-    uvTransform: {x: 100, y: 1005, z: 100, w: 1434}
+    uvTransform: {x: 100, y: 1106, z: 100, w: 756}
     downscaleMultiplier: 1
   m_PhysicsShape:
   - - {x: -0.12, y: -2.04}
@@ -14993,14 +14993,14 @@ Sprite:
     m_Bindpose: []
     textureRect:
       serializedVersion: 2
-      x: 757.02673
-      y: 1084.0621
+      x: 0.026752472
+      y: 580.06213
       width: 954.93036
       height: 89.91113
     textureRectOffset: {x: 39.026752, y: 19.062115}
-    atlasRectOffset: {x: 718, y: 1065}
+    atlasRectOffset: {x: -39, y: 561}
     settingsRaw: 67
-    uvTransform: {x: 100, y: 1230, z: 100, w: 1129}
+    uvTransform: {x: 100, y: 473, z: 100, w: 625}
     downscaleMultiplier: 1
   m_PhysicsShape:
   - - {x: -3.1599998, y: -0.08}
@@ -17685,8 +17685,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1826865036}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 192.2, y: 0, z: 0}
-  m_LocalScale: {x: 4.57307, y: 1, z: 1}
+  m_LocalPosition: {x: 334.7473, y: 0, z: 0.000027268003}
+  m_LocalScale: {x: 7.1666975, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2053279874}
@@ -18314,7 +18314,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 558.88, y: 383.00003}
+  m_AnchoredPosition: {x: 556.7, y: 383.00003}
   m_SizeDelta: {x: 139.22, y: 117.26}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1857410321
@@ -21236,14 +21236,14 @@ Sprite:
     m_Bindpose: []
     textureRect:
       serializedVersion: 2
-      x: 1347.0762
-      y: 1178.043
+      x: 1188.0762
+      y: 516.0429
       width: 255.84775
       height: 254.95709
     textureRectOffset: {x: 0.076120496, y: 1.042908}
-    atlasRectOffset: {x: 1347, y: 1177}
+    atlasRectOffset: {x: 1188, y: 515}
     settingsRaw: 67
-    uvTransform: {x: 100, y: 1475, z: 100, w: 1305}
+    uvTransform: {x: 100, y: 1316, z: 100, w: 643}
     downscaleMultiplier: 1
   m_PhysicsShape:
   - - {x: 0.78999996, y: -1}

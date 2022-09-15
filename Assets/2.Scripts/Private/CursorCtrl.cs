@@ -118,7 +118,7 @@ public class CursorCtrl : MonoBehaviour
             if (time[index] <= StaticVideoPlayer.staticVideoPlayer.Frame)
             {
                 //消除提示，不过玩家此时还是可以按下去
-              if(Core.core.selectedInstrument == 0)  circle.position = 100 * Vector3Int.right;
+              if(Core.core.selectedInstrument == 0)  circle.position = 100 * Vector3Int.down;
                //到了就切换到下一个音符
                if(index < time.Length - 1)  index++;
                
@@ -204,7 +204,7 @@ public class CursorCtrl : MonoBehaviour
         {
             //0这一情况，单独拿出来
             case 0:
-                if (StaticVideoPlayer.staticVideoPlayer.Frame - (time[0] - 7) >= 0 )
+                if (StaticVideoPlayer.staticVideoPlayer.Frame - (time[0] - 3) >= 0 )
                 {
                     //这第0个音符，刚好落在提前5帧的范围内
                     //检查玩家输入的指法是否符合要要求
@@ -218,7 +218,7 @@ public class CursorCtrl : MonoBehaviour
                 break;
                 
             default:
-                if (Mathf.Abs(StaticVideoPlayer.staticVideoPlayer.Frame - time[index]) <= 7)
+                if (Mathf.Abs(StaticVideoPlayer.staticVideoPlayer.Frame - time[index]) <= 3)
                 {
                     //第index个音符
                     //检查玩家输入的指法是否符合要要求
@@ -227,7 +227,7 @@ public class CursorCtrl : MonoBehaviour
                         onRight.Invoke();
                     }
                 }
-                else if (Mathf.Abs(StaticVideoPlayer.staticVideoPlayer.Frame - time[index - 1]) <= 7)
+                else if (Mathf.Abs(StaticVideoPlayer.staticVideoPlayer.Frame - time[index - 1]) <= 3)
                 {
                     //第index - 1个音符
                     //检查玩家输入的指法是否符合要要求

@@ -1,4 +1,5 @@
 
+using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
@@ -13,6 +14,8 @@ public class OpeningCtrl : MonoBehaviour
    
     public UnityEvent initialization = new();
 
+    public TMP_Text staff;
+    
     private void Awake()
     {
         Application.targetFrameRate = -1;
@@ -61,6 +64,11 @@ public class OpeningCtrl : MonoBehaviour
     {
         PublicAudioSource.publicAudioSource.PlaySoundEffect(PublicAudioSource.AudioType.Click);
      SceneManager.LoadScene("load");
+    }
+
+    public void clickSound()
+    {
+        PublicAudioSource.publicAudioSource.PlaySoundEffect(PublicAudioSource.AudioType.Click);
     }
 
  

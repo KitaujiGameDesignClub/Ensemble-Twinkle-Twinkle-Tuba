@@ -24,6 +24,9 @@ public class Loading : MonoBehaviour
     // Start is called before the first frame update
     private IEnumerator Start()
     {
+        PublicAudioSource.publicAudioSource.StopMusicPlaying();
+        
+        
         loadingState.text = "少女调音中.....\n清除无用资源";
         Settings.SaveSettings();  
         GC.Collect();

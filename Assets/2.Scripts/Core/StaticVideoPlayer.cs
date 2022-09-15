@@ -91,5 +91,12 @@ public class StaticVideoPlayer : MonoBehaviour,IUpdate
             PreviousFrameInVideo++;
             eachFrame.Invoke();
         }
+
+        else   if (VideoPlayer.frame - PreviousFrameInVideo > 1)
+        {
+            PreviousFrameInVideo = VideoPlayer.frame;
+            eachFrame.Invoke();
+            
+        }
     }
 }

@@ -45,7 +45,7 @@ public AudioClip bgm;
     //读取内容
     //读取内容
   
-    if (selectedDialogue.extraContent != "可选内容​" || selectedDialogue.extraContent != "可选内容")
+    if (selectedDialogue.extraContent != "可选内容​" && selectedDialogue.extraContent != "可选内容")
     {
       Extra.text = selectedDialogue.extraContent;
     }
