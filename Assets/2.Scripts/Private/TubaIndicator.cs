@@ -10,10 +10,10 @@ public class TubaIndicator : MonoBehaviour
    public readonly Color light = new Color(1f, 1f, 1f);
 
    private Image image;
-   private Audioclip audioclip;
-   
-   
-   private void Awake()
+    private Audioclip audioclip;
+
+
+    private void Awake()
    {
       image = GetComponent<Image>();
       image.color = dark;
@@ -35,7 +35,7 @@ public class TubaIndicator : MonoBehaviour
       image.color = light;
         //然后逐渐变暗
 
-      PublicAudioSource.publicAudioSource.PlaySoundEffect(audioclip);
+        PublicAudioSource.publicAudioSource.PlaySoundEffect(audioclip);
 
     }
 
