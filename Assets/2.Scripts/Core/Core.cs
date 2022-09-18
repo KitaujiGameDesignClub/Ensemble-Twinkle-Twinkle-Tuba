@@ -163,6 +163,7 @@ public GameObject AndroidScreenButton;
 
     public void Retry()
     {
+        PublicAudioSource.publicAudioSource.PlaySoundEffect(PublicAudioSource.AudioType.Click);
         SceneManager.LoadScene("SampleScene");
     }
 
@@ -180,6 +181,7 @@ public GameObject AndroidScreenButton;
             Time.timeScale = 1f;
             StaticVideoPlayer.staticVideoPlayer.Play();
         }
+        PublicAudioSource.publicAudioSource.PlaySoundEffect(PublicAudioSource.AudioType.Click);
     }
 
     public void skip()
@@ -195,6 +197,8 @@ public GameObject AndroidScreenButton;
         {
             StaticVideoPlayer.staticVideoPlayer.Jump(Episode.VideoEnd - 1);
         }
+        
+        PublicAudioSource.publicAudioSource.PlaySoundEffect(PublicAudioSource.AudioType.Click);
     }
     
 }
