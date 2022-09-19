@@ -107,7 +107,11 @@ public class BrassInstruments : MonoBehaviour, IUpdate,ILateUpdate
         
 #endif
 
-     
+        //松开space之后，直接取消对于space的禁用
+        if (!keysPressed[3])
+        {
+            Core.core.banSpace = false;
+        }
 
       
     }
@@ -125,9 +129,16 @@ public class BrassInstruments : MonoBehaviour, IUpdate,ILateUpdate
         UpdateManager.RemoveLateUpdate(this);
 
     }
-
+ 
     public void BetterLateUpdate()
     {
+        //有音符的地方，铜管都要按space
+        if (!keysPressed[3] || Core.core.banSpace)
+        {
+            return;
+        }
+        
+        
           //针对铺面要求的指法的判断（大号）
         if (instrumentId == 1)
         {
@@ -135,56 +146,47 @@ public class BrassInstruments : MonoBehaviour, IUpdate,ILateUpdate
             switch (keysPressed[0])
             {
                 //仅吹气（无按键）
-                case false when !keysPressed[1] && !keysPressed[2] &&keysPressed[3]:
+                case false when !keysPressed[1] && !keysPressed[2] :
                     cursorCtrl.CheckFingeringForBass(Core.Fingering.Space);
                  
                     break;
                 //活塞13
-                case true when keysPressed[2] && keysPressed[3]:
+                case true when keysPressed[2] && !keysPressed[1]:
                     cursorCtrl.CheckFingeringForBass(Core.Fingering.Key13);
                   
                     break;
-                //活塞1
-                case true when keysPressed[3]:
+                //活塞1 
+                    case true when !keysPressed[1] && !keysPressed[2] :
                     cursorCtrl.CheckFingeringForBass(Core.Fingering.Key1);
-                 
-                    break;
+                 break;
             }
-            //仅吹气
+          
         }
         //针对铺面要求的指法的判断（上低音号）
         else
         {
             switch (keysPressed[0])
             {
-              
-                case true when keysPressed[1] && keysPressed[3]:
+                case true when keysPressed[1] && !keysPressed[2]:
                     cursorCtrl.CheckFingeringForBass(Core.Fingering.Key12Space);
-                  break;
-                case true when keysPressed[1]:
-                    cursorCtrl.CheckFingeringForBass(Core.Fingering.Key12);
-                  break;
-                case true when keysPressed[2]:
-                    cursorCtrl.CheckFingeringForBass(Core.Fingering.Key13);
-                  break;
-                default:
-                {
-                    if (keysPressed[3])
-                    {
-                        cursorCtrl.CheckFingeringForBass(Core.Fingering.Space);
-                    
-                    }
-
-
-                    else if (keysPressed[0])
-                    {
-                        cursorCtrl.CheckFingeringForBass(Core.Fingering.Key1);
-                      
-                    }
-
                     break;
-                }
+                
+                case true when  !keysPressed[1] && keysPressed[2]:
+                    cursorCtrl.CheckFingeringForBass(Core.Fingering.Key13Space);
+                    break;
+                
+                case true when  !keysPressed[1] && !keysPressed[2]:
+                    cursorCtrl.CheckFingeringForBass(Core.Fingering.Key1Space);
+                    break;
+                
+                case false when  !keysPressed[1] && !keysPressed[2]:
+                    cursorCtrl.CheckFingeringForBass(Core.Fingering.Space);
+                    break;
+                    
             }
+            
+            
+           
         }
 
 

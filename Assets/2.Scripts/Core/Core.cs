@@ -26,6 +26,12 @@ public class Core : MonoBehaviour,IUpdate
 /// 上低音号，这个音符到前一个音符之间，按下过按键了吗
 /// </summary>
     [HideInInspector] public bool hasPressedButton;
+
+/// <summary>
+/// 禁用space输入（防止铜管一直按着space）
+/// </summary>
+public bool banSpace = false;
+
 /// <summary>
 /// 乐器指法
 /// </summary>
@@ -78,7 +84,8 @@ public GameObject AndroidScreenButton;
         selectedInstrument = -1;
         //禁用游戏本体
         gameSelf.SetActive(false);
-     
+     //禁用小剧场
+     dialogue.SetActive(false);
         //打开选择角色的面板
         chooseCharacter.SetActive(true);
        
