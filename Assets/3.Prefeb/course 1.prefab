@@ -357,6 +357,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: OpeningCtrl, Core
+        m_MethodName: clickSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6039508984368845909
 GameObject:
   m_ObjectHideFlags: 0
@@ -679,8 +691,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -7.605007, y: -257.1}
-  m_SizeDelta: {x: 882.78, y: 354.39}
+  m_AnchoredPosition: {x: -0.00000083425, y: -212.07}
+  m_SizeDelta: {x: 1159.4, y: 272.94}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6039508984454014310
 CanvasRenderer:
@@ -710,7 +722,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u9009\u62E9\u4EBA\u7269---\u9F20\u6807\u5DE6\u952E\r\u6216\u8005\u89E6\u5C4F\u70B9\u51FB\n\u8DF3\u8FC7\u5267\u60C5\u52A8\u753B---X\u952E\r\n\u6682\u505C\u6E38\u620F\u548C\u7EE7\u7EED\u6E38\u620F---ESC\u952E\r\n\u91CD\u65B0\u5F00\u59CB\u6E38\u620F---R\u952E"
+  m_text: "\u9009\u62E9\u4EBA\u7269---\u9F20\u6807\u5DE6\u952E\u6216\u8005\u89E6\u5C4F\u70B9\u51FB\r\n\u8DF3\u8FC7\u5267\u60C5\u52A8\u753B---X\u952E\r\n\u6682\u505C\u6E38\u620F\u548C\u7EE7\u7EED\u6E38\u620F---ESC\u952E\r\n\u91CD\u65B0\u5F00\u59CB\u6E38\u620F---R\u952E"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 26216fab0443bbf48b81c57fc633a352, type: 2}
   m_sharedMaterial: {fileID: 317546186484929211, guid: 26216fab0443bbf48b81c57fc633a352, type: 2}
@@ -744,7 +756,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -1001,6 +1013,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: OpeningCtrl, Core
+        m_MethodName: clickSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6039508985478252137
 GameObject:
   m_ObjectHideFlags: 0
@@ -1036,8 +1060,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 37.375004, y: -62}
-  m_SizeDelta: {x: 1624.5, y: 146.42}
+  m_AnchoredPosition: {x: -17.374996, y: -32.195007}
+  m_SizeDelta: {x: 1624.5, y: 86.81}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6039508985478252132
 CanvasRenderer:
@@ -1101,7 +1125,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -1151,7 +1175,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &808426763427533122
 RectTransform:
   m_ObjectHideFlags: 0
