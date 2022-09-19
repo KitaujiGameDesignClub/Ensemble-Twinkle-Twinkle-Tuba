@@ -120,10 +120,30 @@ public class CursorCtrl : MonoBehaviour
                 //（提琴）消除圆圈提示，不过玩家此时还是可以按下去
               if(Core.core.selectedInstrument == 0)  circle.position = 100 * Vector3Int.down;
               
-              //铜管：空拍并且没有按键的话，亮一下
-              if(fingeringNeedToPressed[index] == Core.Fingering.Null && !Core.core.hasPressedButton)  onRight.Invoke();
+              //铜管：空拍并且没有按键的话，亮一下 暂时不需要了
+           //   if(fingeringNeedToPressed[index] == Core.Fingering.Null && !Core.core.hasPressedButton)  onRight.Invoke();
               
          
+         
+           switch (Core.core.selectedInstrument)
+           {
+               //eupho：每7个音符松开一下space，如果一直按着的话，后续的音符会被判定为“错误按键”
+               case 2:
+                   if ((index - 6) % 7 == 0 )
+                   {
+                       Core.core.banSpace = true;
+                   }
+                   break;
+               
+               //tuba：每个音符之后，如果一直按着space的话，后续的音符会被判定为“错误按键”
+               case 1:
+                   Core.core.banSpace = true;
+                   break;
+                   
+           }
+           
+         
+           
               
                if(index < time.Length - 1)
                {
