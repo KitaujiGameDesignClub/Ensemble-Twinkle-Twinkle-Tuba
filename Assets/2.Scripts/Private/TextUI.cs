@@ -75,7 +75,7 @@ public class TextUI : MonoBehaviour
             totalRealTimeDeltaBeforeFpsShow += Time.unscaledDeltaTime;
         }
 
-        frameCount.text = $"fps:{fps.ToString()}\nframe:{StaticVideoPlayer.staticVideoPlayer.Frame}";
+        frameCount.text = $"fps:{fps.ToString()}\nframe:{StaticVideoPlayer.staticVideoPlayer.Frame.ToString()}";
     }
 
     /// <summary>

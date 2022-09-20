@@ -142,6 +142,13 @@ public class CursorCtrl : MonoBehaviour
                    
            }
            
+           //正确反馈
+           if (Core.core.rightButton)
+           {
+               onRight.Invoke();
+           }
+          //重置正确按键状态
+           Core.core.rightButton = false;
          
            
               
@@ -201,6 +208,10 @@ public class CursorCtrl : MonoBehaviour
     /// <returns></returns>
     public void CheckFingeringForBass(int fingering)
     {
+        if (Core.core.rightButton)
+        {
+            return;
+        }
       checkFingeringsNeedToPressed((Core.Fingering)fingering);
     }
     
@@ -211,6 +222,10 @@ public class CursorCtrl : MonoBehaviour
     /// <returns></returns>
     public void CheckFingeringForBass(Core.Fingering fingering)
     {
+        if (Core.core.rightButton)
+        {
+            return;
+        }
         checkFingeringsNeedToPressed(fingering);
     }
 
@@ -222,9 +237,9 @@ public class CursorCtrl : MonoBehaviour
     /// <returns></returns>
     bool CheckFingering(Core.Fingering fingering,int index)
     {
-        
-        return fingering == fingeringNeedToPressed[index];
-  
+
+        Core.core.rightButton = fingering == fingeringNeedToPressed[index];
+        return Core.core.rightButton;
     }
     
 
@@ -253,7 +268,7 @@ public class CursorCtrl : MonoBehaviour
                     //检查玩家输入的指法是否符合要要求
                     if ( CheckFingering(fingering, 0))
                     {
-                        onRight.Invoke();
+                      // onRight.Invoke();
                     }
 
                    
@@ -267,7 +282,7 @@ public class CursorCtrl : MonoBehaviour
                     //检查玩家输入的指法是否符合要要求
                     if ( CheckFingering(fingering, index))
                     {
-                        onRight.Invoke();
+                    //    onRight.Invoke();
                     }
                 }
                 else if (Mathf.Abs(StaticVideoPlayer.staticVideoPlayer.Frame - time[index - 1]) <= 7)
@@ -276,7 +291,7 @@ public class CursorCtrl : MonoBehaviour
                     //检查玩家输入的指法是否符合要要求
                     if ( CheckFingering(fingering, index - 1))
                     {
-                        onRight.Invoke();
+                      //  onRight.Invoke();
                     }
                 }
 

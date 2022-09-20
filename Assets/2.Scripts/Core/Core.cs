@@ -33,6 +33,12 @@ public class Core : MonoBehaviour,IUpdate
 public bool banSpace = false;
 
 /// <summary>
+/// 正确按键了吗
+/// </summary>
+public bool rightButton = false;
+
+
+/// <summary>
 /// 乐器指法
 /// </summary>
     public enum Fingering
