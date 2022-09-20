@@ -152,7 +152,7 @@ public class BrassInstruments : MonoBehaviour, IUpdate,ILateUpdate
                     // if(BreathIndicator.color.a >= 0.99f)   BreathIndicator.CrossFadeAlpha(0F,0.1F,false);
                 }
 
-                return;
+             break;
             }
 
 
