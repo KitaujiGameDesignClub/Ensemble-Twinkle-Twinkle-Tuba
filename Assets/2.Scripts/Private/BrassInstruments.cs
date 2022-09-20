@@ -132,6 +132,43 @@ public class BrassInstruments : MonoBehaviour, IUpdate,ILateUpdate
  
     public void BetterLateUpdate()
     {
+         
+        //动画更新
+        for (int i = 0; i < keyCodes.Length; i++)
+        {
+            //气息控制
+            if (i == keyCodes.Length - 1)
+            {
+                if (keysPressed[i])
+                {
+                    //淡入气息标记
+
+                    BreathIndicator.color = Color.white;
+                }
+                else
+                {
+                    //淡出气息标记
+                    BreathIndicator.color = Color.Lerp(BreathIndicator.color, transparent, 15f * Time.deltaTime);
+                    // if(BreathIndicator.color.a >= 0.99f)   BreathIndicator.CrossFadeAlpha(0F,0.1F,false);
+                }
+
+                return;
+            }
+
+
+            if (keysPressed[i])
+            {
+                keys[i].localPosition =
+                    Vector3.Lerp(keys[i].localPosition, pressedLocalPos[i], pressSpeed * Time.deltaTime);
+            }
+            else
+            {
+                keys[i].localPosition =
+                    Vector3.Lerp(keys[i].localPosition, initialLocalPos[i], pressSpeed * Time.deltaTime);
+            }
+        }
+        
+        
         //有音符的地方，铜管都要按space
         if (!keysPressed[3] || Core.core.banSpace)
         {
@@ -190,39 +227,5 @@ public class BrassInstruments : MonoBehaviour, IUpdate,ILateUpdate
         }
 
 
-        //动画更新
-        for (int i = 0; i < keyCodes.Length; i++)
-        {
-            //气息控制
-            if (i == keyCodes.Length - 1)
-            {
-                if (keysPressed[i])
-                {
-                    //淡入气息标记
-
-                    BreathIndicator.color = Color.white;
-                }
-                else
-                {
-                    //淡出气息标记
-                    BreathIndicator.color = Color.Lerp(BreathIndicator.color, transparent, 20f * Time.deltaTime);
-                    // if(BreathIndicator.color.a >= 0.99f)   BreathIndicator.CrossFadeAlpha(0F,0.1F,false);
-                }
-
-                return;
-            }
-
-
-            if (keysPressed[i])
-            {
-                keys[i].localPosition =
-                    Vector3.Lerp(keys[i].localPosition, pressedLocalPos[i], pressSpeed * Time.deltaTime);
-            }
-            else
-            {
-                keys[i].localPosition =
-                    Vector3.Lerp(keys[i].localPosition, initialLocalPos[i], pressSpeed * Time.deltaTime);
-            }
-        }
     }
 }
