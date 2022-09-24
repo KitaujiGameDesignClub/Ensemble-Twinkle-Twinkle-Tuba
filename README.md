@@ -1,4 +1,5 @@
 # 合奏！闪闪发光的大号
+# Ensemble! Twinkle Twinkle Tuba
 
 ## 游戏特性
 
@@ -12,35 +13,47 @@
 
 - 结尾有小剧场，提高娱乐性与人文性
 
-## 制作人员表
+##Game features
 
-1 . 项目策划：
+-Support Windows and Android platforms.
+
+-To experience the music playing corresponding to the plot in the origin.
+
+-You could simulate the performance of tuba and euphonium. 
+
+-The startup page is in random.
+
+-There is a small theater at the end to improve entertainment and humanity.
+
+## 制作人员表 STAFF
+
+1 . 项目策划(Designer)：
 
 - PureAmaya
 - 暗格陈霜
 
 
-2 . 音乐与乐器监督：
+2 . 音乐与乐器监督(Music Supervisor)：
  - 暗格陈霜
 
-3 . 项目润色：
+3 . 项目润色(Polish)：
 - 暗格陈霜
 - 阿骚被抢注了
 - PureAmaya
 
-4 . 媒体处理与收集：
+4 . 媒体处理与收集(Material Collect and Process)：
 - 阿骚被抢注了
 - 暗格陈霜
 
-5 . 代码设计与程序处理：
+5 . 代码设计与程序处理(Programme Design and Coding)：
 - PureAmaya
 - 阿骚被抢注了
 
-6 . 小剧场设计：
+6 . 小剧场设计(Designer of Little Theatre)：
 - 阿骚被抢注了
 - PureAmaya
 
-7 . 游戏测试：
+7 . 游戏测试(Game Test)：
 - 暗格陈霜
 - 阿骚被抢注了
 - PureAmaya
