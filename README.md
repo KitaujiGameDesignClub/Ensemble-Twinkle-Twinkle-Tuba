@@ -1,7 +1,7 @@
 # 合奏！闪闪发光的大号
 # Ensemble! Twinkle Twinkle Tuba
 
-## 游戏特性
+## 游戏特性 Game features
 
 - 支持Windows与Android平台，其他平台可以自行编译
 
@@ -12,8 +12,6 @@
 - 随机启动页
 
 - 结尾有小剧场，提高娱乐性与人文性
-
-##Game features
 
 - Support Windows and Android platforms.
 
@@ -60,10 +58,11 @@
 
 
 
-## 借物表
+## 借物表 Reference List
 - [上低音号](https://ux.getuploader.com/instruments_3Dmodels/download/27) by 楽器P
 - [大号](https://ux.getuploader.com/instruments_3Dmodels/download/15) by 楽器P
 - [低音提琴](https://sketchfab.com/3d-models/old-double-bass-033da97c0a4549d28a9ff24e62f2ac43) by forpinik
 - 开源仓库中均不存在上述模型
+- The models above do not exist in this public repository.
 
  
