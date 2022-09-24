@@ -14,7 +14,43 @@
 
 ## 制作人员表
 
-## 借物表
+1 . 项目策划：
 
+- PureAmaya
+- 暗格陈霜
+
+
+2 . 音乐与乐器监督：
+ - 暗格陈霜
+
+3 . 项目润色：
+- 暗格陈霜
+- 阿骚被抢注了
+- PureAmaya
+
+4 . 媒体处理与收集：
+- 阿骚被抢注了
+- 暗格陈霜
+
+5 . 代码设计与程序处理：
+- PureAmaya
+- 阿骚被抢注了
+
+6 . 小剧场设计：
+- 阿骚被抢注了
+- PureAmaya
+
+7 . 游戏测试：
+- 暗格陈霜
+- 阿骚被抢注了
+- PureAmaya
+
+
+
+## 借物表
+- [上低音号](https://ux.getuploader.com/instruments_3Dmodels/download/27) by 楽器P
+- [大号](https://ux.getuploader.com/instruments_3Dmodels/download/15) by 楽器P
+- [低音提琴](https://sketchfab.com/3d-models/old-double-bass-033da97c0a4549d28a9ff24e62f2ac43) by forpinik
+- 开源仓库中均不存在上述模型
 
  
