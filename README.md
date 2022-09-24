@@ -15,15 +15,15 @@
 
 ##Game features
 
--Support Windows and Android platforms.
+- Support Windows and Android platforms.
 
--To experience the music playing corresponding to the plot in the origin.
+- To experience the music playing corresponding to the plot in the origin.
 
--You could simulate the performance of tuba and euphonium. 
+- You could simulate the performance of tuba and euphonium. 
 
--The startup page is in random.
+- The startup page is in random.
 
--There is a small theater at the end to improve entertainment and humanity.
+- There is a small theater at the end to improve entertainment and humanity.
 
 ## 制作人员表 STAFF
 
