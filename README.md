@@ -3,6 +3,8 @@
 
 ## 游戏特性 Game features
 
+- 动漫作品《吹响吧！上低音号》的同人游戏作品
+
 - 支持Windows与Android平台，其他平台可以自行编译
 
 - 原作音游化，带入到北宇治中，体会对应剧情的音乐演奏
@@ -12,6 +14,8 @@
 - 随机启动页
 
 - 结尾有小剧场，提高娱乐性与人文性
+
+- This is a Doujin Game of the anime 'Hibike! Euphonium'
 
 - Support Windows and Android platforms.
 
