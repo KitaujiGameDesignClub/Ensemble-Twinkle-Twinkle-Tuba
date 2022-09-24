@@ -49,9 +49,10 @@ public class PackForAndroid : IPreprocessBuildWithReport, IPostprocessBuildWithR
     {
         //编译完了，删掉Resources文件夹
      
-        Directory.Delete($"{Application.dataPath}/Resources/Dialogue");
-        Directory.Delete($"{Application.dataPath}/Resources/saves");
+        Directory.Delete($"{Application.dataPath}/Resources/Dialogue",true);
+        Directory.Delete($"{Application.dataPath}/Resources/saves",true);
 
+  
     
     }
 }

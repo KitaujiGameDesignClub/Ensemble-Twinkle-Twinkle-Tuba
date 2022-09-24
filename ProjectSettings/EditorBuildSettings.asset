@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Tools/DialogueTools.unity
     guid: 5a7b99158b89f86409b80717d001df70
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 91dbf283b2159aa4a9e3431e4c83a3b5, type: 2}
+    com.unity.adaptiveperformance.samsung.android.provider_settings: {fileID: 11400000, guid: 1ed0a2b03dd9fe346b8394a236eb69fb, type: 2}
+    com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: e996a47bc63e7c949b41d05f0ef9f0f9, type: 2}

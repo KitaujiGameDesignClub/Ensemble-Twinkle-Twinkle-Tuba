@@ -4415,7 +4415,6 @@ MonoBehaviour:
   chooseCharacter: {fileID: 2110285454}
   gameSelf: {fileID: 1495219235}
   dialogue: {fileID: 1283847471}
-  AndroidScreenButton: {fileID: 1104293343}
 --- !u!4 &563983679
 Transform:
   m_ObjectHideFlags: 0
@@ -6880,7 +6879,7 @@ MonoBehaviour:
   - {fileID: 633703791}
   - {fileID: 1840131894}
   - {fileID: 2079146354}
-  fingeringNeedToPressed: 130000001300000013000000140000001400000014000000130000001600000016000000140000001400000015000000150000001300000013000000130000001600000016000000140000001400000015000000130000001300000016000000160000001400000014000000150000001300000013000000130000001300000014000000140000001300000016000000160000001400000014000000150000001500000013000000
+  fingeringNeedToPressed: 130000001300000013000000130000001400000014000000130000001600000016000000140000001400000015000000150000001300000013000000130000001600000016000000140000001400000015000000130000001300000016000000160000001400000014000000150000001300000013000000130000001300000014000000140000001300000016000000160000001400000014000000150000001500000013000000
   onRight:
     m_PersistentCalls:
       m_Calls:
@@ -6896,6 +6895,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  rightFrame: 7
 --- !u!1 &859025343
 GameObject:
   m_ObjectHideFlags: 0
@@ -9754,6 +9754,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  rightFrame: 11
 --- !u!1 &1104293343
 GameObject:
   m_ObjectHideFlags: 0
@@ -14020,7 +14021,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1495219236
 Transform:
   m_ObjectHideFlags: 0
@@ -14064,6 +14065,7 @@ MonoBehaviour:
   - {fileID: 939764929}
   - {fileID: 441465873}
   - {fileID: 1113291983}
+  androidInput: {fileID: 1104293343}
   Cursor: {fileID: 201008371}
 --- !u!82 &1495219239
 AudioSource:
@@ -17637,6 +17639,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  rightFrame: 7
 --- !u!213 &1827736749
 Sprite:
   m_ObjectHideFlags: 0

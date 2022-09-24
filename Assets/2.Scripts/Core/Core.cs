@@ -80,7 +80,7 @@ public bool rightButton = false;
 /// </summary>
   public GameObject dialogue;
 
-public GameObject AndroidScreenButton;
+
 
     private void Awake()
     {
@@ -98,12 +98,6 @@ public GameObject AndroidScreenButton;
 
         episode = 0;
 
-#if UNITY_EDITOR || UNITY_STANDALONE_WIN
-      Destroy(AndroidScreenButton);
-      
-      #elif UNITY_ANDROID
-      AndroidScreenButton.SetActive(true);
-#endif
 
     }
 
@@ -111,9 +105,12 @@ public GameObject AndroidScreenButton;
     {
         UpdateManager.RegisterUpdate(this);
   
+        //准备视频
+        StaticVideoPlayer.staticVideoPlayer.PrepareVideo(false);
     }
 
 
+    
     public void StartGame()
     {
         if (selectedInstrument < 0)
@@ -121,8 +118,7 @@ public GameObject AndroidScreenButton;
             return;
         }
         
-        //停止BGM继续播放
-        PublicAudioSource.publicAudioSource.StopMusicPlaying();
+      
         //开始游戏
         DemonstrateInstrument();
         //开始游戏

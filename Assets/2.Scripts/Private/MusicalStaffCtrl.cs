@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class MusicalStaffCtrl : MonoBehaviour,IUpdate
 {
@@ -17,8 +18,8 @@ public class MusicalStaffCtrl : MonoBehaviour,IUpdate
 
     [Header("三个指法显示")] 
     public GameObject[] fingeringShow = new GameObject[3];
-    
-    
+
+    public GameObject androidInput;
    
 
    
@@ -33,6 +34,9 @@ public class MusicalStaffCtrl : MonoBehaviour,IUpdate
     // Start is called before the first frame update
     void Start()
     {
+        //开始游戏了，恢复帧率
+        OnDemandRendering.renderFrameInterval = 1;
+        
         //先禁用乐器和乐谱
         for (int i = 0; i < 3; i++)
         {
@@ -43,6 +47,15 @@ public class MusicalStaffCtrl : MonoBehaviour,IUpdate
         //禁用判定线
         Cursor.gameObject.SetActive(false);
      
+        //按需销毁或者启用android输入
+        #if !UNITY_ANDROID
+          Destroy(androidInput);
+        
+        #else
+        androidInput.SetActive(false);
+        #endif
+      
+        
         
         //播放视频
         StaticVideoPlayer.staticVideoPlayer.Play();
@@ -50,9 +63,6 @@ public class MusicalStaffCtrl : MonoBehaviour,IUpdate
         //注册update
         UpdateManager.RegisterUpdate(this);
 
-        //   metronome.OnReady.AddListener(showStaffAndInstrument);
-        //  metronome.AfterTick.AddListener(moveStaff); 
-        //  metronome.StartPlay();
     }
 
     // Update is called once per frame
@@ -87,6 +97,11 @@ public class MusicalStaffCtrl : MonoBehaviour,IUpdate
       //显示判定线
        Cursor.gameObject.SetActive(true); 
     
+       //android显示输入按钮就
+       #if UNITY_ANDROID
+        androidInput.SetActive(true);
+        #endif
+     
     
     //一段时间之后注册事件，让乐谱移动
  //  Invoke(nameof(register),startTimeOffset);
@@ -162,6 +177,10 @@ public class MusicalStaffCtrl : MonoBehaviour,IUpdate
                 
                 //删掉判定线
                 Destroy(Cursor.gameObject); 
+                
+#if UNITY_ANDROID
+                Destroy(androidInput);
+#endif
                 break;
             
             //视频结束，进入小剧场

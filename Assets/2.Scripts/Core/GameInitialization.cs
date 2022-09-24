@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
 
 public class GameInitialization : MonoBehaviour
@@ -10,7 +11,24 @@ public class GameInitialization : MonoBehaviour
 #if UNITY_EDITOR
     public bool textGame = true;
 #endif
-    
+
+    private void Awake()
+    {
+#if  !UNITY_ANDROID
+        QualitySettings.vSyncCount = 1;
+        //降低帧率 省点电
+        OnDemandRendering.renderFrameInterval = 3;
+        #else
+           QualitySettings.vSyncCount = 0;
+        Application.targetFrameRate = 60;
+        //降低帧率 省点电
+        OnDemandRendering.renderFrameInterval = 3;
+#endif
+        
+        
+     
+    }
+
     private void Start()
     {
         

@@ -45,6 +45,15 @@ public class StaticVideoPlayer : MonoBehaviour,IUpdate
       
     }
 
+    public void PrepareVideo(bool autoPlay)
+    {
+        VideoPlayer.Prepare();
+        if (autoPlay)
+        {
+            Play();
+        }
+    }
+    
 
     public  void Play()
     {

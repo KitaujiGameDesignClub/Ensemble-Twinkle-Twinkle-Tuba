@@ -39,6 +39,11 @@ public class CursorCtrl : MonoBehaviour
     /// 正确按下了对应的按键（指法）
     /// </summary>
     public UnityEvent onRight = new();
+
+    /// <summary>
+    /// 能判定成功的提前帧数
+    /// </summary>
+    public int rightFrame;
     
   /// <summary>
     /// 帧数间隔
@@ -55,6 +60,9 @@ public class CursorCtrl : MonoBehaviour
     private bool pressed;
     private Transform staff;
 
+    
+    
+    
     /// <summary>
     /// 读取的本乐器的时间点（程序可识别）
     /// </summary>
@@ -106,8 +114,8 @@ public class CursorCtrl : MonoBehaviour
 
 
             //下面是提亲的，辅助的 提示的 圈圈
-            //光标前10frames显示（按帧数判断）
-            if (Core.core.selectedInstrument == 0 && StaticVideoPlayer.staticVideoPlayer.Frame >= time[index] - 10)
+            //光标前11frames显示（按帧数判断）
+            if (Core.core.selectedInstrument == 0 && StaticVideoPlayer.staticVideoPlayer.Frame >= time[index] - 11)
             {
                 //显示要按的位置
                 circle.position = bassButtons[(int)fingeringNeedToPressed[index]].position;
@@ -147,6 +155,7 @@ public class CursorCtrl : MonoBehaviour
            {
                onRight.Invoke();
            }
+           
           //重置正确按键状态
            Core.core.rightButton = false;
          
@@ -208,10 +217,7 @@ public class CursorCtrl : MonoBehaviour
     /// <returns></returns>
     public void CheckFingeringForBass(int fingering)
     {
-        if (Core.core.rightButton)
-        {
-            return;
-        }
+     
       checkFingeringsNeedToPressed((Core.Fingering)fingering);
     }
     
@@ -222,10 +228,7 @@ public class CursorCtrl : MonoBehaviour
     /// <returns></returns>
     public void CheckFingeringForBass(Core.Fingering fingering)
     {
-        if (Core.core.rightButton)
-        {
-            return;
-        }
+        
         checkFingeringsNeedToPressed(fingering);
     }
 
@@ -235,11 +238,11 @@ public class CursorCtrl : MonoBehaviour
     /// <param name="fingering">接受玩家的fingering输入</param>
     /// <param name="index">第几个音符</param>
     /// <returns></returns>
-    bool CheckFingering(Core.Fingering fingering,int index)
+    void CheckFingering(Core.Fingering fingering,int index)
     {
 
         Core.core.rightButton = fingering == fingeringNeedToPressed[index];
-        return Core.core.rightButton;
+       
     }
     
 
@@ -250,49 +253,37 @@ public class CursorCtrl : MonoBehaviour
     /// </summary>
     private void checkFingeringsNeedToPressed(Core.Fingering fingering)
     {
-        //仅在判定时间之内（更短点）判断玩家是否松开了所有按键
-        if (Mathf.Abs(StaticVideoPlayer.staticVideoPlayer.Frame - time[index]) <= 5)
-        {
-            //这个音符到前一个音符之间，按下去按键了
-            Core.core.hasPressedButton = true;
-        }
+        
+     
 
         //确定应该是第几个音符
         switch (index)
         {
             //0这一情况，单独拿出来
             case 0:
-                if (StaticVideoPlayer.staticVideoPlayer.Frame - (time[0] - 7) >= 0 )
+                if (StaticVideoPlayer.staticVideoPlayer.Frame - (time[0] - rightFrame) >= 0 )
                 {
                     //这第0个音符，刚好落在提前7帧的范围内
                     //检查玩家输入的指法是否符合要要求
-                    if ( CheckFingering(fingering, 0))
-                    {
-                      // onRight.Invoke();
-                    }
+                   CheckFingering(fingering, 0);
 
-                   
+
+
                 }
                 break;
                 
             default:
-                if (Mathf.Abs(StaticVideoPlayer.staticVideoPlayer.Frame - time[index]) <= 7)
+                if (Mathf.Abs(StaticVideoPlayer.staticVideoPlayer.Frame - time[index]) <= rightFrame)
                 {
                     //第index个音符
                     //检查玩家输入的指法是否符合要要求
-                    if ( CheckFingering(fingering, index))
-                    {
-                    //    onRight.Invoke();
-                    }
+                    CheckFingering(fingering, index);
                 }
-                else if (Mathf.Abs(StaticVideoPlayer.staticVideoPlayer.Frame - time[index - 1]) <= 7)
+                else if (Mathf.Abs(StaticVideoPlayer.staticVideoPlayer.Frame - time[index - 1]) <= rightFrame)
                 {
                     //第index - 1个音符
                     //检查玩家输入的指法是否符合要要求
-                    if ( CheckFingering(fingering, index - 1))
-                    {
-                      //  onRight.Invoke();
-                    }
+                    CheckFingering(fingering, index);
                 }
 
                 break;
