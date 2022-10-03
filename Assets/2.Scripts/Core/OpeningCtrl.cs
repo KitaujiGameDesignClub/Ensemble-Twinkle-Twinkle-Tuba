@@ -71,5 +71,11 @@ public class OpeningCtrl : MonoBehaviour
         PublicAudioSource.publicAudioSource.PlaySoundEffect(PublicAudioSource.AudioType.Click);
     }
 
+    public void OpenWeb()
+    {
+        clickSound();
+        Application.OpenURL("https://kitaujigamedesign.top");
+    }
+
  
 }
