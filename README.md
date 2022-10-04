@@ -61,7 +61,6 @@
 - PureAmaya
 
 
-
 ## 借物表 Reference List
 - [上低音号](https://ux.getuploader.com/instruments_3Dmodels/download/27) by 楽器P
 - [大号](https://ux.getuploader.com/instruments_3Dmodels/download/15) by 楽器P
@@ -69,4 +68,21 @@
 - 开源仓库中均不存在上述模型
 - The models above do not exist in this public repository.
 
+
+## 更新日志 Update log
+
+### Ver 1.1.3 （2022年10月4日）
+  <details>
+    <summary>展开查看详细日志 Show more...</summary>
+    
+1. 主界面添加了官网按钮 
+
+2. 调整了游戏中的乐谱，现在是半透明的背景了
+
+3. 修复了不正常压缩格式导致的文件体积过大的问题
+
+4. 修复了从小剧场返回选择角色界面时，BGM仍然播放的问题
+
+5. 降低小剧场画面的刷新频率。
+</details>
  
