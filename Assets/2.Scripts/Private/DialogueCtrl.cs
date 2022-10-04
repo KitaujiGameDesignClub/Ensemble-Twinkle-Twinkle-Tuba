@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Networking;
+using UnityEngine.Rendering;
 using UnityEngine.UI;
 
 public class DialogueCtrl : MonoBehaviour
@@ -60,7 +61,8 @@ public AudioClip bgm;
     characterIcons[0].GetSpriteFromAtlas($"Euphonium-characters_{selectedDialogue.characterLeft}");
     characterIcons[1].GetSpriteFromAtlas($"Euphonium-characters_{selectedDialogue.characterRight}");
 
-    
+    //降低帧率 省点电
+    OnDemandRendering.renderFrameInterval = 3;
     
   }
 

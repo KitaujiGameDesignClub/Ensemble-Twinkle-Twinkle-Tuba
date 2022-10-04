@@ -121,7 +121,7 @@ public class TextUI : MonoBehaviour
     public void PlayAgain()
     {
         PublicAudioSource.publicAudioSource.PlaySoundEffect(PublicAudioSource.AudioType.Click);
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("load");
         Settings.SaveSettings();
     }
 }

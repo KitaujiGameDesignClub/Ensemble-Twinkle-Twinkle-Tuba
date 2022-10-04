@@ -14,18 +14,10 @@ public class GameInitialization : MonoBehaviour
 
     private void Awake()
     {
-#if  !UNITY_ANDROID
+
         QualitySettings.vSyncCount = 1;
         //降低帧率 省点电
         OnDemandRendering.renderFrameInterval = 3;
-        #else
-           QualitySettings.vSyncCount = 0;
-        Application.targetFrameRate = 60;
-        //降低帧率 省点电
-        OnDemandRendering.renderFrameInterval = 3;
-#endif
-        
-        
      
     }
 
